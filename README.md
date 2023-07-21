@@ -1,10 +1,16 @@
+---
+layout: page
+permalink: index.html
+---
+![jekyll-theme-profile](screenshot.png)
+
 # jekyll-theme-profile
+{:.no_toc}
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+Meet "jekyll-theme-profile" – your ultimate Jekyll theme, based on GitHub's primer style. With both light and dark modes, and three stylish options: sidebar, topbar, and stacked, it's all about personalization. Setting up is a breeze, as it automatically populates your profile using your GitHub user info. Add custom links like Linktree and share engaging blog posts effortlessly. Get ready to rock your online presence with this user-friendly and charming theme, making Jekyll and GitHub Pages a joy to use!
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
+1. TOC
+{:toc}
 
 ## Installation
 
@@ -30,20 +36,189 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+Here's a sample config file you can copy and customize:
+
+```yaml
+style: topbar # One of "stacked", "sidebar", "topbar"
+# image: If you don't want to use your github image, set a custom one here
+
+links:
+#   - name: Example full entry
+#     web_url: https://www.example.com
+#     image_url: /assets/img/icon-topbar.png
+#     description: Example description
+#   - name: Example entry with url and image
+#     web_url: https://www.example.com
+#     image_url: /assets/img/icon-sidebar.png
+#   - name: Example entry with image
+#     image_url: /assets/img/icon-stacked.png
+#   - name: Example entry with description
+#     description: Example Description
+#   - name: Example entry with only a name
+
+repositories:
+  sort_by: stars
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 24
+  exclude:
+    archived: true
+    forks: true
+    repositories:
+      # - respositories to exclude
+
+social_media:
+  # behance: your_username
+  # dribbble: your_username
+  # docker: your_username
+  # facebook: your_username
+  # hackerrank: your_username
+  # instagram: your_username
+  # keybase: your_username
+  # linkedin: your_username
+  # mastodon: your_username
+  # medium: your_username
+  # stackoverflow: your_user_id
+  # telegram: your_username
+  # twitter: your_username
+  # unsplash: your_username
+  # vk: your_username
+  # vscode: your_username
+  # youtube: your_username
+
+```
+
+### Choose your style
+
+Select the default style for your theme by adding `style` to your config file:
+
+```yaml
+style: sidebar # One of "stacked", "sidebar", "topbar"
+```
+
+You can also set the style of a particular page by adding `style` to your frontmatter.
+
+```yaml
+---
+style: sidebar # One of "stacked", "sidebar", "topbar"
+---
+```
+
+#### Sidebar
+
+[![Sidebar image](/assets/img/sidebar-preview.png)]({% link home-sidebar.md %})
+
+#### Stacked
+
+[![Stacked image](/assets/img/stacked-preview.png)]({% link home-stacked.md %})
+
+#### Topbar
+
+[![Topbar image](/assets/img/topbar-preview.png)]({% link home-topbar.md %})
+
+### Links
+
+In the `links` section, you can add links to showcase various pages on the web or your website.
+
+![Links](/assets/img/links.png){: .border}
+
+```yaml
+links:
+  - name: Example full entry
+    web_url: https://www.example.com
+    image_url: /assets/img/icon-topbar.png
+    description: Example description
+  - name: Example entry with url and image
+    web_url: https://www.example.com
+    image_url: /assets/img/icon-sidebar.png
+  - name: Example entry with image
+    image_url: /assets/img/icon-stacked.png
+  - name: Example entry with description
+    description: Example Description
+  - name: Example entry with only a name
+```
+
+### Repositories
+
+The `repositories` section allows you to display your GitHub repositories on your page.  You can sort them by stars or latest pushes, set a limit to the number of repositories displayed, and exclude archived, forked, or specific repositories from the list
+
+![Repositories](/assets/img/repositories.png)
+
+```yaml
+repositories:
+  sort_by: stars
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 24
+  exclude:
+    archived: true
+    forks: true
+    repositories:
+      # - respositories to exclude
+```
+
+### Social media
+
+Utilize the `social_media` section to add links to your various social media profiles.  For each platform simply provide your username or user ID to have the corresponding icon and link appear on your profile.
+
+![Social Media](/assets/img/social-media.png)
+
+```yaml
+social_media:
+  behance: your_username
+  dribbble: your_username
+  docker: your_username
+  facebook: your_username
+  hackerrank: your_username
+  instagram: your_username
+  keybase: your_username
+  linkedin: your_username
+  mastodon: your_username
+  medium: your_username
+  stackoverflow: your_user_id
+  telegram: your_username
+  twitter: your_username
+  unsplash: your_username
+  vk: your_username
+  vscode: your_username
+  youtube: your_username
+```
+
+### Blog
+
+Make entries for the blog the same way you normally would by placing entries in the `_posts` folder.  You can adjust the number of entries that show up in the main page by adjusting `posts_limit` in the `_config.yml` file.  If you have more posts than the limit, a `Read more` button will link to the paginated blog post page /blog/index.html.
+
+![Blog](/assets/img/blog.png){: .border}
+
+```yaml
+posts_limit: 3
+```
+
+Additionally, the theme provides a paginate layout you can use.  By default, the theme serves pagination from `/assets/blog/index.html`.
+
+But you can adjust the source by updating the config
+
+```yaml
+paginate: 6
+paginate_path: "/assets/blog/page:num"
+```
+
+And adding a `index.html` page at the `pagenate_path`
+
+```yaml
+---
+layout: paginate
+title: My Blog
+---
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jekyll-theme-profile. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/athackst/jekyll-theme-profile. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-profile.gemspec` accordingly.
+See [Contributing]({% link CONTRIBUTING.md %}) for more information on contributing to this theme.
 
 ## License
 

@@ -1,0 +1,1443 @@
+.repo-language-color {
+  filter: brightness(125%) !important;
+  border-radius: 50%;
+  display: inline-block;
+  height: 12px;
+  position: relative;
+  top: 2px;
+  width: 12px;
+  /* Use a CSS variable to set the background color */
+  background-color: var(--language-color);
+}
+
+.repo-language-color[data-language='1C Enterprise'] {
+  --language-color: #814CCC;
+}
+
+.repo-language-color[data-language='ABAP'] {
+  --language-color: #E8274B;
+}
+
+.repo-language-color[data-language='ActionScript'] {
+  --language-color: #882B0F;
+}
+
+.repo-language-color[data-language='Ada'] {
+  --language-color: #02f88c;
+}
+
+.repo-language-color[data-language='Agda'] {
+  --language-color: #315665;
+}
+
+.repo-language-color[data-language='AGS Script'] {
+  --language-color: #B9D9FF;
+}
+
+.repo-language-color[data-language='Alloy'] {
+  --language-color: #64C800;
+}
+
+.repo-language-color[data-language='Alpine Abuild'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='AMPL'] {
+  --language-color: #E6EFBB;
+}
+
+.repo-language-color[data-language='AngelScript'] {
+  --language-color: #C7D7DC;
+}
+
+.repo-language-color[data-language='ANTLR'] {
+  --language-color: #9DC3FF;
+}
+
+.repo-language-color[data-language='Apex'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='API Blueprint'] {
+  --language-color: #2ACCA8;
+}
+
+.repo-language-color[data-language='APL'] {
+  --language-color: #5A8164;
+}
+
+.repo-language-color[data-language='Apollo Guidance Computer'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='AppleScript'] {
+  --language-color: #101F1F;
+}
+
+.repo-language-color[data-language='Arc'] {
+  --language-color: #aa2afe;
+}
+
+.repo-language-color[data-language='ASP'] {
+  --language-color: #6a40fd;
+}
+
+.repo-language-color[data-language='AspectJ'] {
+  --language-color: #a957b0;
+}
+
+.repo-language-color[data-language='Assembly'] {
+  --language-color: #6E4C13;
+}
+
+.repo-language-color[data-language='ATS'] {
+  --language-color: #1ac620;
+}
+
+.repo-language-color[data-language='Augeas'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='AutoHotkey'] {
+  --language-color: #6594b9;
+}
+
+.repo-language-color[data-language='AutoIt'] {
+  --language-color: #1C3552;
+}
+
+.repo-language-color[data-language='Awk'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Ballerina'] {
+  --language-color: #FF5000;
+}
+
+.repo-language-color[data-language='Batchfile'] {
+  --language-color: #C1F12E;
+}
+
+.repo-language-color[data-language='Befunge'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Bison'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='BitBake'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='BlitzBasic'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='BlitzMax'] {
+  --language-color: #cd6400;
+}
+
+.repo-language-color[data-language='Bluespec'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Boo'] {
+  --language-color: #d4bec1;
+}
+
+.repo-language-color[data-language='Brainfuck'] {
+  --language-color: #2F2530;
+}
+
+.repo-language-color[data-language='Brightscript'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Bro'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='C'] {
+  --language-color: #555555;
+}
+
+.repo-language-color[data-language='C#'] {
+  --language-color: #178600;
+}
+
+.repo-language-color[data-language='C++'] {
+  --language-color: #f34b7d;
+}
+
+.repo-language-color[data-language='C2hs Haskell'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Capn Proto'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='CartoCSS'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Ceylon'] {
+  --language-color: #dfa535;
+}
+
+.repo-language-color[data-language='Chapel'] {
+  --language-color: #8dc63f;
+}
+
+.repo-language-color[data-language='Charity'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='ChucK'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Cirru'] {
+  --language-color: #ccccff;
+}
+
+.repo-language-color[data-language='Clarion'] {
+  --language-color: #db901e;
+}
+
+.repo-language-color[data-language='Clean'] {
+  --language-color: #3F85AF;
+}
+
+.repo-language-color[data-language='Click'] {
+  --language-color: #E4E6F3;
+}
+
+.repo-language-color[data-language='CLIPS'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Clojure'] {
+  --language-color: #db5855;
+}
+
+.repo-language-color[data-language='CMake'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='COBOL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='CoffeeScript'] {
+  --language-color: #244776;
+}
+
+.repo-language-color[data-language='ColdFusion'] {
+  --language-color: #ed2cd6;
+}
+
+.repo-language-color[data-language='ColdFusion CFC'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Common Lisp'] {
+  --language-color: #3fb68b;
+}
+
+.repo-language-color[data-language='Common Workflow Language'] {
+  --language-color: #B5314C;
+}
+
+.repo-language-color[data-language='Component Pascal'] {
+  --language-color: #B0CE4E;
+}
+
+.repo-language-color[data-language='Cool'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Coq'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Crystal'] {
+  --language-color: #000100;
+}
+
+.repo-language-color[data-language='Csound'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Csound Document'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Csound Score'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='CSS'] {
+  --language-color: #563d7c;
+}
+
+.repo-language-color[data-language='Cuda'] {
+  --language-color: #3A4E3A;
+}
+
+.repo-language-color[data-language='CWeb'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Cycript'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Cython'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='D'] {
+  --language-color: #ba595e;
+}
+
+.repo-language-color[data-language='Dart'] {
+  --language-color: #00B4AB;
+}
+
+.repo-language-color[data-language='DataWeave'] {
+  --language-color: #003a52;
+}
+
+.repo-language-color[data-language='DIGITAL Command Language'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='DM'] {
+  --language-color: #447265;
+}
+
+.repo-language-color[data-language='Dockerfile'] {
+  --language-color: #384d54;
+}
+
+.repo-language-color[data-language='Dogescript'] {
+  --language-color: #cca760;
+}
+
+.repo-language-color[data-language='DTrace'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Dylan'] {
+  --language-color: #6c616e;
+}
+
+.repo-language-color[data-language='E'] {
+  --language-color: #ccce35;
+}
+
+.repo-language-color[data-language='eC'] {
+  --language-color: #913960;
+}
+
+.repo-language-color[data-language='ECL'] {
+  --language-color: #8a1267;
+}
+
+.repo-language-color[data-language='ECLiPSe'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Eiffel'] {
+  --language-color: #946d57;
+}
+
+.repo-language-color[data-language='Elixir'] {
+  --language-color: #6e4a7e;
+}
+
+.repo-language-color[data-language='Elm'] {
+  --language-color: #60B5CC;
+}
+
+.repo-language-color[data-language='Emacs Lisp'] {
+  --language-color: #c065db;
+}
+
+.repo-language-color[data-language='EmberScript'] {
+  --language-color: #FFF4F3;
+}
+
+.repo-language-color[data-language='EQ'] {
+  --language-color: #a78649;
+}
+
+.repo-language-color[data-language='Erlang'] {
+  --language-color: #B83998;
+}
+
+.repo-language-color[data-language='F#'] {
+  --language-color: #b845fc;
+}
+
+.repo-language-color[data-language='Factor'] {
+  --language-color: #636746;
+}
+
+.repo-language-color[data-language='Fancy'] {
+  --language-color: #7b9db4;
+}
+
+.repo-language-color[data-language='Fantom'] {
+  --language-color: #14253c;
+}
+
+.repo-language-color[data-language='Filebench WML'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Filterscript'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='fish'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='FLUX'] {
+  --language-color: #88ccff;
+}
+
+.repo-language-color[data-language='Forth'] {
+  --language-color: #341708;
+}
+
+.repo-language-color[data-language='Fortran'] {
+  --language-color: #4d41b1;
+}
+
+.repo-language-color[data-language='FreeMarker'] {
+  --language-color: #0050b2;
+}
+
+.repo-language-color[data-language='Frege'] {
+  --language-color: #00cafe;
+}
+
+.repo-language-color[data-language='Game Maker Language'] {
+  --language-color: #71b417;
+}
+
+.repo-language-color[data-language='GAMS'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='GAP'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='GCC Machine Description'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='GDB'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='GDScript'] {
+  --language-color: #355570;
+}
+
+.repo-language-color[data-language='Genie'] {
+  --language-color: #fb855d;
+}
+
+.repo-language-color[data-language='Genshi'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Gentoo Ebuild'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Gentoo Eclass'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Gherkin'] {
+  --language-color: #5B2063;
+}
+
+.repo-language-color[data-language='GLSL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Glyph'] {
+  --language-color: #c1ac7f;
+}
+
+.repo-language-color[data-language='Gnuplot'] {
+  --language-color: #f0a9f0;
+}
+
+.repo-language-color[data-language='Go'] {
+  --language-color: #00ADD8;
+}
+
+.repo-language-color[data-language='Golo'] {
+  --language-color: #88562A;
+}
+
+.repo-language-color[data-language='Gosu'] {
+  --language-color: #82937f;
+}
+
+.repo-language-color[data-language='Grace'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Grammatical Framework'] {
+  --language-color: #79aa7a;
+}
+
+.repo-language-color[data-language='Groovy'] {
+  --language-color: #e69f56;
+}
+
+.repo-language-color[data-language='Groovy Server Pages'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Hack'] {
+  --language-color: #878787;
+}
+
+.repo-language-color[data-language='Harbour'] {
+  --language-color: #0e60e3;
+}
+
+.repo-language-color[data-language='Haskell'] {
+  --language-color: #5e5086;
+}
+
+.repo-language-color[data-language='Haxe'] {
+  --language-color: #df7900;
+}
+
+.repo-language-color[data-language='HCL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='HiveQL'] {
+  --language-color: #dce200;
+}
+
+.repo-language-color[data-language='HLSL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='HTML'] {
+  --language-color: #e34c26;
+}
+
+.repo-language-color[data-language='Hy'] {
+  --language-color: #7790B2;
+}
+
+.repo-language-color[data-language='HyPhy'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='IDL'] {
+  --language-color: #a3522f;
+}
+
+.repo-language-color[data-language='Idris'] {
+  --language-color: #b30000;
+}
+
+.repo-language-color[data-language='IGOR Pro'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Inform 7'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Inno Setup'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Io'] {
+  --language-color: #a9188d;
+}
+
+.repo-language-color[data-language='Ioke'] {
+  --language-color: #078193;
+}
+
+.repo-language-color[data-language='Isabelle'] {
+  --language-color: #FEFE00;
+}
+
+.repo-language-color[data-language='Isabelle ROOT'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='J'] {
+  --language-color: #9EEDFF;
+}
+
+.repo-language-color[data-language='Jasmin'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Java'] {
+  --language-color: #b07219;
+}
+
+.repo-language-color[data-language='Java Server Pages'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='JavaScript'] {
+  --language-color: #f1e05a;
+}
+
+.repo-language-color[data-language='JFlex'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Jison'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Jison Lex'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Jolie'] {
+  --language-color: #843179;
+}
+
+.repo-language-color[data-language='JSONiq'] {
+  --language-color: #40d47e;
+}
+
+.repo-language-color[data-language='JSX'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Julia'] {
+  --language-color: #a270ba;
+}
+
+.repo-language-color[data-language='Jupyter Notebook'] {
+  --language-color: #DA5B0B;
+}
+
+.repo-language-color[data-language='Kotlin'] {
+  --language-color: #F18E33;
+}
+
+.repo-language-color[data-language='KRL'] {
+  --language-color: #28430A;
+}
+
+.repo-language-color[data-language='LabVIEW'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Lasso'] {
+  --language-color: #999999;
+}
+
+.repo-language-color[data-language='Lean'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Lex'] {
+  --language-color: #DBCA00;
+}
+
+.repo-language-color[data-language='LFE'] {
+  --language-color: #4C3023;
+}
+
+.repo-language-color[data-language='LilyPond'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Limbo'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Literate Agda'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Literate CoffeeScript'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Literate Haskell'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='LiveScript'] {
+  --language-color: #499886;
+}
+
+.repo-language-color[data-language='LLVM'] {
+  --language-color: #185619;
+}
+
+.repo-language-color[data-language='Logos'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Logtalk'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='LOLCODE'] {
+  --language-color: #cc9900;
+}
+
+.repo-language-color[data-language='LookML'] {
+  --language-color: #652B81;
+}
+
+.repo-language-color[data-language='LoomScript'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='LSL'] {
+  --language-color: #3d9970;
+}
+
+.repo-language-color[data-language='Lua'] {
+  --language-color: #000080;
+}
+
+.repo-language-color[data-language='M'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='M4'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='M4Sugar'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Makefile'] {
+  --language-color: #427819;
+}
+
+.repo-language-color[data-language='Mako'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Mask'] {
+  --language-color: #f97732;
+}
+
+.repo-language-color[data-language='Mathematica'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Matlab'] {
+  --language-color: #e16737;
+}
+
+.repo-language-color[data-language='Max'] {
+  --language-color: #c4a79c;
+}
+
+.repo-language-color[data-language='MAXScript'] {
+  --language-color: #00a6a6;
+}
+
+.repo-language-color[data-language='Mercury'] {
+  --language-color: #ff2b2b;
+}
+
+.repo-language-color[data-language='Meson'] {
+  --language-color: #007800;
+}
+
+.repo-language-color[data-language='Metal'] {
+  --language-color: #8f14e9;
+}
+
+.repo-language-color[data-language='MiniD'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Mirah'] {
+  --language-color: #c7a938;
+}
+
+.repo-language-color[data-language='Modelica'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Modula-2'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Module Management System'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Monkey'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Moocode'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='MoonScript'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='MQL4'] {
+  --language-color: #62A8D6;
+}
+
+.repo-language-color[data-language='MQL5'] {
+  --language-color: #4A76B8;
+}
+
+.repo-language-color[data-language='MTML'] {
+  --language-color: #b7e1f4;
+}
+
+.repo-language-color[data-language='MUF'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='mupad'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Myghty'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='NCL'] {
+  --language-color: #28431f;
+}
+
+.repo-language-color[data-language='Nearley'] {
+  --language-color: #990000;
+}
+
+.repo-language-color[data-language='Nemerle'] {
+  --language-color: #3d3c6e;
+}
+
+.repo-language-color[data-language='nesC'] {
+  --language-color: #94B0C7;
+}
+
+.repo-language-color[data-language='NetLinx'] {
+  --language-color: #0aa0ff;
+}
+
+.repo-language-color[data-language='NetLinx+ERB'] {
+  --language-color: #747faa;
+}
+
+.repo-language-color[data-language='NetLogo'] {
+  --language-color: #ff6375;
+}
+
+.repo-language-color[data-language='NewLisp'] {
+  --language-color: #87AED7;
+}
+
+.repo-language-color[data-language='Nextflow'] {
+  --language-color: #3ac486;
+}
+
+.repo-language-color[data-language='Nim'] {
+  --language-color: #37775b;
+}
+
+.repo-language-color[data-language='Nit'] {
+  --language-color: #009917;
+}
+
+.repo-language-color[data-language='Nix'] {
+  --language-color: #7e7eff;
+}
+
+.repo-language-color[data-language='NSIS'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Nu'] {
+  --language-color: #c9df40;
+}
+
+.repo-language-color[data-language='NumPy'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Objective-C'] {
+  --language-color: #438eff;
+}
+
+.repo-language-color[data-language='Objective-C++'] {
+  --language-color: #6866fb;
+}
+
+.repo-language-color[data-language='Objective-J'] {
+  --language-color: #ff0c5a;
+}
+
+.repo-language-color[data-language='OCaml'] {
+  --language-color: #3be133;
+}
+
+.repo-language-color[data-language='Omgrofl'] {
+  --language-color: #cabbff;
+}
+
+.repo-language-color[data-language='ooc'] {
+  --language-color: #b0b77e;
+}
+
+.repo-language-color[data-language='Opa'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Opal'] {
+  --language-color: #f7ede0;
+}
+
+.repo-language-color[data-language='OpenCL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='OpenEdge ABL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='OpenRC runscript'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='OpenSCAD'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Ox'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Oxygene'] {
+  --language-color: #cdd0e3;
+}
+
+.repo-language-color[data-language='Oz'] {
+  --language-color: #fab738;
+}
+
+.repo-language-color[data-language='P4'] {
+  --language-color: #7055b5;
+}
+
+.repo-language-color[data-language='Pan'] {
+  --language-color: #cc0000;
+}
+
+.repo-language-color[data-language='Papyrus'] {
+  --language-color: #6600cc;
+}
+
+.repo-language-color[data-language='Parrot'] {
+  --language-color: #f3ca0a;
+}
+
+.repo-language-color[data-language='Parrot Assembly'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Parrot Internal Representation'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Pascal'] {
+  --language-color: #E3F171;
+}
+
+.repo-language-color[data-language='PAWN'] {
+  --language-color: #dbb284;
+}
+
+.repo-language-color[data-language='Pep8'] {
+  --language-color: #C76F5B;
+}
+
+.repo-language-color[data-language='Perl'] {
+  --language-color: #0298c3;
+}
+
+.repo-language-color[data-language='Perl 6'] {
+  --language-color: #0000fb;
+}
+
+.repo-language-color[data-language='PHP'] {
+  --language-color: #4F5D95;
+}
+
+.repo-language-color[data-language='PicoLisp'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='PigLatin'] {
+  --language-color: #fcd7de;
+}
+
+.repo-language-color[data-language='Pike'] {
+  --language-color: #005390;
+}
+
+.repo-language-color[data-language='PLpgSQL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='PLSQL'] {
+  --language-color: #dad8d8;
+}
+
+.repo-language-color[data-language='PogoScript'] {
+  --language-color: #d80074;
+}
+
+.repo-language-color[data-language='Pony'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='PostScript'] {
+  --language-color: #da291c;
+}
+
+.repo-language-color[data-language='POV-Ray SDL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='PowerBuilder'] {
+  --language-color: #8f0f8d;
+}
+
+.repo-language-color[data-language='PowerShell'] {
+  --language-color: #012456;
+}
+
+.repo-language-color[data-language='Processing'] {
+  --language-color: #0096D8;
+}
+
+.repo-language-color[data-language='Prolog'] {
+  --language-color: #74283c;
+}
+
+.repo-language-color[data-language='Propeller Spin'] {
+  --language-color: #7fa2a7;
+}
+
+.repo-language-color[data-language='Puppet'] {
+  --language-color: #302B6D;
+}
+
+.repo-language-color[data-language='PureBasic'] {
+  --language-color: #5a6986;
+}
+
+.repo-language-color[data-language='PureScript'] {
+  --language-color: #1D222D;
+}
+
+.repo-language-color[data-language='Python'] {
+  --language-color: #3572A5;
+}
+
+.repo-language-color[data-language='Python console'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='q'] {
+  --language-color: #0040cd;
+}
+
+.repo-language-color[data-language='QMake'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='QML'] {
+  --language-color: #44a51c;
+}
+
+.repo-language-color[data-language='R'] {
+  --language-color: #198CE7;
+}
+
+.repo-language-color[data-language='Racket'] {
+  --language-color: #3c5caa;
+}
+
+.repo-language-color[data-language='Ragel'] {
+  --language-color: #9d5200;
+}
+
+.repo-language-color[data-language='RAML'] {
+  --language-color: #77d9fb;
+}
+
+.repo-language-color[data-language='Rascal'] {
+  --language-color: #fffaa0;
+}
+
+.repo-language-color[data-language='REALbasic'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Reason'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Rebol'] {
+  --language-color: #358a5b;
+}
+
+.repo-language-color[data-language='Red'] {
+  --language-color: #f50000;
+}
+
+.repo-language-color[data-language='Redcode'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='RenPy'] {
+  --language-color: #ff7f7f;
+}
+
+.repo-language-color[data-language='RenderScript'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='REXX'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Ring'] {
+  --language-color: #2D54CB;
+}
+
+.repo-language-color[data-language='RobotFramework'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Roff'] {
+  --language-color: #ecdebe;
+}
+
+.repo-language-color[data-language='Rouge'] {
+  --language-color: #cc0088;
+}
+
+.repo-language-color[data-language='RPC'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Ruby'] {
+  --language-color: #701516;
+}
+
+.repo-language-color[data-language='RUNOFF'] {
+  --language-color: #665a4e;
+}
+
+.repo-language-color[data-language='Rust'] {
+  --language-color: #dea584;
+}
+
+.repo-language-color[data-language='Sage'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='SaltStack'] {
+  --language-color: #646464;
+}
+
+.repo-language-color[data-language='SAS'] {
+  --language-color: #B34936;
+}
+
+.repo-language-color[data-language='Scala'] {
+  --language-color: #c22d40;
+}
+
+.repo-language-color[data-language='Scheme'] {
+  --language-color: #1e4aec;
+}
+
+.repo-language-color[data-language='Scilab'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='sed'] {
+  --language-color: #64b970;
+}
+
+.repo-language-color[data-language='Self'] {
+  --language-color: #0579aa;
+}
+
+.repo-language-color[data-language='ShaderLab'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Shell'] {
+  --language-color: #89e051;
+}
+
+.repo-language-color[data-language='ShellSession'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Shen'] {
+  --language-color: #120F14;
+}
+
+.repo-language-color[data-language='Slash'] {
+  --language-color: #007eff;
+}
+
+.repo-language-color[data-language='Smali'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Smalltalk'] {
+  --language-color: #596706;
+}
+
+.repo-language-color[data-language='Smarty'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='SMT'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Solidity'] {
+  --language-color: #AA6746;
+}
+
+.repo-language-color[data-language='SourcePawn'] {
+  --language-color: #5c7611;
+}
+
+.repo-language-color[data-language='SQF'] {
+  --language-color: #3F3F3F;
+}
+
+.repo-language-color[data-language='SQLPL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Squirrel'] {
+  --language-color: #800000;
+}
+
+.repo-language-color[data-language='SRecode Template'] {
+  --language-color: #348a34;
+}
+
+.repo-language-color[data-language='Stan'] {
+  --language-color: #b2011d;
+}
+
+.repo-language-color[data-language='Standard ML'] {
+  --language-color: #dc566d;
+}
+
+.repo-language-color[data-language='Stata'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='SuperCollider'] {
+  --language-color: #46390b;
+}
+
+.repo-language-color[data-language='Swift'] {
+  --language-color: #ffac45;
+}
+
+.repo-language-color[data-language='SystemVerilog'] {
+  --language-color: #DAE1C2;
+}
+
+.repo-language-color[data-language='Tcl'] {
+  --language-color: #e4cc98;
+}
+
+.repo-language-color[data-language='Tcsh'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Terra'] {
+  --language-color: #00004c;
+}
+
+.repo-language-color[data-language='TeX'] {
+  --language-color: #3D6117;
+}
+
+.repo-language-color[data-language='Thrift'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='TI Program'] {
+  --language-color: #A0AA87;
+}
+
+.repo-language-color[data-language='TLA'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Turing'] {
+  --language-color: #cf142b;
+}
+
+.repo-language-color[data-language='TXL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='TypeScript'] {
+  --language-color: #2b7489;
+}
+
+.repo-language-color[data-language='Unified Parallel C'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Unix Assembly'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Uno'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='UnrealScript'] {
+  --language-color: #a54c4d;
+}
+
+.repo-language-color[data-language='UrWeb'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Vala'] {
+  --language-color: #fbe5cd;
+}
+
+.repo-language-color[data-language='VCL'] {
+  --language-color: #148AA8;
+}
+
+.repo-language-color[data-language='Verilog'] {
+  --language-color: #b2b7f8;
+}
+
+.repo-language-color[data-language='VHDL'] {
+  --language-color: #adb2cb;
+}
+
+.repo-language-color[data-language='Vim script'] {
+  --language-color: #199f4b;
+}
+
+.repo-language-color[data-language='Visual Basic'] {
+  --language-color: #945db7;
+}
+
+.repo-language-color[data-language='Volt'] {
+  --language-color: #1F1F1F;
+}
+
+.repo-language-color[data-language='Vue'] {
+  --language-color: #2c3e50;
+}
+
+.repo-language-color[data-language='wdl'] {
+  --language-color: #42f1f4;
+}
+
+.repo-language-color[data-language='WebAssembly'] {
+  --language-color: #04133b;
+}
+
+.repo-language-color[data-language='WebIDL'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='wisp'] {
+  --language-color: #7582D1;
+}
+
+.repo-language-color[data-language='X10'] {
+  --language-color: #4B6BEF;
+}
+
+.repo-language-color[data-language='xBase'] {
+  --language-color: #403a40;
+}
+
+.repo-language-color[data-language='XC'] {
+  --language-color: #99DA07;
+}
+
+.repo-language-color[data-language='Xojo'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='XProc'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='XQuery'] {
+  --language-color: #5232e7;
+}
+
+.repo-language-color[data-language='XS'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='XSLT'] {
+  --language-color: #EB8CEB;
+}
+
+.repo-language-color[data-language='Xtend'] {
+  --language-color: None;
+}
+
+.repo-language-color[data-language='Yacc'] {
+  --language-color: #4B6C4B;
+}
+
+.repo-language-color[data-language='Zephir'] {
+  --language-color: #118f9e;
+}
+
+.repo-language-color[data-language='Zimpl'] {
+  --language-color: None;
+}

@@ -1,0 +1,58 @@
+{%- assign user = site.github.owner %}
+
+{%- if site.title %}
+{%- assign name = site.title %}
+{%- elsif user.name %}
+{%- assign name = user.name %}
+{%- else %}
+{%- assign name = user.login %}
+{%- endif %}
+
+{%- if site.image %}
+{%- assign user_img = site.image %}
+{%- else %}
+{%- assign user_img = user.avatar_url %}
+{%- endif %}
+
+{%- assign metadata_styles = 'd-flex flex-items-center flex-justify-center mb-3' %}
+<a href="{{ site.url }}{{ site.baseurl }}/">
+<div class="img-masthead">
+  <img src="{{ user_img }}" alt="{{ name }}" class="avatar avatar-user rounded-circle border color-border-default">
+</div>
+</a>
+<h1 class="mb-2 lh-condensed">{{ name }}</h1>
+<p class="mb-3 f4">
+  {{ user.bio }}
+</p>
+
+<div class="f4 mb-6">
+{%- if include.metadata %}
+
+    {%- if user.name %}
+      <div class="{{ metadata_styles }}">
+        {% octicon mark-github height:20 class:"mr-2 v-align-middle" aria-label:GitHub %}
+        <a href="https://github.com/{{ user.login }}">
+          @{{ user.login }}
+        </a>
+      </div>
+    {%- endif %}
+    {%- if user.email %}
+      <div class="{{ metadata_styles }}">
+        {% octicon mail height:20 class:"mr-2 v-align-middle" aria-label:email %}
+        <a href="mailto:{{ user.email }}">
+          {{ user.email }}
+        </a>
+      </div>
+    {%- endif %}
+    {%- if user.location %}
+      <div class="{{ metadata_styles }}">
+        {% octicon location height:20 class:"mr-2 v-align-middle" aria-label:Location %}
+        {{ user.location }}
+      </div>
+    {%- endif %}
+
+{%- endif %}
+{%- if site.social_media %}
+{%- include social.html %}
+{%- endif %}
+</div>

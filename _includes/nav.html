@@ -1,0 +1,46 @@
+<div class="f5 d-flex">
+    {%- if include.breadcrumbs %}
+    <div class="d-flex flex-items-center">
+        <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+                {%- assign crumbs = page.url | split: '/' %}
+                {%- assign url = "/" %}
+                {%- for crumb in crumbs %}
+                    {%- if crumb == "" %}
+                        <li class="breadcrumb-item">
+                            <a href="/">Home</a>
+                        </li>
+                        {%- continue %}
+                    {%- endif %}
+
+                    {%- assign url = url | append: crumb %}
+
+                    {%- assign isa_page = site.pages | where: "url", url | first %}
+                    {%- assign isa_post = site.posts | where: "url", url | first %}
+
+                    {%- if page.url == url %}
+                    <li class="breadcrumb-item breadcrumb-item-selected" aria-current="page">
+                        <a href="{{ page.url }}">{{ crumb | replace: ".html", "" | capitalize }}</a>
+                    </li>
+                    {%- elsif isa_page or isa_post %}
+                    <li class="breadcrumb-item">
+                        <a href="{{ url }}">{{ crumb | capitalize }}</a>
+                    </li>
+                    {%- else %}
+                    <li class="breadcrumb-item">
+                        {{ crumb | capitalize }}
+                    </li>
+                    {%- endif %}
+                    {%- unless crumb == crumbs.last %}{%- assign url = url | append: "/" %}{%- endunless %}
+                {%- endfor %}
+            </ol>
+        </nav>
+    </div>
+    {%- endif %}
+    <div class="flex-1">
+    </div>
+    <div>
+        <button id="theme-toggle" class="btn btn-sm mr-2" type="button"><span id="theme-icon"
+                class="octicon octicon-moon-24"></span></button>
+    </div>
+</div>

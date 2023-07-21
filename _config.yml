@@ -1,0 +1,55 @@
+style: topbar # One of "stacked", "sidebar", "topbar"
+image: /assets/img/user-image.jpg
+
+plugins:
+  - jekyll-github-metadata
+  - jekyll-octicons
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jemoji
+
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      breadcrumbs: true
+      permalink: /blog/:year/:month/:day/:title.html
+
+exclude:
+  - .vscode
+  - .devcontainer
+  - .deprecated
+  - .github
+  - "*.gem"
+
+paginate: 6
+paginate_path: "/assets/blog/page:num"
+
+markdown: kramdown
+
+posts_limit: 3
+
+links:
+  - name: Example page with topbar
+    web_url: /page-topbar
+    image_url: /assets/img/icon-topbar.png
+  - name: Example page with sidebar
+    web_url: /page-sidebar
+    image_url: /assets/img/icon-sidebar.png
+  - name: Example page with header stacked
+    web_url: /page-stacked
+    image_url: /assets/img/icon-stacked.png
+
+repositories:
+  sort_by: stars
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 24
+  exclude:
+    archived: true
+    forks: true
+    repositories:
+      # - respositories to exclude

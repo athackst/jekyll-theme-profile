@@ -1,1 +1,97 @@
-{{ content }}
+{%- assign user = site.github.owner %}
+
+{%- if page.style %}
+{%- assign style = page.style %}
+{%- else %}
+{%- assign style = site.style %}
+{%- endif %}
+
+{%- if page.breadcrumbs %}
+{%- assign breadcrumbs = page.breadcrumbs %}
+{%- else %}
+{%- assign breadcrumbs = false %}
+{%- endif %}
+
+{%- if site.title %}
+{%- assign name = site.title %}
+{%- elsif user.name %}
+{%- assign name = user.name %}
+{%- else %}
+{%- assign name = user.login %}
+{%- endif %}
+
+{%- if site.image %}
+{%- assign user_img = site.image %}
+{%- else %}
+{%- assign user_img = user.avatar_url %}
+{%- endif %}
+
+{%- if site.metadata %}
+{%- assign metadata = site.metadata %}
+{%- else %}
+{%- assign metadata = true %}
+{%- endif %}
+
+<!doctype html>
+<html class="min-height-full min-width" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
+
+{%- include header.html %}
+
+<body class="min-height-full">
+    {%- if style == 'stacked' %}
+    <div class="container-lg p-responsive py-3">
+        <div class="text-center">
+        {%- include nav.html breadcrumbs=breadcrumbs %}
+        {%- include masthead.html metadata=metadata %}
+        </div>
+        <div class="p-responsive mb-6">
+            {{ content }}
+        </div>
+    </div>
+    {%- elsif style == 'sidebar' %}
+    <div class="container-lg d-md-flex min-height-full border-md-bottom">
+        <div
+            class="flex-self-stretch border-gray-light col-md-4 col-lg-3 px-4 py-6 text-center">
+            {%- include masthead.html metadata=metadata %}
+        </div>
+        <div class="col-md-8 col-lg-9 border-top border-md-top-0 px-4 ">
+            <div class="container-lg py-3 ml-0">
+                {%- include nav.html breadcrumbs=breadcrumbs %}
+                <div class="p-responsive mb-6">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {%- else %}
+    <div class="Header">
+        <div class="Header-item">
+            <a href="{{ site.url }}{{ site.baseurl }}/" class="Header-link f4 d-flex flex-items-center">
+                {% octicon mark-github height:32 %}
+            </a>
+        </div>
+        <div class="Header-item Header-item--full">
+            {{ name }}
+        </div>
+        <div class="Header-item">
+            {%- include social.html %}
+        </div>
+        <div class="Header-item mr-0 ml-3">
+            <a href="https://github.com/{{ user.login }}" class="Header-link f4 d-flex flex-items-center">
+                <img class="avatar img-cover" height="20" alt="{{ name }}" src="{{ user_img }}" width="20">
+            </a>
+        </div>
+    </div>
+
+    <div class="container-lg py-3">
+        {%- include nav.html breadcrumbs=breadcrumbs %}
+        <div class="p-responsive mb-6">
+            {{ content }}
+        </div>
+    </div>
+    {%- endif %}
+
+    {%- include footer.html %}
+</body>
+
+</html>

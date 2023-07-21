@@ -1,0 +1,10 @@
+{%- assign post_limit = 3 %}
+{%- if include.limit %}
+  {%- assign post_limit = include.limit %}
+{%- endif %}
+
+<div class="gutter-condensed mb-4">
+  {%- for post in site.posts limit: {{post_limit}} %}
+      {%- include post-card.html %}
+  {%- endfor %}
+</div>

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{%- assign posts_total = site.posts | size %}
+{% if site.posts_limit %}
+  {%- assign posts_limit = site.posts_limit %}
+{% else %}
+  {%- assign posts_limit = posts_total %}
+{% endif %}
+
+{% unless content == "" %}
+  {{ content }}
+{% endunless %}
+
+{% if site.links %}
+  <h2 class="mb-3">Links</h2>
+  {% include links.html %}
+{% endif %}
+
+{% unless posts_total == 0 %}
+  <h2 class="mb-3">Blog</h2>
+  {% include posts.html limit=posts_limit %}
+  {%- if site.posts.size > post_limit %}
+  <div>
+    <a href="{{ site.paginate_path | relative_url | replace: 'page:num', '' }}" class="btn btn-block mb-2">Read more</a>
+  </div>
+  {%- endif %}
+{% endunless %}
+
+{% if site.repositories %}
+  <h2 class="mb-3">Repositories</h2>
+  {% include repositories.html %}
+{% endif %}

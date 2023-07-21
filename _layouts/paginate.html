@@ -1,0 +1,46 @@
+---
+layout: page
+---
+<!-- This loops through the paginated posts -->
+{%- for post in paginator.posts %}
+<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+<p class="author">
+    <span class="date">Published {{ post.date | date: "%Y-%m-%d" }}</span>
+    <span class="author">{{ post.author }}</span>
+</p>
+<div class="content mb-6">
+    {{ post.excerpt }}
+</div>
+<div>
+    <a href="{{ post.url }}" class="btn btn-block mb-2">Read more</a>
+</div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="paginate-container">
+    <div role="navigation" aria-label="Pagination" class="d-flex d-md-inline-block pagination">
+        {%- if paginator.previous_page %}
+        <a class="previous_page" rel="prev" href="{{ paginator.previous_page_path | relative_url }}"
+            aria-disabled="false">Previous</a>
+        {% else %}
+        <span class="previous_page disabled" aria-disabled="true">Previous</span>
+        {% endif %}
+
+        {%- for blog_page in (1..paginator.total_pages) %}
+        {%- if blog_page == paginator.page %}
+        <a href="{{ page.url | relative_url }}" aria-label="{{ blog_page }}" aria-current="page">{{ blog_page }}</a>
+        {% elsif blog_page == 1 %}
+        <a href="{{ site.paginate_path | relative_url | replace: 'page:num', '' }}" aria-label="{{ blog_page }}">{{ blog_page }}</a>
+        {% else %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', blog_page }}" aria-label="{{ blog_page }}">{{ blog_page }}</a>
+        {%- endif %}
+        {%- endfor %}
+
+        {%- if paginator.next_page %}
+        <a class="next_page" rel="next" href="{{ paginator.next_page_path | relative_url }}"
+            aria-disabled="false">Next</a>
+        {% else %}
+        <span class="next_page disabled" aria-disabled="true">Next</span>
+        {% endif %}
+    </div>
+</div>
