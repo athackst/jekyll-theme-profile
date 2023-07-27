@@ -15,9 +15,9 @@
 {%- endif %}
 
 {%- assign metadata_styles = 'd-flex flex-items-center flex-justify-center mb-3' %}
-<a href="{{ site.url }}{{ site.baseurl }}/">
+<a href="{{ site.baseurl }}/">
 <div class="img-masthead">
-  <img src="{{ user_img }}" alt="{{ name }}" class="avatar avatar-user rounded-circle border color-border-default">
+  <img src="{{ user_img | relative_url }}" alt="{{ name }}" class="avatar avatar-user rounded-circle border color-border-default">
 </div>
 </a>
 <h1 class="mb-2 lh-condensed">{{ name }}</h1>

@@ -17,7 +17,7 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 1 # Increment this number if you need to re-download cached gems
       - name: Release
-        run: .github/release.sh jekyll-theme-profie.gemspec
+        run: .github/release.sh jekyll-theme-profile.gemspec
         env:
           RUBYGEMS_USERNAME: ${{ secrets.RUBYGEMS_USERNAME }}
           RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}

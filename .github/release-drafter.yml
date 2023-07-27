@@ -1,5 +1,5 @@
-name-template: "Release v$RESOLVED_VERSION"
-tag-template: "v$RESOLVED_VERSION"
+name-template: "Release $RESOLVED_VERSION"
+tag-template: "$RESOLVED_VERSION"
 template: |
   # What’s Changed
 
