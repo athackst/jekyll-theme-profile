@@ -56,6 +56,12 @@
             "group": {
                 "kind": "test",
                 "isDefault": true
+            },
+            "options": {
+                "env": {
+                    "HOSTURL": "www.althack.dev",
+                    "BASEURL": "/jekyll-theme-profile"
+                }
             }
         }
     ]

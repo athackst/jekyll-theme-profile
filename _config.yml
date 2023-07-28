@@ -1,3 +1,6 @@
+repository: athackst/jekyll-theme-profile
+url: https://www.althack.dev
+baseurl: /jekyll-theme-profile
 style: topbar # One of "stacked", "sidebar", "topbar"
 image: /assets/img/user-image.jpg
 
@@ -18,6 +21,13 @@ defaults:
       permalink: /blog/:year/:month/:day/:title.html
 
 exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
   - .vscode
   - .devcontainer
   - .deprecated

@@ -39,8 +39,11 @@ Or install it yourself as:
 Here's a sample config file you can copy and customize:
 
 ```yaml
+repository: athackst/jekyll-theme-profile # Your repository name
+url: https://username.github.io # The host url for your site
+baseurl: "" # or your package name /jekyll-theme-profile (leave blank if it is the username.github.io package)
 style: topbar # One of "stacked", "sidebar", "topbar"
-# image: If you don't want to use your github image, set a custom one here
+# image: /assets/img/user-image.jpg # If you don't want to use your github image, set a custom one here
 
 links:
 #   - name: Example full entry
@@ -105,17 +108,17 @@ style: sidebar # One of "stacked", "sidebar", "topbar"
 ---
 ```
 
-#### Sidebar
+#### [Sidebar](/home-sidebar.md)
 
-[![Sidebar image](/assets/img/sidebar-preview.png)]({% link home-sidebar.md %})
+![Sidebar image](/assets/img/sidebar-preview.png){: .thumbnail }
 
-#### Stacked
+#### [Stacked](/home-stacked.md)
 
-[![Stacked image](/assets/img/stacked-preview.png)]({% link home-stacked.md %})
+![Stacked image](/assets/img/stacked-preview.png)
 
-#### Topbar
+#### [Topbar](/home-topbar.md)
 
-[![Topbar image](/assets/img/topbar-preview.png)]({% link home-topbar.md %})
+![Topbar image](/assets/img/topbar-preview.png)
 
 ### Links
 
@@ -218,7 +221,7 @@ title: My Blog
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/athackst/jekyll-theme-profile. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
-See [Contributing]({% link CONTRIBUTING.md %}) for more information on contributing to this theme.
+See [Contributing](/CONTRIBUTING.md) for more information on contributing to this theme.
 
 ## License
 

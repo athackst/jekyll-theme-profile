@@ -1,4 +1,7 @@
 #!/bin/bash
-
 set -e
-htmlproofer _site
+BASEURL=${BASEURL:-""}
+HOSTURL=${HOSTURL:-""}
+url_swap=".*${HOSTURL}:,^${BASEURL}:"
+
+bundle exec htmlproofer --swap-urls $url_swap _site

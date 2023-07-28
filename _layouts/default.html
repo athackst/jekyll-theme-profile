@@ -66,7 +66,7 @@
     {%- else %}
     <div class="Header">
         <div class="Header-item">
-            <a href="{{ site.url }}{{ site.baseurl }}/" class="Header-link f4 d-flex flex-items-center">
+            <a href="{{ site.baseurl }}/" class="Header-link f4 d-flex flex-items-center">
                 {% octicon mark-github height:32 %}
             </a>
         </div>
@@ -78,7 +78,7 @@
         </div>
         <div class="Header-item mr-0 ml-3">
             <a href="https://github.com/{{ user.login }}" class="Header-link f4 d-flex flex-items-center">
-                <img class="avatar img-cover" height="20" alt="{{ name }}" src="{{ user_img }}" width="20">
+                <img class="avatar img-cover" height="20" alt="{{ name }}" src="{{ user_img | relative_url }}" width="20">
             </a>
         </div>
     </div>

@@ -4,7 +4,7 @@
   <div class="TimelineItem-badge">{% octicon comment height:16 %}</div>
   <div class="TimelinItem-body">
     <span class="f3 lh-condensed mb-1">
-      <a href="{{ site.baseurl }}{{ post.url }}">
+      <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
     </span>
