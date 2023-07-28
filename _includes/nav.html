@@ -8,27 +8,34 @@
                 {%- for crumb in crumbs %}
                     {%- if crumb == "" %}
                         <li class="breadcrumb-item">
-                            <a href="{{ site.baseurl}}/">Home</a>
+                            <a href="{{ site.baseurl}}/">home</a>
                         </li>
                         {%- continue %}
                     {%- endif %}
-
+                    {%- assign asset_crumb = crumb | prepend: "assets/" | append: "/" %}
+                    {%- assign asset_url = url | append: asset_crumb %}
+                    {%- assign isa_asset = site.pages | where: "url", asset_url | first %}
                     {%- assign url = url | append: crumb %}
-
                     {%- assign isa_page = site.pages | where: "url", url | first %}
                     {%- assign isa_post = site.posts | where: "url", url | first %}
 
+                    {%- assign nice_crumb = crumb | url_decode | replace: ".html", "" | replace: "-", " " | replace: "_", " " | downcase %}
+
                     {%- if page.url == url %}
                     <li class="breadcrumb-item breadcrumb-item-selected" aria-current="page">
-                        <a href="{{ page.url | relative_url }}">{{ crumb | replace: ".html", "" | capitalize }}</a>
+                        <a href="{{ page.url | relative_url }}">{{ nice_crumb }}</a>
                     </li>
                     {%- elsif isa_page or isa_post %}
                     <li class="breadcrumb-item">
-                        <a href="{{ url | relative_url }}">{{ crumb | capitalize }}</a>
+                        <a href="{{ url | relative_url }}">{{ nice_crumb }}</a>
+                    </li>
+                    {%- elsif isa_asset %}
+                    <li class="breadcrumb-item">
+                        <a href="{{ asset_url | relative_url }}">{{ nice_crumb }}</a>
                     </li>
                     {%- else %}
                     <li class="breadcrumb-item">
-                        {{ crumb | capitalize }}
+                        {{ nice_crumb }}
                     </li>
                     {%- endif %}
                     {%- unless crumb == crumbs.last %}{%- assign url = url | append: "/" %}{%- endunless %}
