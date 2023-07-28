@@ -12,7 +12,7 @@ bump_version() {
     fi
 
     # Replace the version with the new version using sed
-    sed -i "s/spec\.version\s*=\s*\"\(.*\)\"/spec.version = \"$new_version\"/" "$gemspec_file"
+    sed -i "s/spec\.version\s*=\s*\"\(.*\)\"/spec.version =       \"$new_version\"/" "$gemspec_file"
 
     echo "Version in $gemspec_file bumped to $new_version."
 }

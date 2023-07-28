@@ -110,7 +110,7 @@ style: sidebar # One of "stacked", "sidebar", "topbar"
 
 #### [Sidebar](/home-sidebar.md)
 
-![Sidebar image](/assets/img/sidebar-preview.png){: .thumbnail }
+![Sidebar image](/assets/img/sidebar-preview.png)
 
 #### [Stacked](/home-stacked.md)
 
@@ -146,7 +146,7 @@ links:
 
 The `repositories` section allows you to display your GitHub repositories on your page.  You can sort them by stars or latest pushes, set a limit to the number of repositories displayed, and exclude archived, forked, or specific repositories from the list
 
-![Repositories](/assets/img/repositories.png)
+![Repositories](/assets/img/repositories.png){: .border}
 
 ```yaml
 repositories:
@@ -166,7 +166,7 @@ repositories:
 
 Utilize the `social_media` section to add links to your various social media profiles.  For each platform simply provide your username or user ID to have the corresponding icon and link appear on your profile.
 
-![Social Media](/assets/img/social-media.png)
+![Social Media](/assets/img/social-media.png){: .border}
 
 ```yaml
 social_media:
