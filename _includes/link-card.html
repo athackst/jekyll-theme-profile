@@ -1,18 +1,10 @@
 {%- if link.web_url %}
-{%- assign is_local = link.web_url | slice: 0 %}
-{%- if is_local == '/' %}
-{%- capture url_prefix %}{{ site.baseurl }}{% endcapture %}
-{%- endif %}
-<a href="{{ link.web_url | prepend: url_prefix }}"
+<a href="{{ link.web_url | relative_url }}"
   class="github-component position-relative hover-grow no-underline d-flex flex-column text-center border border-gray-light rounded-1 p-1">
   <div class="d-inline-flex flex-items-center">
     <div class="avatar-7">
       {%- if link.image_url %}
-      {%- assign is_local = link.image_url | slice: 0 %}
-      {%- if is_local == '/' %}
-      {%- capture img_prefix %}{{ site.baseurl }}{% endcapture %}
-      {%- endif %}
-      <img src="{{ link.image_url | prepend: img_prefix }}" width="48" height="48"
+      <img src="{{ link.image_url | relative_url }}" width="48" height="48"
         class="rounded-1 box-shadow-none img-contain float-left" alt="{{ link.name }}">
       {%- endif %}
     </div>
@@ -30,11 +22,7 @@
   <div class="d-inline-flex flex-items-center">
     <div class="avatar-7">
       {%- if link.image_url %}
-      {%- assign is_local = link.image_url | slice: 0 %}
-      {%- if is_local == '/' %}
-      {%- capture img_prefix %}{{ site.baseurl }}{% endcapture %}
-      {%- endif %}
-      <img src="{{ link.image_url | prepend: img_prefix }}" width="48" height="48"
+      <img src="{{ link.image_url | relative_url }}" width="48" height="48"
         class="rounded-1 box-shadow-none img-contain float-left" alt="{{ link.name }}">
       {%- endif %}
     </div>
