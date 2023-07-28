@@ -1,6 +1,4 @@
 repository: athackst/jekyll-theme-profile
-url: https://www.althack.dev
-baseurl: /jekyll-theme-profile
 style: topbar # One of "stacked", "sidebar", "topbar"
 image: /assets/img/user-image.jpg
 
