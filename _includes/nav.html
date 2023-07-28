@@ -8,7 +8,7 @@
                 {%- for crumb in crumbs %}
                     {%- if crumb == "" %}
                         <li class="breadcrumb-item">
-                            <a href="/">Home</a>
+                            <a href="{{ site.baseurl}}/">Home</a>
                         </li>
                         {%- continue %}
                     {%- endif %}
@@ -20,11 +20,11 @@
 
                     {%- if page.url == url %}
                     <li class="breadcrumb-item breadcrumb-item-selected" aria-current="page">
-                        <a href="{{ page.url }}">{{ crumb | replace: ".html", "" | capitalize }}</a>
+                        <a href="{{ page.url | relative_url }}">{{ crumb | replace: ".html", "" | capitalize }}</a>
                     </li>
                     {%- elsif isa_page or isa_post %}
                     <li class="breadcrumb-item">
-                        <a href="{{ url }}">{{ crumb | capitalize }}</a>
+                        <a href="{{ url | relative_url }}">{{ crumb | capitalize }}</a>
                     </li>
                     {%- else %}
                     <li class="breadcrumb-item">
