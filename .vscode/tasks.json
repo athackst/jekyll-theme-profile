@@ -63,6 +63,12 @@
                     "BASEURL": "/jekyll-theme-profile"
                 }
             }
-        }
+        },
+        {
+            "label": "release",
+            "type": "shell",
+            "command": ".github/release.sh jekyll-theme-profile.gemspec",
+            "problemMatcher": []
+        },
     ]
 }
