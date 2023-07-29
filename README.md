@@ -1,5 +1,4 @@
 ---
-layout: default
 permalink: index.html
 ---
 ![jekyll-theme-profile](screenshot.png)
