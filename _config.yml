@@ -1,6 +1,7 @@
 repository: athackst/jekyll-theme-profile
 style: topbar # One of "stacked", "sidebar", "topbar"
-image: /assets/img/user-image.jpg
+user_image: /assets/img/user-image.jpg
+image: /screenshot.png
 
 plugins:
   - jekyll-github-metadata
