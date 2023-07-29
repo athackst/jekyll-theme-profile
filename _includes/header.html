@@ -1,25 +1,41 @@
 {%- assign user = site.github.owner %}
-{%- if page.path contains '_posts' %}
-{%- assign page_title = page.title %}
-{%- assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+{%- if page.title %}
+  {%- assign page_title = page.title %}
 {%- elsif site.title %}
-{%- assign page_title = site.title %}
-{%- assign meta_description = site.description %}
+  {%- assign page_title = site.title %}
 {%- else %}
-{%- assign page_title = user.name %}
-{%- assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+  {%- assign page_title = user.name %}
 {%- endif %}
+
+{%- if page.description %}
+  {%- assign meta_description = page.description %}
+{%- elsif page.path contains '_posts' %}
+  {%- assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+{%- elsif site.description %}
+  {%- assign meta_description = site.description %}
+{%- else %}
+  {%- assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+{%- endif %}
+
+{%- if page.image %}
+  {%- assign page_image = page.image %}
+{%- elsif site.image %}
+  {%- assign page_image = site.image %}
+{%- else %}
+  {% assign page_image = user.avatar_url %}
+{%- endif %}
+
 <head>
   <meta charset="utf-8">
   <title>{{ page_title }}</title>
   <meta name="description" content="{{ meta_description }}" />
-  <meta property="og:title" content="{{ user.name }}" />
-  <meta property="og:image" content="{%- if page.image %}{{ page.image }}{%- else %}{{ user.avatar_url }}{%- endif %}" />
+  <meta property="og:title" content="{{ page_title }}" />
+  <meta property="og:image" content="{{ page_image | relative_url }}" />
   <meta property="og:description" content="{{ meta_description }}" />
   <meta property="og:type" content="profile" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url}}">
   <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
 
 
