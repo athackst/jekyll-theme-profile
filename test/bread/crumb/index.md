@@ -1,8 +1,8 @@
 ---
-layout: default
-permalink: /test/bread/crumb
 breadcrumbs: true
 ---
+
+# Crumb
 
 ## This is a nested page via permalink
 

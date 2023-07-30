@@ -12,6 +12,10 @@ plugins:
 
 defaults:
   - scope:
+      type: pages
+    values:
+      permalink: /:path/:basename:output_ext
+  - scope:
       path: "" # an empty string here means all files in the project
       type: "posts"
     values:
@@ -42,13 +46,13 @@ posts_limit: 3
 
 links:
   - name: Example page with topbar
-    web_url: /page-topbar
+    web_url: /test/page/topbar
     image_url: /assets/img/icon-topbar.png
-  - name: Example page with sidebar
-    web_url: /page-sidebar
+  - name: Example page with sidebar/
+    web_url: /test/page/sidebar
     image_url: /assets/img/icon-sidebar.png
   - name: Example page with header stacked
-    web_url: /page-stacked
+    web_url: /test/page/stacked
     image_url: /assets/img/icon-stacked.png
 
 repositories:

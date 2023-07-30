@@ -98,6 +98,9 @@ jobs:
         with:
           ignore_urls: |
             https://opensource.org/license/mit/
+          swap_urls: |
+            ^${{ steps.pages.outputs.base_path }}:
+            ^.*${{ steps.pages.outputs.host }}${{ steps.pages.outputs.base_path }}:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
