@@ -1,5 +1,5 @@
 ---
-permalink: index.html
+permalink: /index.html
 ---
 ![jekyll-theme-profile](screenshot.png)
 
@@ -196,15 +196,15 @@ style: sidebar # One of "stacked", "sidebar", "topbar"
 ---
 ```
 
-#### [Sidebar](/home-sidebar.md)
+#### [Sidebar](/test/home/sidebar.md)
 
 ![Sidebar image](/assets/img/sidebar-preview.png)
 
-#### [Stacked](/home-stacked.md)
+#### [Stacked](/test/home/stacked.md)
 
 ![Stacked image](/assets/img/stacked-preview.png)
 
-#### [Topbar](/home-topbar.md)
+#### [Topbar](/test/home/topbar.md)
 
 ![Topbar image](/assets/img/topbar-preview.png)
 

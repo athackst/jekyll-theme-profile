@@ -1,8 +1,8 @@
 ---
-layout: default
-permalink: /test/bread
 breadcrumbs: true
 ---
+
+# bread
 
 ## This is a nested page
 

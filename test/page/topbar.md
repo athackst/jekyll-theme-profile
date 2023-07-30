@@ -1,12 +1,12 @@
 ---
 layout: page
-style: stacked
-title: Page (Stacked Style)
+style: topbar
+title: Page (Topbar Style)
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](./another-page.html).
+[Link to another page](../../another-page.md).
 
 There should be whitespace between paragraphs.
 
