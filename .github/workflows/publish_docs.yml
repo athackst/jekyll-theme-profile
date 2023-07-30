@@ -66,6 +66,7 @@ jobs:
       - name: Debug output
         run: |
           tree _site
+          cat _site/index.html
       - name: HTLMProofer
         run: .github/test.sh
         env:
