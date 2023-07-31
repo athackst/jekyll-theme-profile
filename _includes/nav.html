@@ -16,6 +16,8 @@
                     {%- assign isa_asset = site.pages | where: "url", asset_url | first %}
                     {%- assign index_url = url | append: crumb | append: "/index.html" %}
                     {%- assign isa_index = site.pages | where: "url", index_url | first %}
+                    {%- assign folder_url = url | append: crumb | append: "/" %}
+                    {%- assign isa_folder = site.pages | where: "url", folder_url | first %}
                     {%- assign url = url | append: crumb %}
                     {%- assign isa_page = site.pages | where: "url", url | first %}
                     {%- assign isa_post = site.posts | where: "url", url | first %}
@@ -30,22 +32,19 @@
                     {% endfor %}
                     {%- endcomment %}
 
-                    {%- if page.url == url or page.url == index_url %}
+
+                    {%- if page.url == url or page.url == index_url or page.url == folder_url %}
                     <li class="breadcrumb-item breadcrumb-item-selected" aria-current="page">
                         <a href="{{ page.url | relative_url }}">{{ nice_crumb }}</a>
                     </li>
                         {%- break %}
-                    {%- elsif isa_page or isa_post %}
+                    {%- elsif isa_page or isa_post or isa_index or isa_folder %}
                     <li class="breadcrumb-item">
                         <a href="{{ url | relative_url }}">{{ nice_crumb }}</a>
                     </li>
                     {%- elsif isa_asset %}
                     <li class="breadcrumb-item">
                         <a href="{{ asset_url | relative_url }}">{{ nice_crumb }}</a>
-                    </li>
-                    {%- elsif isa_index %}
-                    <li class="breadcrumb-item">
-                        <a href="{{ index_url | relative_url }}">{{ nice_crumb }}</a>
                     </li>
                     {%- else %}
                     <li class="breadcrumb-item">

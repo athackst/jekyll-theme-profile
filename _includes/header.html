@@ -1,4 +1,12 @@
 {%- assign user = site.github.owner %}
+{% capture last_char %}{{ page.url | slice: -1 }}{% endcapture %}
+{%- if page.url == '/' %}
+  {%- capture page_url %}{{ site.url }}{{ site.baseurl }}{% endcapture %}
+{%- elsif last_char == '/' %}
+  {%- capture page_url %}{{ page.url | append: "index.html" }}{% endcapture %}
+{%- else %}
+  {%- assign page_url = page.url %}
+{%- endif %}
 {%- if page.title %}
   {%- assign page_title = page.title %}
 {%- elsif site.title %}
@@ -35,16 +43,16 @@
  <meta name="description" content="{{ meta_description }}">
 
  <!-- Opengraph Meta Tags -->
- <meta property="og:url" content="{{ page.url | absolute_url }}">
+ <meta property="og:url" content="{{ page_url | absolute_url }}">
  <meta property="og:type" content="website">
- <meta property="og:title" content="{{ page_title }}">
+ <meta property="og:title" content="{{ page_title | absolute_url }}">
  <meta property="og:description" content="{{ meta_description }}">
  <meta property="og:image" content="{{ page_image | absolute_url }}">
 
  <!-- Twitter Meta Tags -->
  <meta name="twitter:card" content="summary_large_image">
- <meta property="twitter:domain" content="{{ site.url | replace: 'https://', '' | replace: 'www.', '' }}">
- <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+ <meta property="twitter:domain" content="{{ site.url | replace: 'http://', '' | replace: 'https://', '' | replace: 'www.', '' }}">
+ <meta property="twitter:url" content="{{ page_url | absolute_url }}">
  <meta name="twitter:title" content="{{ page_title }}">
  <meta name="twitter:description" content="{{ meta_description }}">
  <meta name="twitter:image" content="{{ page_image | absolute_url }}">

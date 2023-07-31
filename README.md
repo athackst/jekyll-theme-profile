@@ -1,5 +1,5 @@
 ---
-permalink: /index.html
+permalink: /
 ---
 ![jekyll-theme-profile](screenshot.png)
 

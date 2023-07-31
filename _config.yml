@@ -12,10 +12,6 @@ plugins:
 
 defaults:
   - scope:
-      type: pages
-    values:
-      permalink: /:path/:basename:output_ext
-  - scope:
       path: "" # an empty string here means all files in the project
       type: "posts"
     values:
