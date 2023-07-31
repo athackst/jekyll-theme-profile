@@ -1,12 +1,12 @@
 {%- assign user = site.github.owner %}
+
 {% capture last_char %}{{ page.url | slice: -1 }}{% endcapture %}
-{%- if page.url == '/' %}
-  {%- capture page_url %}{{ site.url }}{{ site.baseurl }}{% endcapture %}
-{%- elsif last_char == '/' %}
+{%- if last_char == '/' %}
   {%- capture page_url %}{{ page.url | append: "index.html" }}{% endcapture %}
 {%- else %}
   {%- assign page_url = page.url %}
 {%- endif %}
+
 {%- if page.title %}
   {%- assign page_title = page.title %}
 {%- elsif site.title %}
@@ -36,7 +36,6 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <!-- HTML Meta Tags -->
  <title>{{ page_title }}</title>
