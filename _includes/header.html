@@ -59,7 +59,7 @@
 
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url}}">
-  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <link rel="canonical" href="{{ page.url | absoulte_url }}">
 
 
   {%- if site.analytics.provider == 'google' %}
