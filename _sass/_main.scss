@@ -43,3 +43,7 @@
   border-radius: 50%; /* Make the div circular */
   object-fit: cover; /* Scale the image to fill the container */
 }
+
+.overflow-wrap-word {
+  overflow-wrap: break-word;
+}
