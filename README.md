@@ -42,7 +42,12 @@ repository: athackst/jekyll-theme-profile # Your repository name
 url: https://username.github.io # The host url for your site
 baseurl: "" # or your package name /jekyll-theme-profile (leave blank if it is the username.github.io package)
 style: topbar # One of "stacked", "sidebar", "topbar"
-# image: /assets/img/user-image.jpg # If you don't want to use your github image, set a custom one here
+# background: #(optional)
+#   image: /assets/img/background-img.jpg # The path/url to the image you want on the background
+#   light:
+#     overlay: rgba(255, 255, 255, 0.5) # Overlay for light theme
+#   dark:
+#     overlay: rgba(0, 0, 0, 0.5) # Overlay for dark theme
 
 links:
 #   - name: Example full entry
@@ -209,6 +214,21 @@ style: sidebar # One of "stacked", "sidebar", "topbar"
 #### [Topbar](/test/home/topbar.md)
 
 ![Topbar image](/assets/img/topbar-preview.png)
+
+#### Background
+
+You can even change the background by adding the following to your `_config.yml` file.
+
+```yaml
+# background:
+#   image: /assets/img/background-img.jpg
+#   light:
+#     overlay: rgba(255, 255, 255, 0.5)
+#   dark:
+#     overlay: rgba(0, 0, 0, 0.5)
+```
+
+[Example page](/test/page/background.md)
 
 ### Links
 

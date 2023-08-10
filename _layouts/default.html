@@ -37,15 +37,17 @@
 
 {%- include header.html %}
 
-<body class="min-height-full">
+<body class="min-height-full d-flex flex-column">
     {%- if style == 'stacked' %}
-    <div class="container-lg p-responsive py-3">
+    <div class="container-lg p-responsive py-3 min-height-full">
         <div class="text-center">
         {%- include nav.html breadcrumbs=breadcrumbs %}
         {%- include masthead.html metadata=metadata %}
         </div>
-        <div class="p-responsive mb-6 markdown-body">
-            {{ content }}
+        <div class="d-flex">
+            <div class="p-responsive p-3 markdown-body color-bg-default">
+                {{ content }}
+            </div>
         </div>
     </div>
     {%- elsif style == 'sidebar' %}
@@ -54,7 +56,7 @@
             class="col-lg-4 border-gray-light px-4 py-6 text-center">
             {%- include masthead.html metadata=metadata %}
         </div>
-        <div class="col-lg-8 border-top border-lg-top-0 px-4 ">
+        <div class="col-lg-8 border-top border-lg-top-0 px-4 color-bg-default">
             <div class="py-3">
                 {%- include nav.html breadcrumbs=breadcrumbs %}
                 <div class="p-responsive mb-6 mt-3 markdown-body">
@@ -83,7 +85,7 @@
         </div>
     </div>
 
-    <div class="container-lg py-3">
+    <div class="container-lg p-3 color-bg-default flex-1">
         {%- include nav.html breadcrumbs=breadcrumbs %}
         <div class="p-responsive mb-6 mt-3 markdown-body">
             {{ content }}
