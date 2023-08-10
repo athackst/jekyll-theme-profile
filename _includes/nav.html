@@ -12,7 +12,7 @@
                         </li>
                         {%- continue %}
                     {%- endif %}
-                    {%- assign asset_url = url | append: "assets/" | append: crumb | append: "/index.html" %}
+                    {%- assign asset_url = url | append: "assets/" | append: crumb | append: "/" %}
                     {%- assign isa_asset = site.pages | where: "url", asset_url | first %}
                     {%- assign index_url = url | append: crumb | append: "/index.html" %}
                     {%- assign isa_index = site.pages | where: "url", index_url | first %}
@@ -26,12 +26,14 @@
 
                     {%- comment %}
                     Checking the crumb: {{ crumb }}
-                    Checking crumb url: {{ index_url }}
+                    [asset url: {{ asset_url }}]
+                    [index url: {{ index_url }}]
+                    [folder_url: {{ folder_url }}]
+                    [url: {{ url }}]
                     {% for p in site.pages %}
                     {{ p.url }}
                     {% endfor %}
                     {%- endcomment %}
-
 
                     {%- if page.url == url or page.url == index_url or page.url == folder_url %}
                     <li class="breadcrumb-item breadcrumb-item-selected" aria-current="page">
