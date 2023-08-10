@@ -97,6 +97,14 @@
   </div>
   {%- endif %}
 
+  {%- if site.social_media.threads %}
+  <div class="mr-3">
+    <a href="https://www.threads.net/@{{ site.social_media.threads }}" class="tooltipped tooltipped-se" aria-label="Threads: {{ site.social_media.threads }}">
+      <img src="/assets/brands/threads.svg" alt="threads" />
+    </a>
+  </div>
+  {%- endif %}
+
   {%- if site.social_media.twitter %}
   <div class="mr-3">
     <a href="https://www.twitter.com/{{ site.social_media.twitter }}" class="tooltipped tooltipped-se" aria-label="Twitter: {{ site.social_media.twitter }}">
@@ -125,6 +133,14 @@
   <div class="mr-3">
     <a href="https://marketplace.visualstudio.com/publishers/{{ site.social_media.vscode }}" class="tooltipped tooltipped-se" aria-label="VS Code Marketplace: {{ site.social_media.vscode }}">
       <img src="/assets/brands/vscode.svg" alt="vscode" />
+    </a>
+  </div>
+  {%- endif %}
+
+  {%- if site.social_media.x %}
+  <div class="mr-3">
+    <a href="https://www.x.com/{{ site.social_media.x }}" class="tooltipped tooltipped-se" aria-label="X: {{ site.social_media.x }}">
+      <img src="/assets/brands/x.svg" alt="x" />
     </a>
   </div>
   {%- endif %}
