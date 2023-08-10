@@ -2,6 +2,12 @@ repository: athackst/jekyll-theme-profile
 style: topbar # One of "stacked", "sidebar", "topbar"
 user_image: /assets/img/user-image.jpg
 image: /screenshot.png
+# background:
+#   image: /assets/img/background-img.jpg
+#   light:
+#     overlay: rgba(255, 255, 255, 0.5)
+#   dark:
+#     overlay: rgba(0, 0, 0, 0.5)
 
 plugins:
   - jekyll-github-metadata
@@ -44,12 +50,15 @@ links:
   - name: Example page with topbar
     web_url: /test/page/topbar
     image_url: /assets/img/icon-topbar.png
-  - name: Example page with sidebar/
+  - name: Example page with sidebar
     web_url: /test/page/sidebar
     image_url: /assets/img/icon-sidebar.png
   - name: Example page with header stacked
     web_url: /test/page/stacked
     image_url: /assets/img/icon-stacked.png
+  - name: Example page with a custom background
+    web_url: /test/page/background
+    image_url: /assets/img/icon-bg.png
 
 repositories:
   sort_by: stars
