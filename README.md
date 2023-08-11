@@ -51,14 +51,14 @@ style: topbar # One of "stacked", "sidebar", "topbar"
 
 links:
 #   - name: Example full entry
-#     web_url: https://www.example.com
-#     image_url: /assets/img/icon-topbar.png
+#     url: https://www.example.com
+#     thumbnail: /assets/img/icon-topbar.png
 #     description: Example description
 #   - name: Example entry with url and image
-#     web_url: https://www.example.com
-#     image_url: /assets/img/icon-sidebar.png
+#     url: https://www.example.com
+#     thumbnail: /assets/img/icon-sidebar.png
 #   - name: Example entry with image
-#     image_url: /assets/img/icon-stacked.png
+#     thumbnail: /assets/img/icon-stacked.png
 #   - name: Example entry with description
 #     description: Example Description
 #   - name: Example entry with only a name
@@ -239,14 +239,14 @@ In the `links` section, you can add links to showcase various pages on the web o
 ```yaml
 links:
   - name: Example full entry
-    web_url: https://www.example.com
-    image_url: /assets/img/icon-topbar.png
+    url: https://www.example.com
+    thumbnail: /assets/img/icon-topbar.png
     description: Example description
   - name: Example entry with url and image
-    web_url: https://www.example.com
-    image_url: /assets/img/icon-sidebar.png
+    url: https://www.example.com
+    thumbnail: /assets/img/icon-sidebar.png
   - name: Example entry with image
-    image_url: /assets/img/icon-stacked.png
+    thumbnail: /assets/img/icon-stacked.png
   - name: Example entry with description
     description: Example Description
   - name: Example entry with only a name
