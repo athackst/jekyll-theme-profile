@@ -293,12 +293,19 @@ social_media:
   stackoverflow: your_user_id
   telegram: your_username
   threads: your_username
+  tiktok: your_username
   twitter: your_username
   unsplash: your_username
   vk: your_username
   vscode: your_username
   youtube: your_username
   x: your_username
+```
+
+You can also set the icon color.  If you don't set an icon color, the original icon colors will be used.
+
+```yaml
+icon_color: "#959da5"
 ```
 
 ### Blog
