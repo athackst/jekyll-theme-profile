@@ -2,6 +2,7 @@ repository: athackst/jekyll-theme-profile
 style: topbar # One of "stacked", "sidebar", "topbar"
 user_image: /assets/img/user-image.jpg
 image: /screenshot.png
+# icon_color: "#959da5"
 # background:
 #   image: /assets/img/background-img.jpg
 #   light:
@@ -86,6 +87,7 @@ social_media:
   # stackoverflow: your_user_id
   # telegram: your_username
   # threads: your_username
+  # tiktok: your_username
   # twitter: your_username
   # unsplash: your_username
   # vk: your_username
