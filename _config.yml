@@ -1,10 +1,10 @@
 repository: athackst/jekyll-theme-profile
 style: topbar # One of "stacked", "sidebar", "topbar"
-user_image: /assets/img/user-image.jpg
+user_image: /media/user-image.jpg
 social_image: /screenshot.png
 # icon_color: "#959da5"
 # background:
-#   image: /assets/img/background-img.jpg
+#   image: /media/background-img.jpg
 #   light:
 #     overlay: rgba(255, 255, 255, 0.5)
 #   dark:
@@ -58,16 +58,16 @@ nav:
 links:
   - name: Example page with topbar
     url: /test/page/topbar
-    thumbnail: /assets/img/icon-topbar.png
+    thumbnail: /media/icon-topbar.png
   - name: Example page with sidebar
     url: /test/page/sidebar
-    thumbnail: /assets/img/icon-sidebar.png
+    thumbnail: /media/icon-sidebar.png
   - name: Example page with header stacked
     url: /test/page/stacked
-    thumbnail: /assets/img/icon-stacked.png
+    thumbnail: /media/icon-stacked.png
   - name: Example page with a custom background
     url: /test/page/background
-    thumbnail: /assets/img/icon-bg.png
+    thumbnail: /media/icon-bg.png
 
 repositories:
   sort_by: stars
