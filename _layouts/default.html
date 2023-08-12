@@ -41,7 +41,7 @@
     {%- if style == 'stacked' %}
     <div class="container-lg p-responsive py-3 min-height-full">
         <div class="text-center">
-        {%- include nav.html breadcrumbs=breadcrumbs %}
+        {%- include banner.html breadcrumbs=breadcrumbs %}
         {%- include masthead.html metadata=metadata %}
         </div>
         <div class="d-flex">
@@ -58,7 +58,7 @@
         </div>
         <div class="col-lg-8 border-top border-lg-top-0 px-4 color-bg-default">
             <div class="py-3">
-                {%- include nav.html breadcrumbs=breadcrumbs %}
+                {%- include banner.html breadcrumbs=breadcrumbs %}
                 <div class="p-responsive mb-6 mt-3 markdown-body">
                     {{ content }}
                 </div>
@@ -86,7 +86,7 @@
     </div>
 
     <div class="container-lg p-3 color-bg-default flex-1">
-        {%- include nav.html breadcrumbs=breadcrumbs %}
+        {%- include banner.html breadcrumbs=breadcrumbs %}
         <div class="p-responsive mb-6 mt-3 markdown-body">
             {{ content }}
         </div>
