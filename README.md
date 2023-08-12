@@ -44,7 +44,7 @@ baseurl: "" # or your package name /jekyll-theme-profile (leave blank if it is t
 style: topbar # One of "stacked", "sidebar", "topbar"
 # social_image: /screenshot.jpg # The image to use for social cards
 # background: #(optional)
-#   image: /assets/img/background-img.jpg # The path/url to the image you want on the background
+#   image: /media/background-img.jpg # The path/url to the image you want on the background
 #   light:
 #     overlay: rgba(255, 255, 255, 0.5) # Overlay for light theme
 #   dark:
@@ -61,13 +61,13 @@ style: topbar # One of "stacked", "sidebar", "topbar"
 # links:
 #   - name: Example full entry
 #     url: https://www.example.com
-#     thumbnail: /assets/img/icon-topbar.png
+#     thumbnail: /media/icon-topbar.png
 #     description: Example description
 #   - name: Example entry with url and image
 #     url: https://www.example.com
-#     thumbnail: /assets/img/icon-sidebar.png
+#     thumbnail: /media/icon-sidebar.png
 #   - name: Example entry with image
-#     thumbnail: /assets/img/icon-stacked.png
+#     thumbnail: /media/icon-stacked.png
 #   - name: Example entry with description
 #     description: Example Description
 #   - name: Example entry with only a name
@@ -214,15 +214,15 @@ style: sidebar # One of "stacked", "sidebar", "topbar"
 
 #### [Sidebar](/test/home/sidebar.md)
 
-![Sidebar image](/assets/img/sidebar-preview.png)
+![Sidebar image](/media/sidebar-preview.png)
 
 #### [Stacked](/test/home/stacked.md)
 
-![Stacked image](/assets/img/stacked-preview.png)
+![Stacked image](/media/stacked-preview.png)
 
 #### [Topbar](/test/home/topbar.md)
 
-![Topbar image](/assets/img/topbar-preview.png)
+![Topbar image](/media/topbar-preview.png)
 
 #### Background
 
@@ -230,7 +230,7 @@ You can even change the background by adding the following to your `_config.yml`
 
 ```yaml
 # background:
-#   image: /assets/img/background-img.jpg
+#   image: /media/background-img.jpg
 #   light:
 #     overlay: rgba(255, 255, 255, 0.5)
 #   dark:
@@ -243,7 +243,7 @@ You can even change the background by adding the following to your `_config.yml`
 
 In the `nav` section, you can add navigation links that will show up on every page of your website.
 
-![Nav](/assets/img/nav.png){: .border}
+![Nav](/media/nav.png){: .border}
 
 ```yaml
 nav:
@@ -259,19 +259,19 @@ nav:
 
 In the `links` section, you can add links to showcase various pages on the web or your website.
 
-![Links](/assets/img/links.png){: .border}
+![Links](/media/links.png){: .border}
 
 ```yaml
 links:
   - name: Example full entry
     url: https://www.example.com
-    thumbnail: /assets/img/icon-topbar.png
+    thumbnail: /media/icon-topbar.png
     description: Example description
   - name: Example entry with url and image
     url: https://www.example.com
-    thumbnail: /assets/img/icon-sidebar.png
+    thumbnail: /media/icon-sidebar.png
   - name: Example entry with image
-    thumbnail: /assets/img/icon-stacked.png
+    thumbnail: /media/icon-stacked.png
   - name: Example entry with description
     description: Example Description
   - name: Example entry with only a name
@@ -281,7 +281,7 @@ links:
 
 The `repositories` section allows you to display your GitHub repositories on your page.  You can sort them by stars or latest pushes, set a limit to the number of repositories displayed, and exclude archived, forked, or specific repositories from the list
 
-![Repositories](/assets/img/repositories.png){: .border}
+![Repositories](/media/repositories.png){: .border}
 
 ```yaml
 repositories:
@@ -313,7 +313,7 @@ This works on both yaml frontmatter for a page and in the `_config.yml` file.  P
 
 Utilize the `social_media` section to add links to your various social media profiles.  For each platform simply provide your username or user ID to have the corresponding icon and link appear on your profile.
 
-![Social Media](/assets/img/social-media.png){: .border}
+![Social Media](/media/social-media.png){: .border}
 
 ```yaml
 social_media:
@@ -349,7 +349,7 @@ icon_color: "#959da5"
 
 Make entries for the blog the same way you normally would by placing entries in the `_posts` folder.  You can adjust the number of entries that show up in the main page by adjusting `posts_limit` in the `_config.yml` file.  If you have more posts than the limit, a `Read more` button will link to the paginated blog post page /blog/index.html.
 
-![Blog](/assets/img/blog.png){: .border}
+![Blog](/media/blog.png){: .border}
 
 ```yaml
 posts_limit: 3
