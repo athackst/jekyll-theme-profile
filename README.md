@@ -49,7 +49,15 @@ style: topbar # One of "stacked", "sidebar", "topbar"
 #   dark:
 #     overlay: rgba(0, 0, 0, 0.5) # Overlay for dark theme
 
-links:
+# nav:
+#   - name: Topbar
+#     url: /test/home/topbar.html
+#   - name: Sidebar
+#     url: /test/home/sidebar.html
+#   - name: Stacked
+#     url: /test/home/stacked.html
+
+# links:
 #   - name: Example full entry
 #     url: https://www.example.com
 #     thumbnail: /assets/img/icon-topbar.png
@@ -75,7 +83,7 @@ repositories:
     repositories:
       # - respositories to exclude
 
-social_media:
+# social_media:
 #   behance: your_username
 #   dribbble: your_username
 #   docker: your_username
@@ -229,6 +237,22 @@ You can even change the background by adding the following to your `_config.yml`
 ```
 
 [Example page](/test/page/background.md)
+
+### Nav
+
+In the `nav` section, you can add navigation links that will show up on every page of your website.
+
+![Nav](/assets/img/nav.png){: .border}
+
+```yaml
+nav:
+  - name: Topbar
+    url: /test/home/topbar.html
+  - name: Sidebar
+    url: /test/home/sidebar.html
+  - name: Stacked
+    url: /test/home/stacked.html
+```
 
 ### Links
 
