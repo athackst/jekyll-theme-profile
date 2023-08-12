@@ -42,6 +42,7 @@ repository: athackst/jekyll-theme-profile # Your repository name
 url: https://username.github.io # The host url for your site
 baseurl: "" # or your package name /jekyll-theme-profile (leave blank if it is the username.github.io package)
 style: topbar # One of "stacked", "sidebar", "topbar"
+# social_image: /screenshot.jpg # The image to use for social cards
 # background: #(optional)
 #   image: /assets/img/background-img.jpg # The path/url to the image you want on the background
 #   light:
@@ -297,6 +298,18 @@ repositories:
 ```
 
 ### Social media
+
+#### Setting the social media card
+
+You can set the social media image for your site with the setting
+
+```yaml
+social_image: /screenshot.jpg
+```
+
+This works on both yaml frontmatter for a page and in the `_config.yml` file.  Page settings will override site settings.
+
+#### Adding your socials
 
 Utilize the `social_media` section to add links to your various social media profiles.  For each platform simply provide your username or user ID to have the corresponding icon and link appear on your profile.
 
