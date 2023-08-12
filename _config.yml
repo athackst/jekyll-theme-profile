@@ -47,6 +47,14 @@ markdown: kramdown
 
 posts_limit: 3
 
+nav:
+  - name: Topbar
+    url: /test/home/topbar.html
+  - name: Sidebar
+    url: /test/home/sidebar.html
+  - name: Stacked
+    url: /test/home/stacked.html
+
 links:
   - name: Example page with topbar
     url: /test/page/topbar
