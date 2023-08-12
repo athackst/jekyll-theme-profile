@@ -1,7 +1,7 @@
 repository: athackst/jekyll-theme-profile
 style: topbar # One of "stacked", "sidebar", "topbar"
 user_image: /assets/img/user-image.jpg
-image: /screenshot.png
+social_image: /screenshot.png
 # icon_color: "#959da5"
 # background:
 #   image: /assets/img/background-img.jpg
