@@ -41,7 +41,7 @@
 <body class="min-height-full">
     {%- if style == 'stacked' %}
     <div class="container-lg p-responsive min-height-full">
-        <div class="d-flex flex-justify-end mt-2">
+        <div class="d-flex flex-justify-end pt-2">
             {%- include toggle.html %}
         </div>
         <div class="text-center py-3 border-bottom">
@@ -62,13 +62,15 @@
             {%- include nav.html %}
         </nav>
         {%- endif %}
-        {%- if breadcrumbs %}
-        <div class="mt-1">
-            {%- include breadcrumbs.html %}
-        </div>
-        {%- endif %}
-        <div class="p-responsive p-3 markdown-body color-bg-default">
+        <div class="color-bg-default">
+            {%- if breadcrumbs %}
+            <div class="p-3">
+                {%- include breadcrumbs.html %}
+            </div>
+            {%- endif %}
+            <div class="p-responsive markdown-body ">
             {{ content }}
+            </div>
         </div>
     </div>
     {%- elsif style == 'sidebar' %}
@@ -101,7 +103,7 @@
                     </div>
                     {% include toggle.html %}
                 </div>
-                <div class="p-responsive mb-6 mt-3 markdown-body">
+                <div class="p-responsive markdown-body">
                     {{ content }}
                 </div>
             </div>
@@ -148,7 +150,7 @@
         {%- if breadcrumbs %}
         {%- include breadcrumbs.html %}
         {%- endif %}
-        <div class="p-responsive mb-6 mt-3 markdown-body">
+        <div class="p-responsive markdown-body">
             {{ content }}
         </div>
     </div>
