@@ -15,40 +15,42 @@
 {%- endif %}
 
 {%- assign metadata_styles = 'd-flex flex-items-center flex-justify-center mb-3' %}
-<a href="{{ site.baseurl }}/">
-  <div class="img-masthead">
-    <img src="{{ user_img | relative_url }}" alt="{{ name }}"
-      class="avatar avatar-user rounded-circle border color-border-default">
-  </div>
-</a>
-<h1 class="mb-2 lh-condensed overflow-wrap-word">{{ name }}</h1>
-<p class="mb-3 f4">
-  {{ user.bio }}
-</p>
+<div class="Masthead">
+  <a href="{{ site.baseurl }}/">
+    <div class="img-masthead">
+      <img src="{{ user_img | relative_url }}" alt="{{ name }}"
+        class="avatar avatar-user rounded-circle border color-border-default">
+    </div>
+  </a>
+  <h1 class="mb-2 lh-condensed overflow-wrap-word">{{ name }}</h1>
+  <p class="mb-3 f4">
+    {{ user.bio }}
+  </p>
 
-{%- if include.metadata %}
-<div class="f4">
-  {%- if user.name %}
-  <div class="{{ metadata_styles }}">
-    {% octicon mark-github height:20 class:"mr-2 v-align-middle" aria-label:GitHub %}
-    <a href="https://github.com/{{ user.login }}">
-      @{{ user.login }}
-    </a>
-  </div>
-  {%- endif %}
-  {%- if user.email %}
-  <div class="{{ metadata_styles }}">
-    {% octicon mail height:20 class:"mr-2 v-align-middle" aria-label:email %}
-    <a href="mailto:{{ user.email }}">
-      {{ user.email }}
-    </a>
-  </div>
-  {%- endif %}
-  {%- if user.location %}
-  <div class="{{ metadata_styles }}">
-    {% octicon location height:20 class:"mr-2 v-align-middle" aria-label:Location %}
-    {{ user.location }}
+  {%- if include.metadata %}
+  <div class="f4">
+    {%- if user.name %}
+    <div class="{{ metadata_styles }}">
+      {% octicon mark-github height:20 class:"mr-2 v-align-middle" aria-label:GitHub %}
+      <a href="https://github.com/{{ user.login }}">
+        @{{ user.login }}
+      </a>
+    </div>
+    {%- endif %}
+    {%- if user.email %}
+    <div class="{{ metadata_styles }}">
+      {% octicon mail height:20 class:"mr-2 v-align-middle" aria-label:email %}
+      <a href="mailto:{{ user.email }}">
+        {{ user.email }}
+      </a>
+    </div>
+    {%- endif %}
+    {%- if user.location %}
+    <div class="{{ metadata_styles }}">
+      {% octicon location height:20 class:"mr-2 v-align-middle" aria-label:Location %}
+      {{ user.location }}
+    </div>
+    {%- endif %}
   </div>
   {%- endif %}
 </div>
-{%- endif %}

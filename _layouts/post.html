@@ -3,14 +3,15 @@ layout: page
 ---
 <p class="mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
 <div class="markdown-body">
-{{ content }}
+    {{ content }}
 </div>
 
 <!-- Pagination links -->
 <div class="paginate-container">
     <div role="navigation" aria-label="Pagination" class="d-flex d-md-inline-block pagination">
         {% if page.previous.url %}
-        <a class="previous_page" rel="prev" href="{{ page.previous.url | relative_url }}" aria-disabled="false">{{page.previous.title | truncate: 20 }}</a>
+        <a class="previous_page" rel="prev" href="{{ page.previous.url | relative_url }}"
+            aria-disabled="false">{{page.previous.title | truncate: 20 }}</a>
         {% else %}
         <span class="previous_page disabled" aria-disabled="true">Previous</span>
         {% endif %}
