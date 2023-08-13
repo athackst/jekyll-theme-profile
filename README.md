@@ -66,10 +66,12 @@ user_image: /media/user-image.jpg
   # dribbble: your_username
   # docker: your_username
   # facebook: your_username
+  # github: your_username
   # hackerrank: your_username
   # instagram: your_username
   # keybase: your_username
   # linkedin: your_username
+  # mail: email@address
   # mastodon: your_username
   # medium: your_username
   # stackoverflow: your_user_id
@@ -345,10 +347,12 @@ social_media:
   dribbble: your_username
   docker: your_username
   facebook: your_username
+  github: your_username
   hackerrank: your_username
   instagram: your_username
   keybase: your_username
   linkedin: your_username
+  mail: email@address
   mastodon: your_username
   medium: your_username
   stackoverflow: your_user_id
