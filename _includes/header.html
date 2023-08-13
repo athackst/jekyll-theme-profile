@@ -167,15 +167,15 @@
   </script>
 
 {%- if bg_image %}
+{%- if site.backgrournd.overlay %}
+  {%- assign dark_overlay = site.background.overlay %}
+  {%- assign light_overlay = site.background.overlay %}
+{%- endif %}
 {%- if site.background.dark.overlay %}
   {%- assign dark_overlay = site.background.dark.overlay %}
-{%- else %}
-  {%- assign dark_overlay = 'rgba(34, 39, 46, 0.5)' %}
 {%- endif %}
 {%- if site.background.light.overlay %}
   {%- assign light_overlay = site.background.light.overlay %}
-{%- else %}
-  {%- assign light_overlay = 'rgba(255, 255, 255, 0.5)' %}
 {%- endif %}
 <style>
   body {
