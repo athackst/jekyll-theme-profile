@@ -26,28 +26,46 @@
 {%- assign user_img = user.avatar_url %}
 {%- endif %}
 
-{%- if site.metadata %}
+{%- if site.metadata == true or site.metadata == false %}
 {%- assign metadata = site.metadata %}
 {%- else %}
 {%- assign metadata = true %}
 {%- endif %}
 
 <!doctype html>
-<html lang="en" class="min-height-full min-width" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
+<html lang="en" class="min-height-full min-width" data-color-mode="auto" data-light-theme="light"
+    data-dark-theme="dark_dimmed">
 
 {%- include header.html %}
 
 <body class="min-height-full">
     {%- if style == 'stacked' %}
-    <div class="container-lg p-responsive py-3 min-height-full">
-        <div class="text-center">
-        {%- include banner.html breadcrumbs=breadcrumbs %}
-        {%- include masthead.html metadata=metadata %}
+    <div class="container-lg p-responsive min-height-full">
+        <div class="d-flex flex-justify-end mt-2">
+            {%- include toggle.html %}
+        </div>
+        <div class="text-center py-3 border-bottom">
+            {%- include masthead.html metadata=metadata %}
+            {%- if site.repo_info %}
+            <div class="my-2">
+                {% include mini-repo-info-card.html class="Box-row-link" %}
+            </div>
+            {%- endif %}
+            {%- if site.social_media %}
+            <div class="my-2">
+                {%- include social.html %}
+            </div>
+            {%- endif %}
         </div>
         {%- if site.nav %}
         <nav class="Header d-flex flex-column flex-md-row flex-justify-center">
             {%- include nav.html %}
         </nav>
+        {%- endif %}
+        {%- if breadcrumbs %}
+        <div class="mt-1">
+            {%- include breadcrumbs.html %}
+        </div>
         {%- endif %}
         <div class="p-responsive p-3 markdown-body color-bg-default">
             {{ content }}
@@ -57,6 +75,16 @@
     <div class="container-xl d-lg-flex min-height-full">
         <div class="col-lg-4 border-gray-light px-4 py-6 text-center">
             {%- include masthead.html metadata=metadata %}
+            {%- if site.repo_info %}
+            <div class="my-2">
+                {% include mini-repo-info-card.html class="Box-row-link" %}
+            </div>
+            {%- endif %}
+            {%- if site.social_media %}
+            <div class="my-2">
+                {%- include social.html %}
+            </div>
+            {%- endif %}
             {%- if site.nav %}
             <nav class="d-flex flex-column Header">
                 {%- include nav.html %}
@@ -65,7 +93,14 @@
         </div>
         <div class="col-lg-8 border-top border-lg-top-0 px-4 color-bg-default">
             <div class="py-3">
-                {%- include banner.html breadcrumbs=breadcrumbs %}
+                <div class="d-flex">
+                    {%- if breadcrumbs %}
+                    {%- include breadcrumbs.html %}
+                    {%- endif %}
+                    <div class="flex-1">
+                    </div>
+                    {% include toggle.html %}
+                </div>
                 <div class="p-responsive mb-6 mt-3 markdown-body">
                     {{ content }}
                 </div>
@@ -74,36 +109,45 @@
     </div>
     {%- else %}
     <div class="Header">
-        <div class="Header-item">
-            <a href="{{ site.baseurl }}/" class="Header-link f4 d-flex flex-items-center">
-                {% octicon mark-github height:32 %}
-            </a>
-        </div>
-        <div class="Header-item Header-item--full">
-            {{ name }}
-        </div>
-        {%- if site.nav %}
-        <div class="Header-item hide-md hide-sm">
-        {%- include nav.html %}
-        </div>
-        {%- endif %}
-        <div class="Header-item">
-            {%- include social.html %}
-        </div>
-        <div class="Header-item mr-0 ml-3">
-            <a href="https://github.com/{{ user.login }}" class="Header-link f4 d-flex flex-items-center">
-                <img class="avatar img-cover" height="20" alt="{{ name }}" src="{{ user_img | relative_url }}" width="20">
-            </a>
+        <div class="flex-1">
+            <div class="d-flex">
+                <div class="Header-item">
+                    <a href="{{ site.baseurl }}/" class="Header-link f4 d-flex flex-items-center">
+                        {% octicon mark-github height:32 %}
+                    </a>
+                </div>
+                <div class="Header-item Header-item--full">{{ name }}</div>
+                {%- if site.social_media %}
+                <div class="Header-item hide-md hide-sm">
+                    {%- include social.html %}
+                </div>
+                {%- endif %}
+                {%- if site.repo_info %}
+                <div class="Header-item hide-sm">
+                    {% include mini-repo-info-card.html class="Header-link" %}
+                </div>
+                {% endif %}
+                {% include toggle.html %}
+                <div class="Header-item mr-0">
+                    <a href="https://github.com/{{ user.login }}" class="Header-link d-flex flex-items-center">
+                        <img class="avatar img-cover" height="32" width="32" alt="{{ name }}"
+                            src="{{ user_img | relative_url }}">
+                    </a>
+                </div>
+            </div>
+            {%- if site.nav %}
+            <div class="d-flex">
+                <div class="Header-item">
+                    {%- include nav.html %}
+                </div>
+            </div>
+            {%- endif %}
         </div>
     </div>
-    {%- if site.nav %}
-    <div class="Header flex-column d-md-none">
-    {%- include nav.html %}
-    </div>
-    {%- endif %}
-
     <div class="container-lg p-3 color-bg-default flex-1">
-        {%- include banner.html breadcrumbs=breadcrumbs %}
+        {%- if breadcrumbs %}
+        {%- include breadcrumbs.html %}
+        {%- endif %}
         <div class="p-responsive mb-6 mt-3 markdown-body">
             {{ content }}
         </div>

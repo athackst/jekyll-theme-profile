@@ -39,18 +39,50 @@ Or install it yourself as:
 Here's a sample config file you can copy and customize:
 
 ```yaml
-repository: athackst/jekyll-theme-profile # Your repository name
-url: https://username.github.io # The host url for your site
-baseurl: "" # or your package name /jekyll-theme-profile (leave blank if it is the username.github.io package)
+repository: athackst/jekyll-theme-profile
+# The style of the website
 style: topbar # One of "stacked", "sidebar", "topbar"
-# social_image: /screenshot.jpg # The image to use for social cards
-# background: #(optional)
-#   image: /media/background-img.jpg # The path/url to the image you want on the background
+ # The user/project avatar.  If not set the avatar of the project owner will be used.
+user_image: /media/user-image.jpg
+# Optional custom background image and overlay
+# background:
+#   image: /media/background-img.jpg
 #   light:
-#     overlay: rgba(255, 255, 255, 0.5) # Overlay for light theme
+#     overlay: rgba(255, 255, 255, 0.5)
 #   dark:
-#     overlay: rgba(0, 0, 0, 0.5) # Overlay for dark theme
+#     overlay: rgba(0, 0, 0, 0.5)
 
+# repo_info: true # Show the information for the source of this project
+# metadata: false # Show the metadata associated with the user
+
+####################
+# Social media
+# social_image: /screenshot.png # The social media thumbnail image to use in post links.
+# icon_color: "#959da5" # The color of the social media icons on the site
+# social_media: # Your social media accounts
+  # behance: your_username
+  # dribbble: your_username
+  # docker: your_username
+  # facebook: your_username
+  # hackerrank: your_username
+  # instagram: your_username
+  # keybase: your_username
+  # linkedin: your_username
+  # mastodon: your_username
+  # medium: your_username
+  # stackoverflow: your_user_id
+  # telegram: your_username
+  # threads: your_username
+  # tiktok: your_username
+  # twitter: your_username
+  # unsplash: your_username
+  # vk: your_username
+  # vscode: your_username
+  # youtube: your_username
+  # x: your_username
+
+####################
+# Navigation links
 # nav:
 #   - name: Topbar
 #     url: /test/home/topbar.html
@@ -59,20 +91,24 @@ style: topbar # One of "stacked", "sidebar", "topbar"
 #   - name: Stacked
 #     url: /test/home/stacked.html
 
+####################
+# List of links for home page
 # links:
-#   - name: Example full entry
-#     url: https://www.example.com
+#   - name: Example page with topbar
+#     url: /test/page/topbar
 #     thumbnail: /media/icon-topbar.png
-#     description: Example description
-#   - name: Example entry with url and image
-#     url: https://www.example.com
+#   - name: Example page with sidebar
+#     url: /test/page/sidebar
 #     thumbnail: /media/icon-sidebar.png
-#   - name: Example entry with image
+#   - name: Example page with header stacked
+#     url: /test/page/stacked
 #     thumbnail: /media/icon-stacked.png
-#   - name: Example entry with description
-#     description: Example Description
-#   - name: Example entry with only a name
+#   - name: Example page with a custom background
+#     url: /test/page/background
+#     thumbnail: /media/icon-bg.png
 
+###################
+# Repositories to show on home page
 repositories:
   sort_by: stars
   # sort_by options:
@@ -83,29 +119,14 @@ repositories:
     archived: true
     forks: true
     repositories:
-      # - respositories to exclude
+      # - list of respositories to exclude
 
-# social_media:
-#   behance: your_username
-#   dribbble: your_username
-#   docker: your_username
-#   facebook: your_username
-#   hackerrank: your_username
-#   instagram: your_username
-#   keybase: your_username
-#   linkedin: your_username
-#   mastodon: your_username
-#   medium: your_username
-#   stackoverflow: your_user_id
-#   telegram: your_username
-#   threads: your_username
-#   twitter: your_username
-#   unsplash: your_username
-#   vk: your_username
-#   vscode: your_username
-#   youtube: your_username
-#   x: your_username
+####################
+# Blog
+posts_limit: 3 # The number of posts to show in home
 
+paginate: 6 # The number of posts to show per page of pagination of blog posts
+paginate_path: "/assets/blog/page:num"
 ```
 
 You can also use this with github acions. Below is a typical worfklow file
