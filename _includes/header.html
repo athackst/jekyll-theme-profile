@@ -153,6 +153,7 @@
         }
         // Set the span to the themeIcon class
         themeIcon.classList = "octicon octicon-" + nextIcon + "-24";
+        themeToggle.setAttribute("aria-label", "Color mode: " + nextMode);
       }
 
       themeToggle.addEventListener('click', function () {
