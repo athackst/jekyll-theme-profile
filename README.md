@@ -47,6 +47,8 @@ user_image: /media/user-image.jpg
 # Optional custom background image and overlay
 # background:
 #   image: /media/background-img.jpg
+#   single overlay for all or custom for light and dark modes
+#   overlay: rgba(0, 0, 0, 0.5)
 #   light:
 #     overlay: rgba(255, 255, 255, 0.5)
 #   dark:
