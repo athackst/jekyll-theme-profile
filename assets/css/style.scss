@@ -1,3 +1,14 @@
 ---
 ---
 @import "jekyll-theme-profile";
+
+{%- if site.color %}
+{%- assign profile_color=site.color %}
+.Profile {
+    color: {{ profile_color }};
+}
+
+.Profile a {
+    color: {{ profile_color }};
+}
+{%- endif %}

@@ -10,6 +10,7 @@ user_image: /media/user-image.jpg
 #     overlay: rgba(255, 255, 255, 0.5)
 #   dark:
 #     overlay: rgba(0, 0, 0, 0.5)
+# color: white # The color for the profile card
 
 repo_info: true # Show the information for the source of this project
 metadata: false # Show the metadata associated with the user
