@@ -1,0 +1,89 @@
+---
+---
+{%- if site.background.overlay %}
+  {%- assign dark_overlay = site.background.overlay %}
+  {%- assign light_overlay = site.background.overlay %}
+{%- endif %}
+{%- if site.background.dark.overlay %}
+  {%- assign dark_overlay = site.background.dark.overlay %}
+{%- endif %}
+{%- if site.background.light.overlay %}
+  {%- assign light_overlay = site.background.light.overlay %}
+{%- endif %}
+
+{%- if dark_overlay %}
+/* Dark mode styles */
+[data-color-mode='dark'] {
+    --overlay-color: {{ dark_overlay }};
+}
+@media(prefers-color-scheme: dark) {
+[data-color-mode='auto'][data-dark-theme='dark_dimmed'] {
+    --overlay-color: {{ dark_overlay }};
+}
+}
+{%- endif %}
+
+{%- if light_overlay %}
+/* Light mode styles */
+[data-color-mode='light'] {
+    --overlay-color: {{ light_overlay }};
+}
+
+@media(prefers-color-scheme: light) {
+[data-color-mode='auto'][data-light-theme='light'] {
+    --overlay-color: {{ light_overlay }};
+}
+}
+{%- endif %}
+
+{%- if site.header.color %}
+
+{%- assign header_color=site.header.color %}
+.Header {
+    --color-header-bg: {{ header_color }};
+}
+/* Light mode styles */
+[data-color-mode='light'] {
+    --color-header-bg: {{ header_color }};
+}
+
+@media(prefers-color-scheme: light) {
+[data-color-mode='auto'][data-light-theme='light'] {
+    --color-header-bg: {{ header_color }};
+}
+}
+/* Dark mode styles */
+[data-color-mode='dark'] {
+    --color-header-bg: {{ header_color }};
+}
+@media(prefers-color-scheme: dark) {
+[data-color-mode='auto'][data-dark-theme='dark_dimmed'] {
+    --color-header-bg: {{ header_color }};
+}
+}
+{%- endif %}
+
+{%- if site.header.text %}
+.Header {
+    --color-header-logo: {{ site.header.text }};
+}
+{%- endif %}
+
+{%- if site.header.accent %}
+.Header {
+    --color-header-text: {{ site.header.accent }};
+}
+{%- endif %}
+
+:root{
+    --color-profile-text: var(--color-fg-default);
+    --color-profile-accent: var(--color-accent-fg);
+    --color-profile-bg: var(--color-canvas-default);
+}
+
+@import "jekyll-theme-profile";
+
+.Profile {
+    background-color: var(--color-profile-bg);
+    color: var(--color-profile-text);
+}

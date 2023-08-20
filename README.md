@@ -255,15 +255,42 @@ style: sidebar # One of "stacked", "sidebar", "topbar"
 You can even change the background by adding the following to your `_config.yml` file.
 
 ```yaml
-# background:
-#   image: /media/background-img.jpg
-#   light:
-#     overlay: rgba(255, 255, 255, 0.5)
-#   dark:
-#     overlay: rgba(0, 0, 0, 0.5)
+background:
+  image: /media/background-img.jpg
+  overlay: rgba(0, 0, 0, 0.5) # Overlay for both light and dark styles
+  light:
+    overlay: rgba(255, 255, 255, 0.5)
+  dark:
+    overlay: rgba(0, 0, 0, 0.5)
+```
+
+or
+
+```yaml
+background:
+  image: /media/background-img.jpg
+  light: # custom overlay for light and dark styles
+    overlay: rgba(255, 255, 255, 0.5)
+  dark:
+    overlay: rgba(0, 0, 0, 0.5)
 ```
 
 [Example page](/test/page/background.md)
+
+#### Header
+
+You can change the header color by adding the following to your `_config.yml` file
+
+```yaml
+header:
+  color: "#4051b5"
+  text: "rgba(255,255,255,0.7)"
+  accent: "#ffffff"
+```
+
+#### Custom styles
+
+You can override any style with styles defined in `/assets/css/style.css` or `/assets/css/style.scss` files.  This is to support config based styling which needs jekyll variables.
 
 ### Nav
 

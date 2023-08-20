@@ -66,6 +66,7 @@
   <meta name="twitter:site" content="@{{ site.social_media.twitter }}">
   {%- endif %}
 
+  <link href="{{ '/assets/css/theme.css' | relative_url }}" rel="stylesheet" type="text/css">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" type="text/css">
   <link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url}}">
   <link rel="canonical" href="{{ page.url | absoulte_url }}">
@@ -168,16 +169,6 @@
   </script>
 
 {%- if bg_image %}
-{%- if site.background.overlay %}
-  {%- assign dark_overlay = site.background.overlay %}
-  {%- assign light_overlay = site.background.overlay %}
-{%- endif %}
-{%- if site.background.dark.overlay %}
-  {%- assign dark_overlay = site.background.dark.overlay %}
-{%- endif %}
-{%- if site.background.light.overlay %}
-  {%- assign light_overlay = site.background.light.overlay %}
-{%- endif %}
 <style>
   body {
       position: relative;
@@ -186,26 +177,6 @@
       background-repeat: no-repeat;
       background-attachment: fixed;
       z-index: -10;
-  }
-  /* Dark mode styles */
-  [data-color-mode='dark'] {
-      --overlay-color: {{ dark_overlay }};
-  }
-  @media(prefers-color-scheme: dark) {
-    [data-color-mode='auto'][data-dark-theme='dark_dimmed'] {
-      --overlay-color: {{ dark_overlay }};
-    }
-  }
-
-  /* Light mode styles */
-  [data-color-mode='light'] {
-      --overlay-color: {{ light_overlay }};
-  }
-
-  @media(prefers-color-scheme: light) {
-    [data-color-mode='auto'][data-light-theme='light'] {
-      --overlay-color: {{ light_overlay }};
-    }
   }
 </style>
 {%- endif %}
