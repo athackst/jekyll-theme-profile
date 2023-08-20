@@ -98,3 +98,20 @@ import sys
 def my_function():
   print("Hello from a function")
 ```
+
+## Using liquid
+
+### Without line numbers
+
+{% highlight javascript %}
+function some(code) { /*goes here*/ }
+let x = 21;
+{% endhighlight %}
+
+
+### With line numbers
+
+{% highlight javascript linenos %}
+function some(code) { /*goes here*/ }
+let x = 21;
+{% endhighlight %}
