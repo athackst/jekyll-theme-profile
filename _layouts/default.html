@@ -40,11 +40,12 @@
 
 <body class="min-height-full">
     {%- if style == 'stacked' %}
-    <div class="container-lg p-responsive min-height-full">
-        <div class="d-flex flex-justify-end pt-2">
-            {%- include toggle.html %}
-        </div>
-        <div class="Profile text-center py-3 border-bottom">
+    <div class="container-lg min-height-full">
+
+        <div class="Profile text-center py-1">
+            <div class="d-flex flex-justify-end pt-2">
+                {%- include toggle.html %}
+            </div>
             {%- include masthead.html metadata=metadata %}
             {%- if site.repo_info %}
             <div class="my-2">
@@ -52,7 +53,7 @@
             </div>
             {%- endif %}
             {%- if site.social_media %}
-            <div class="my-2">
+            <div class="my-2 mx-2">
                 {%- include social.html %}
             </div>
             {%- endif %}
@@ -75,15 +76,15 @@
     </div>
     {%- elsif style == 'sidebar' %}
     <div class="container-xl d-lg-flex min-height-full">
-        <div class="Profile col-lg-4 border-gray-light px-4 py-6 text-center">
+        <div class="Profile col-lg-4 border-gray-light pt-6 text-center">
             {%- include masthead.html metadata=metadata %}
             {%- if site.repo_info %}
             <div class="my-2">
-                {% include mini-repo-info-card.html class="Box-row-link" %}
+                {% include mini-repo-info-card.html %}
             </div>
             {%- endif %}
             {%- if site.social_media %}
-            <div class="my-2">
+            <div class="my-2 mx-2">
                 {%- include social.html %}
             </div>
             {%- endif %}
@@ -118,7 +119,7 @@
                         {% octicon mark-github height:32 %}
                     </a>
                 </div>
-                <div class="Header-item Header-item--full">{{ name }}</div>
+                <div class="Header-item Header-link Header-item--full">{{ name }}</div>
                 {%- if site.social_media %}
                 <div class="Header-item hide-md hide-sm">
                     {%- include social.html %}

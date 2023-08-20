@@ -6,11 +6,17 @@ user_image: /media/user-image.jpg
 # Optional custom background image and overlay
 # background:
 #   image: /media/background-img.jpg
+#   overlay: rgba(0, 0, 0, 0.7)
 #   light:
 #     overlay: rgba(255, 255, 255, 0.5)
 #   dark:
 #     overlay: rgba(0, 0, 0, 0.5)
-# color: white # The color for the profile card
+
+# Optional custom header colors
+# header:
+#   color: "#4051b5"
+#   text: "rgba(255,255,255,0.7)"
+#   accent: "#ffffff"
 
 repo_info: true # Show the information for the source of this project
 metadata: false # Show the metadata associated with the user
@@ -19,29 +25,29 @@ metadata: false # Show the metadata associated with the user
 # Social media
 social_image: /screenshot.png # The social media thumbnail image to use in post links.
 # icon_color: "#959da5" # The color of the social media icons on the site
-social_media: # Your social media accounts
-  # behance: your_username
-  # dribbble: your_username
-  # docker: your_username
-  # facebook: your_username
-  # github: your_username
-  # hackerrank: your_username
-  # instagram: your_username
-  # keybase: your_username
-  # linkedin: your_username
-  # mail: email@address
-  # mastodon: your_username
-  # medium: your_username
-  # stackoverflow: your_user_id
-  # telegram: your_username
-  # threads: your_username
-  # tiktok: your_username
-  # twitter: your_username
-  # unsplash: your_username
-  # vk: your_username
-  # vscode: your_username
-  # youtube: your_username
-  # x: your_username
+# social_media: # Your social media accounts
+#   behance: your_username
+#   dribbble: your_username
+#   docker: your_username
+#   facebook: your_username
+#   github: your_username
+#   hackerrank: your_username
+#   instagram: your_username
+#   keybase: your_username
+#   linkedin: your_username
+#   mail: email@address
+#   mastodon: your_username
+#   medium: your_username
+#   stackoverflow: your_user_id
+#   telegram: your_username
+#   threads: your_username
+#   tiktok: your_username
+#   twitter: your_username
+#   unsplash: your_username
+#   vk: your_username
+#   vscode: your_username
+#   youtube: your_username
+#   x: your_username
 
 ####################
 # Navigation links
