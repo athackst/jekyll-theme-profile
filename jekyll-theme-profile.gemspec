@@ -12,6 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
 
+  spec.required_ruby_version = '>=2.7.0'
   spec.add_dependency "jekyll", "> 3.5", "< 5.0"
   spec.add_runtime_dependency "jekyll-github-metadata", "~> 2.9"
   spec.add_runtime_dependency "jekyll-octicons", "~> 19.4"
