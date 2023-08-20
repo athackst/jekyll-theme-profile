@@ -1,4 +1,4 @@
-.highlight  { width: 100%; overflow: auto; background-color: var(--color-canvas-inset) !important; padding: 8px; }
+.highlight  { overflow: auto; background-color: var(--color-canvas-inset) !important; padding: 8px; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold } /* Keyword */
@@ -64,3 +64,33 @@
 .highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
 .lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
 .lineno::selection {background-color: transparent;} /* Other major browsers */
+.lineno { opacity: 0.5;}
+
+.highlight table {
+    margin: inherit;
+}
+
+.highlight table tr {
+    background-color: inherit;
+    border-top: inherit;
+}
+
+.highlight table td {
+    padding: inherit;
+    border: inherit;
+}
+
+.highlight pre {
+    background-color: inherit !important;
+    border-radius: 0px !important;
+}
+
+.highlight code pre {
+    padding: 0px !important;
+    background-color: inherit;
+}
+
+.highlight code .gutter,
+.highlight code .rouge-gutter {
+    padding-right: 16px !important;
+}

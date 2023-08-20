@@ -96,6 +96,20 @@ posts_limit: 3 # The number of posts to show in home
 paginate: 6 # The number of posts to show per page of pagination of blog posts
 paginate_path: "/assets/blog/page:num"
 
+markdown: kramdown
+highlighter: rouge
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+#   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+#     css_class: highlight
+#     # default_lang: console
+#     span:
+#       line_numbers: false
+#     block:
+#       line_numbers: true
+#       start_line: 1
+
 # ============= general settings for the theme ===============
 plugins:
   - jekyll-github-metadata
@@ -126,5 +140,3 @@ exclude:
   - .deprecated
   - .github
   - "*.gem"
-
-markdown: kramdown
