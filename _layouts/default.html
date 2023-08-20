@@ -42,27 +42,27 @@
     {%- if style == 'stacked' %}
     <div class="container-lg min-height-full">
 
-        <div class="Profile text-center py-1">
-            <div class="d-flex flex-justify-end pt-2">
+        <div class="Profile text-center">
+            <div class="d-flex flex-justify-end pt-3">
                 {%- include toggle.html %}
             </div>
             {%- include masthead.html metadata=metadata %}
             {%- if site.repo_info %}
-            <div class="my-2">
+            <div class="py-2">
                 {% include mini-repo-info-card.html class="Box-row-link" %}
             </div>
             {%- endif %}
             {%- if site.social_media %}
-            <div class="my-2 mx-2">
+            <div class="py-2 px-2">
                 {%- include social.html %}
             </div>
             {%- endif %}
+            {%- if site.nav %}
+            <nav class="Header d-flex flex-column flex-md-row flex-justify-center">
+                {%- include nav.html %}
+            </nav>
+            {%- endif %}
         </div>
-        {%- if site.nav %}
-        <nav class="Header d-flex flex-column flex-md-row flex-justify-center">
-            {%- include nav.html %}
-        </nav>
-        {%- endif %}
         <div class="color-bg-default">
             {%- if breadcrumbs %}
             <div class="p-3">
@@ -79,12 +79,12 @@
         <div class="Profile col-lg-4 border-gray-light pt-6 text-center">
             {%- include masthead.html metadata=metadata %}
             {%- if site.repo_info %}
-            <div class="my-2">
-                {% include mini-repo-info-card.html %}
+            <div class="py-2">
+                {% include mini-repo-info-card.html class="Box-row-link" %}
             </div>
             {%- endif %}
             {%- if site.social_media %}
-            <div class="my-2 mx-2">
+            <div class="py-2 px-2">
                 {%- include social.html %}
             </div>
             {%- endif %}
