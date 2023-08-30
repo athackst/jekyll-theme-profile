@@ -16,11 +16,7 @@
 <body class="min-height-full">
     {%- if style == 'stacked' %}
     <div class="container-lg min-height-full">
-
         <div class="Profile text-center">
-            <div class="d-flex flex-justify-end pt-3">
-                {%- include toggle.html %}
-            </div>
             {%- include masthead.html metadata=metadata %}
             {%- if site.repo_info %}
             <div class="py-2">
@@ -39,13 +35,16 @@
             {%- endif %}
         </div>
         <div class="color-bg-default">
-            {%- if breadcrumbs %}
-            <div class="p-3">
+            <div class="d-flex p-2">
+                {%- if breadcrumbs %}
                 {%- include breadcrumbs.html %}
+                {%- endif %}
+                <div class="flex-1">
+                </div>
+                {% include toggle.html %}
             </div>
-            {%- endif %}
             <div class="p-responsive markdown-body ">
-            {{ content }}
+                {{ content }}
             </div>
         </div>
     </div>
@@ -105,9 +104,6 @@
                     {% include mini-repo-info-card.html class="Header-link" %}
                 </div>
                 {% endif %}
-                <div class="Header-item mr-3">
-                {% include toggle.html %}
-                </div>
                 <div class="Header-item mr-0">
                     <a href="https://github.com/{{ user.login }}" class="Header-link d-flex flex-items-center">
                         <img class="avatar img-cover" height="32" width="32" alt="{{ name }}"
@@ -125,9 +121,14 @@
         </div>
     </div>
     <div class="container-xl p-3 color-bg-default flex-1">
-        {%- if breadcrumbs %}
-        {%- include breadcrumbs.html %}
-        {%- endif %}
+        <div class="d-flex pb-2">
+            {%- if breadcrumbs %}
+            {%- include breadcrumbs.html %}
+            {%- endif %}
+            <div class="flex-1">
+            </div>
+            {% include toggle.html %}
+        </div>
         <div class="p-responsive markdown-body">
             {{ content }}
         </div>
