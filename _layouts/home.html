@@ -3,11 +3,7 @@ layout: default
 ---
 <div class="py-3">
   {%- assign posts_total = site.posts | size %}
-  {%- if site.posts_limit %}
-  {%- assign posts_limit = site.posts_limit %}
-  {%- else %}
-  {%- assign posts_limit = posts_total %}
-  {%- endif %}
+  {%- assign posts_limit = site.posts_limit | default: posts_total %}
 
   {%- unless content == "" %}
   {{ content }}
