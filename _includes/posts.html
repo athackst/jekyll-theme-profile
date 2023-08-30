@@ -1,7 +1,4 @@
-{%- assign post_limit = 3 %}
-{%- if include.limit %}
-  {%- assign post_limit = include.limit %}
-{%- endif %}
+{%- assign post_limit = include.limit | default: 3 %}
 
 <div class="gutter-condensed mb-4">
   {%- for post in site.posts limit: {{post_limit}} %}

@@ -1,36 +1,11 @@
 {%- assign user = site.github.owner %}
 
-{%- if page.style %}
-{%- assign style = page.style %}
-{%- else %}
-{%- assign style = site.style %}
-{%- endif %}
+{%- assign style = page.style | default: site.style %}
+{%- assign breadcrumbs = page.breadcrumbs | default: false %}
+{%- assign name = site.title | default: user.name | default: user.login %}
+{%- assign user_img = site.user_image | default: user.avatar_url %}
+{%- assign metadata = site.metadata | default: true %}
 
-{%- if page.breadcrumbs %}
-{%- assign breadcrumbs = page.breadcrumbs %}
-{%- else %}
-{%- assign breadcrumbs = false %}
-{%- endif %}
-
-{%- if site.title %}
-{%- assign name = site.title %}
-{%- elsif user.name %}
-{%- assign name = user.name %}
-{%- else %}
-{%- assign name = user.login %}
-{%- endif %}
-
-{%- if site.user_image %}
-{%- assign user_img = site.user_image %}
-{%- else %}
-{%- assign user_img = user.avatar_url %}
-{%- endif %}
-
-{%- if site.metadata == true or site.metadata == false %}
-{%- assign metadata = site.metadata %}
-{%- else %}
-{%- assign metadata = true %}
-{%- endif %}
 
 <!doctype html>
 <html lang="en" class="min-height-full min-width" data-color-mode="auto" data-light-theme="light"

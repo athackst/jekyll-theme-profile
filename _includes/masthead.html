@@ -1,18 +1,7 @@
 {%- assign user = site.github.owner %}
 
-{%- if site.title %}
-{%- assign name = site.title %}
-{%- elsif user.name %}
-{%- assign name = user.name %}
-{%- else %}
-{%- assign name = user.login %}
-{%- endif %}
-
-{%- if site.user_image %}
-{%- assign user_img = site.user_image %}
-{%- else %}
-{%- assign user_img = user.avatar_url %}
-{%- endif %}
+{%- assign name = site.title | default: user.name | default: user.login %}
+{%- assign user_img = site.user_image | default: user.avatar_url %}
 
 {%- assign metadata_styles = 'd-flex flex-items-center flex-justify-center mb-3' %}
 <div class="Masthead">
