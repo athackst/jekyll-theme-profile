@@ -7,37 +7,14 @@
   {%- assign page_url = page.url %}
 {%- endif %}
 
-{%- if page.title %}
-  {%- assign page_title = page.title %}
-{%- elsif site.title %}
-  {%- assign page_title = site.title %}
-{%- else %}
-  {%- assign page_title = user.name %}
+{%- assign page_title = page.title | default: site.title | default: user.name | default: user.login %}
+{%- if page.path contains '_posts' %}
+  {%- assign post_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {%- endif %}
-
-{%- if page.description %}
-  {%- assign meta_description = page.description %}
-{%- elsif page.path contains '_posts' %}
-  {%- assign meta_description = page.content | strip_html | strip_newlines | xml_escape | truncate: 300 %}
-{%- elsif site.description %}
-  {%- assign meta_description = site.description %}
-{%- else %}
-  {%- assign meta_description = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
-{%- endif %}
-
-{%- if page.social_image %}
-  {%- assign social_image = page.social_image %}
-{%- elsif site.social_image %}
-  {%- assign social_image = site.social_image %}
-{%- else %}
-  {% assign social_image = user.avatar_url %}
-{%- endif %}
-
-{%- if page.background_image %}
-  {%- assign bg_image = page.background_image %}
-{%- elsif site.background.image %}
-  {%- assign bg_image = site.background.image %}
-{%- endif %}
+{%- assign user_bio = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
+{%- assign meta_description = page.description | default: post_description | default: site_description | default: user_bio %}
+{%- assign social_image = page.social_image | default: site.social_image | default: user.avatar_url %}
+{%- assign bg_image = page.background_image | default: site.background.image | default: null %}
 
 <head>
   <meta charset="utf-8">
