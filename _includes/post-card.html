@@ -1,15 +1,18 @@
-<!-- <div class="height-full text-left border border-gray-light rounded-1 p-3"> -->
-  <!-- <div class="d-flex flex-justify-between flex-items-start mb-1"> -->
+{%- assign icon = post.type | default: "comment" %}
 <div class="TimelineItem">
-  <div class="TimelineItem-badge">{% octicon comment height:16 %}</div>
+  <div class="TimelineItem-badge">{% octicon {{icon}} height:16 %}</div>
   <div class="TimelinItem-body">
     <span class="f3 lh-condensed mb-1">
       <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
     </span>
-    <!-- </div> -->
-    <div class="text-gray mb-2 ws-normal">{{ post.date | date: "%b %d, %Y"}}</div>
+    <div class="d-flex flex-items-end flex-wrap">
+      {%- if post.author %}
+      <div class="authors-wrap text-bold mb-2 mr-3 ">{{ post.author }}</div>
+      {%- endif %}
+      <div class="text-gray mb-2 ws-normal">{{ post.date | date: "%b %d, %Y"}}</div>
+    </div>
     <div class="summary"> {{ post.excerpt }}</div>
   </div>
 </div>
