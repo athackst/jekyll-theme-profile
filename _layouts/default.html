@@ -15,12 +15,39 @@
 
 <body class="min-height-full">
     {%- if style == 'stacked' %}
+    <script>
+        $(document).ready(function () {
+            $('#expansion-btn').click(function () {
+                $('.Extend').toggleClass('hide-sm');
+            });
+        });
+    </script>
+    <div class="Header position-sticky top-0 d-sm-none">
+        <div class="flex-1">
+            <div class="d-flex">
+                <button id="expansion-btn" class="btn-octicon mr-2">{% octicon three-bars height:16 %}</button>
+                <div class="Header-item">
+                    <a href="{{ site.baseurl }}/" class="Header-link f4 d-flex flex-items-center">
+                        {% octicon mark-github height:32 %}
+                    </a>
+                </div>
+                <div class="Header-item Header-link Header-item--full">{{ name }}</div>
+
+                <div class="Header-item mr-0">
+                    <a href="https://github.com/{{ user.login }}" class="Header-link d-flex flex-items-center">
+                        <img class="avatar img-cover" height="32" width="32" alt="{{ name }}"
+                            src="{{ user_img | relative_url }}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-lg min-height-full">
-        <div class="Profile text-center">
+        <div class="Extend Profile text-center hide-sm">
             {%- include masthead.html metadata=metadata %}
             {%- if site.repo_info %}
             <div class="py-2">
-                {% include mini-repo-info-card.html class="Box-row-link" %}
+                {% include mini-repo-info-card.html %}
             </div>
             {%- endif %}
             {%- if site.social_media %}
@@ -49,12 +76,39 @@
         </div>
     </div>
     {%- elsif style == 'sidebar' %}
+    <script>
+        $(document).ready(function () {
+            $('#expansion-btn').click(function () {
+                $('.Profile').toggleClass('hide-sm');
+            });
+        });
+    </script>
+    <div class="Header position-sticky top-0 d-sm-none">
+        <div class="flex-1">
+            <div class="d-flex">
+                <button id="expansion-btn" class="btn-octicon mr-2">{% octicon three-bars height:16 %}</button>
+                <div class="Header-item">
+                    <a href="{{ site.baseurl }}/" class="Header-link f4 d-flex flex-items-center">
+                        {% octicon mark-github height:32 %}
+                    </a>
+                </div>
+                <div class="Header-item Header-link Header-item--full">{{ name }}</div>
+
+                <div class="Header-item mr-0">
+                    <a href="https://github.com/{{ user.login }}" class="Header-link d-flex flex-items-center">
+                        <img class="avatar img-cover" height="32" width="32" alt="{{ name }}"
+                            src="{{ user_img | relative_url }}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-xl d-lg-flex min-height-full">
-        <div class="Profile col-lg-4 border-gray-light pt-6 text-center">
+        <div class="Extend Profile col-lg-4 pt-6 text-center hide-sm">
             {%- include masthead.html metadata=metadata %}
             {%- if site.repo_info %}
             <div class="py-2">
-                {% include mini-repo-info-card.html class="Box-row-link" %}
+                {% include mini-repo-info-card.html %}
             </div>
             {%- endif %}
             {%- if site.social_media %}
@@ -68,7 +122,7 @@
             </nav>
             {%- endif %}
         </div>
-        <div class="col-lg-8 border-top border-lg-top-0 px-4 color-bg-default">
+        <div class="col-lg-8 px-4 color-bg-default">
             <div class="py-3">
                 <div class="d-flex">
                     {%- if breadcrumbs %}
@@ -85,10 +139,18 @@
         </div>
     </div>
     {%- else %}
-    <div class="Header">
+    <script>
+        $(document).ready(function () {
+            $('#expansion-btn').click(function () {
+                $('.Extend').toggleClass('hide-sm');
+            });
+        });
+    </script>
+    <div class="Header position-sticky top-0">
         <div class="flex-1">
             <div class="d-flex">
                 <div class="Header-item">
+                    <button id="expansion-btn" class="btn-octicon mr-2 d-sm-none">{% octicon three-bars height:16 %}</button>
                     <a href="{{ site.baseurl }}/" class="Header-link f4 d-flex flex-items-center">
                         {% octicon mark-github height:32 %}
                     </a>
@@ -113,7 +175,7 @@
             </div>
             {%- if site.nav %}
             <div class="d-flex">
-                <div class="Header-item">
+                <div class="Extend Header-item flex-column flex-sm-row flex-items-center width-full hide-sm">
                     {%- include nav.html %}
                 </div>
             </div>
