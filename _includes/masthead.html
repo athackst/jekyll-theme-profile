@@ -4,7 +4,7 @@
 {%- assign user_img = site.user_image | default: user.avatar_url %}
 
 {%- assign metadata_styles = 'd-flex flex-items-center flex-justify-center mb-3' %}
-<div class="Masthead">
+<div class="Masthead pt-4">
   <a href="{{ site.baseurl }}/">
     <div class="img-masthead">
       <img src="{{ user_img | relative_url }}" alt="{{ name }}"

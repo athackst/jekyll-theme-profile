@@ -61,7 +61,7 @@
             </nav>
             {%- endif %}
         </div>
-        <div class="color-bg-default">
+        <div class="p-responsive  color-bg-default">
             <div class="d-flex p-2">
                 {%- if breadcrumbs %}
                 {%- include breadcrumbs.html %}
@@ -70,7 +70,7 @@
                 </div>
                 {% include toggle.html %}
             </div>
-            <div class="p-responsive markdown-body ">
+            <div class="markdown-body ">
                 {{ content }}
             </div>
         </div>
@@ -123,7 +123,7 @@
             {%- endif %}
         </div>
         <div class="col-lg-8 px-4 color-bg-default">
-            <div class="py-3">
+            <div class="p-responsive py-3">
                 <div class="d-flex">
                     {%- if breadcrumbs %}
                     {%- include breadcrumbs.html %}
@@ -132,7 +132,7 @@
                     </div>
                     {% include toggle.html %}
                 </div>
-                <div class="p-responsive markdown-body">
+                <div class="markdown-body">
                     {{ content }}
                 </div>
             </div>
@@ -182,7 +182,7 @@
             {%- endif %}
         </div>
     </div>
-    <div class="container-xl p-3 color-bg-default flex-1">
+    <div class="p-responsive container-xl p-3 color-bg-default flex-1">
         <div class="d-flex pb-2">
             {%- if breadcrumbs %}
             {%- include breadcrumbs.html %}
@@ -191,7 +191,7 @@
             </div>
             {% include toggle.html %}
         </div>
-        <div class="p-responsive markdown-body">
+        <div class="markdown-body">
             {{ content }}
         </div>
     </div>
