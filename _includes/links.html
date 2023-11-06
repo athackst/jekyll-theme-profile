@@ -1,7 +1,9 @@
-<div class="d-flex flex-wrap gutter-condensed mb-4">
-  {%- for link in site.links %}
-    <div class="col-12 mb-3">
+<div class="container-md mx-auto">
+  <div class="d-flex flex-column gutter-condensed mb-4">
+    {%- for link in site.links %}
+    <div class="mb-3">
       {%- include link-card.html %}
     </div>
-  {%- endfor %}
+    {%- endfor %}
+  </div>
 </div>
