@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 permalink: /
 ---
 ![jekyll-theme-profile](screenshot.png)
@@ -55,7 +55,8 @@ user_image: /media/user-image.jpg
 #     overlay: rgba(0, 0, 0, 0.5)
 
 # repo_info: true # Show the information for the source of this project
-# metadata: false # Show the metadata associated with the user
+# metadata: true # Show the metadata associated with the user
+# profile_link: true # Show a link to the github profile for the user
 
 ####################
 # Social media
@@ -90,6 +91,8 @@ user_image: /media/user-image.jpg
 # nav:
 #   - name: Topbar
 #     url: /test/home/topbar.html
+#   - name: Appbar
+#     url: /test/home/appbar.html
 #   - name: Sidebar
 #     url: /test/home/sidebar.html
 #   - name: Stacked
@@ -101,6 +104,8 @@ user_image: /media/user-image.jpg
 #   - name: Example page with topbar
 #     url: /test/page/topbar
 #     thumbnail: /media/icon-topbar.png
+#   - name: Example page with appbar
+#     url: /test/page/appbar
 #   - name: Example page with sidebar
 #     url: /test/page/sidebar
 #     thumbnail: /media/icon-sidebar.png
@@ -249,6 +254,10 @@ style: sidebar # One of "stacked", "sidebar", "topbar"
 #### [Topbar](/test/home/topbar.md)
 
 ![Topbar image](/media/topbar-preview.png)
+
+#### [Appbar](/test/home/appbar.md)
+
+![Appbar image](/media/appbar-preview.png)
 
 #### Background
 

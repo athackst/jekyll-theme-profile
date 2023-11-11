@@ -1,0 +1,49 @@
+<script>
+    $(document).ready(function () {
+        $('#expansion-btn').click(function () {
+            $('.Extend').toggleClass('d-none');
+        });
+        $('#collapse-btn').click(function() {
+            $('.Extend').addClass('d-none');
+        })
+    });
+</script>
+<header class="AppHeader position-sticky top-0 z-2 border-bottom topbar">
+    <div class="AppHeader-item d-flex flex-justify-between p-2 flex-items-center">
+        <div class="d-flex">
+            <button id="expansion-btn" class="AppHeader-button d-sm-none" type="button">{% octicon three-bars height:16 %}</button>
+        </div>
+        <div tabindex="-1" class="d-flex flex-1 ml-3" id="github-logo">
+            <a href="{{ site.baseurl }}/" class="AppHeader-link d-flex flex-items-center no-underline mr-3">
+                {% octicon mark-github height:32 %}
+                <span class="h4 text-semibold mx-3">{{ name }}</span>
+            </a>
+        </div>
+        <div class="AppHeader-item d-flex flex-items-center">
+            {% include toggle.html %}
+            {%- if site.repo_info %}
+            <div class="AppHeader-item hide-sm">
+                {% include mini-repo-info-card.html class="AppHeader-link no-underline" %}
+            </div>
+            {% endif %}
+            {%- if site.profile_link %}
+            <div class="AppHeader-item mr-0">
+                <a href="https://github.com/{{ user.login }}" class="AppHeader-link d-flex flex-items-center">
+                    <img class="avatar img-cover circle" height="32" width="32" alt="{{ name }}"
+                src="{{ user_img | relative_url }}">
+                </a>
+            </div>
+            {%- endif %}
+        </div>
+    </div>
+    {%- if site.nav %}
+    <div class="d-flex flex-items-center mt-2">
+        <div class="AppHeader-item width-full hide-sm">
+            {%- include navbar-underline.html %}
+        </div>
+        <div class="Extend Overlay-header d-none">
+            {%- include nav-dropdown.html %}
+        </div>
+    </div>
+    {%- endif %}
+</header>

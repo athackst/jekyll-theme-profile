@@ -66,12 +66,15 @@
 {%- if site.header.text %}
 .Header {
     --color-header-logo: {{ site.header.text }};
+    --color-fg-muted: {{ site.header.text }};
 }
 {%- endif %}
 
 {%- if site.header.accent %}
 .Header {
     --color-header-text: {{ site.header.accent }};
+    --color-accent-fg: {{ site.header.accent }};
+
 }
 {%- endif %}
 
@@ -82,8 +85,3 @@
 }
 
 @import "jekyll-theme-profile";
-
-.Profile {
-    background-color: var(--color-profile-bg);
-    color: var(--color-profile-text);
-}

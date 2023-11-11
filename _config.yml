@@ -19,7 +19,7 @@ user_image: /media/user-image.jpg
 #   accent: "#ffffff"
 
 repo_info: true # Show the information for the source of this project
-metadata: false # Show the metadata associated with the user
+profile_link: true # Show a link to the github profile for the user
 
 ####################
 # Social media
@@ -54,6 +54,8 @@ social_image: /screenshot.png # The social media thumbnail image to use in post 
 nav:
   - name: Topbar
     url: /test/home/topbar.html
+  - name: Appbar
+    url: /test/home/appbar.html
   - name: Sidebar
     url: /test/home/sidebar.html
   - name: Stacked
@@ -64,6 +66,9 @@ nav:
 links:
   - name: Example page with topbar
     url: /test/page/topbar
+    thumbnail: /media/icon-topbar.png
+  - name: Example page with appbar
+    url: /test/page/appbar
     thumbnail: /media/icon-topbar.png
   - name: Example page with sidebar
     url: /test/page/sidebar
