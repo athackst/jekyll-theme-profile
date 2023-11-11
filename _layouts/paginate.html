@@ -2,21 +2,16 @@
 layout: page
 ---
 {{ content }}
+<div class="d-flex flex-wrap gutter-spacious">
 <!-- This loops through the paginated posts -->
 {%- for post in paginator.posts %}
-<h1><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h1>
-<p class="author">
-    <span class="date">Published {{ post.date | date: "%Y-%m-%d" }}</span>
-    <span class="author">{{ post.author }}</span>
-</p>
-<div class="content mb-6">
-    {{ post.excerpt }}
-</div>
-<div>
-    <a href="{{ post.url | relative_url }}" class="btn btn-block mb-2">Read more</a>
-</div>
+  {%- if post == paginator.posts.first %}
+  {%- include post-feature-card.html %}
+  {%- else %}
+  {%- include post-card.html %}
+  {%- endif %}
 {% endfor %}
-
+</div>
 <!-- Pagination links -->
 <div class="paginate-container">
     <div role="navigation" aria-label="Pagination" class="d-flex d-md-inline-block pagination">

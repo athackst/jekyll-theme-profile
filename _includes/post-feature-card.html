@@ -1,0 +1,23 @@
+{%- assign icon = post.type | default: "comment" %}
+{%- assign image = post.image | default: post.social_image | default: "assets/img/default.png" %}
+<div class="py-4 d-flex flex-column flex-md-row flex-md-row-reverse p-responsive">
+  <div class="col-12 col-lg-8 p-responsive">
+    <div class="image-container">
+      <a href="{{ post.url | relative_url }}">
+        <img class="rounded-2" src="{{ image | relative_url }}" width="800" height="425" alt="{{ post.title }}">
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-lg-4 pt-lg-4 p-responsive">
+    <h3 class="h4-mktg mb-12px">
+      <a class="Link--primary" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h3>
+    <p class="f4-mktg color-fg-muted">{{ post.excerpt }}</p>
+    <div class="d-flex flex-items-end flex-wrap">
+      {%- if post.author %}
+      <span class="mr-3 mr-12px mt-1 f5-mktg text-bold">{{ post.author }}</span>
+      {%- endif %}
+      <span class="d-inline-block f5-mktg text-mono color-fg-muted mt-1">{{ post.date | date: "%b %d, %Y"}}</span>
+    </div>
+  </div>
+</div>

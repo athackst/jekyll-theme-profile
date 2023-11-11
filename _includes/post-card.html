@@ -1,18 +1,25 @@
 {%- assign icon = post.type | default: "comment" %}
-<div class="TimelineItem">
-  <div class="TimelineItem-badge">{% octicon {{icon}} height:16 %}</div>
-  <div class="TimelinItem-body">
-    <span class="f3 lh-condensed mb-1">
+{%- assign image = post.image | default: post.social_image | default: "assets/img/default.png" %}
+<div class="col-sm-6 col-lg-4 ">
+  <div class="py-4 d-flex flex-column border-top">
+    <div class="image-container">
       <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
+        <img class="rounded-2" src="{{ image | relative_url }}" width="377" height="200" alt="{{ post.title }}">
       </a>
-    </span>
-    <div class="d-flex flex-items-end flex-wrap">
-      {%- if post.author %}
-      <div class="authors-wrap text-bold mb-2 mr-3 ">{{ post.author }}</div>
-      {%- endif %}
-      <div class="text-gray mb-2 ws-normal">{{ post.date | date: "%b %d, %Y"}}</div>
     </div>
-    <div class="summary"> {{ post.excerpt }}</div>
+    <h3 class="h6-mktg mb-12px">
+      <a class="Link--primary" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h3>
+    <p class="f4-mktg color-fg-muted mb-0">{{ post.excerpt }}</p>
+    <div class="mt-14px">
+      <div class="d-flex flex-items-center">
+        <div class="d-flex flex-items-end flex-wrap">
+          {%- if post.author %}
+          <span class="mr-3 mr-12px mt-1 f5-mktg text-bold">{{ post.author }}</span>
+          {%- endif %}
+          <span class="d-inline-block f5-mktg text-mono color-fg-muted mt-1">{{ post.date | date: "%b %d, %Y"}}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

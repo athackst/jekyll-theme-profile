@@ -24,7 +24,7 @@
     <div class="ml-5 mt-5">
       {%- if image %}
       <div class="image-container mb-5">
-        <img class="rounded-2" src="{{ image}}" width="800" height="425" />
+        <img class="rounded-2" src="{{ image}}" width="800" height="425" alt="{{ post.title }}"/>
       </div>
       {%- endif %}
       <div class="summary"> {{ post.excerpt }}</div>
