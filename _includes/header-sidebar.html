@@ -1,0 +1,47 @@
+<script>
+    $(document).ready(function () {
+        $('#expansion-btn').click(function () {
+            $('.Extend').toggleClass('d-none');
+        });
+        $('#collapse-btn').click(function () {
+            $('.Extend').addClass('d-none');
+        })
+    });
+</script>
+<div class="Header container-sm col-lg-4 col-1 border-right flex-items-start p-0" style="min-width: 50px;">
+    <div class="flex-column flex-1 position-sticky top-0 ">
+        <div class="Extend Overlay-header d-none">
+            {%- include nav-overlay.html %}
+        </div>
+        <div class="d-flex flex-column flex-lg-row flex-justify-end mr-lg-5">
+            <div class="d-flex flex-justify-center mt-3">
+                <button id="expansion-btn" class="btn-octicon mr-2 d-lg-none">{% octicon three-bars height:16 %}</button>
+            </div>
+            <div class="d-flex flex-justify-center mt-3">
+                {% include toggle.html %}
+            </div>
+        </div>
+        <div class="d-none d-lg-block">
+            <div class="text-center">
+                <div class="p-2">
+                    {%- include masthead.html metadata=metadata %}
+                </div>
+                {%- if site.repo_info %}
+                <div class="py-2">
+                    {% include mini-repo-info-card.html class="Header-link no-underline" %}
+                </div>
+                {%- endif %}
+                {%- if site.nav %}
+                <div class="d-flex flex-column">
+                    {%- include nav.html %}
+                </div>
+                {%- endif %}
+                {%- if site.social_media %}
+                <div class="py-2 px-2">
+                    {%- include social.html %}
+                </div>
+                {%- endif %}
+            </div>
+        </div>
+    </div>
+</div>

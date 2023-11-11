@@ -1,8 +1,10 @@
 ---
-title: "This is a stacked post style"
-style: stacked
-tags: [style, stacked]
-image: "https://github.blog/wp-content/uploads/2023/05/1200.630-Community-wLogo-e1698634509856.png"
+title: "This is a topbar post style"
+style: appbar
+author: George P. Burdell
+tags: [style, appbar]
+image: https://github.blog/wp-content/uploads/2023/10/hero-light.jpg
+summary: This is an example of a post inside of the appbar style.
 ---
 Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.
 

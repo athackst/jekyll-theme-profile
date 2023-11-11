@@ -1,0 +1,41 @@
+<script>
+    $(document).ready(function () {
+        $('#expansion-btn').click(function () {
+            $('.Extend').toggleClass('d-none');
+        });
+        $('#collapse-btn').click(function () {
+            $('.Extend').addClass('d-none');
+        })
+    });
+</script>
+<div class="Profile text-center hide-sm">
+    {%- include masthead.html metadata=metadata %}
+    {%- if site.repo_info %}
+    <div class="py-2">
+        {% include mini-repo-info-card.html class="AppHeader-link no-underline" %}
+    </div>
+    {%- endif %}
+    {%- if site.social_media %}
+    <div class="py-2 px-2">
+        {%- include social.html %}
+    </div>
+    {%- endif %}
+</div>
+{%- if site.nav %}
+<div class="Header d-flex z-2 position-sticky top-0">
+    <div class="Header-item flex-row flex-justify-center flex-1 hide-sm">
+        {% include nav.html %}
+    </div>
+    <div class="d-flex flex-1 flex-sm-grow-0 flex-justify-end">
+        <div class="d-flex">
+            {% include toggle.html %}
+        </div>
+        <div class="d-flex">
+            <button id="expansion-btn" class="btn-octicon mr-2 d-sm-none">{% octicon three-bars height:16 %}</button>
+        </div>
+    </div>
+    <div class="Extend d-none">
+        {% include nav-dropdown.html %}
+    </div>
+</div>
+{%- endif %}
