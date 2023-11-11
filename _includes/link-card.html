@@ -1,6 +1,6 @@
 {%- if link.url %}
 <a href="{{ link.url | relative_url }}"
-  class="github-component position-relative hover-grow no-underline d-flex flex-column text-center border border-gray-light rounded-1 p-1">
+  class="Link Link-btn github-component position-relative hover-grow no-underline d-flex flex-column text-center border rounded-3 p-1">
   <div class="d-inline-flex flex-items-center">
     <div class="avatar-7">
       {%- if link.thumbnail %}
@@ -9,7 +9,7 @@
       {%- endif %}
     </div>
     <div class="flex-auto p-2">
-      <p class="f3 lh-condensed text-center link-gray-dark mb-0">{{ link.name }}</p>
+      <p class="f3 lh-condensed text-center mb-0">{{ link.name }}</p>
       {%- if link.description %}
       <p class="f5 text-gray text-center mb-0 mt-1">{{ link.description }}</p>
       {%- endif %}
@@ -18,7 +18,7 @@
   </div>
 </a>
 {%- else %}
-<div class="github-component position-relative height-full d-flex flex-column text-center p-1">
+<div class="Link-text github-component position-relative height-full d-flex flex-column text-center p-1">
   <div class="d-inline-flex flex-items-center">
     <div class="avatar-7">
       {%- if link.thumbnail %}
