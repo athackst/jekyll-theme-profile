@@ -8,6 +8,7 @@ group :jekyll_plugins do
   gem "jekyll-github-metadata"
   gem "jekyll-octicons"
   gem "jekyll-paginate"
+  gem "jekyll-toc"
   gem "jemoji"
 end
 
