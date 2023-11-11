@@ -13,7 +13,7 @@
 {%- endif %}
 {%- assign user_bio = user.bio | strip_html | strip_newlines | xml_escape | truncate: 300 %}
 {%- assign meta_description = page.description | default: post_description | default: site_description | default: user_bio %}
-{%- assign social_image = page.social_image | default: site.social_image | default: user.avatar_url %}
+{%- assign social_image = page.social_image | default: page.image | default: site.social_image | default: user.avatar_url %}
 {%- assign bg_image = page.background_image | default: site.background.image | default: null %}
 
 <head>

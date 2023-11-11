@@ -19,6 +19,7 @@ user_image: /media/user-image.jpg
 #   accent: "#ffffff"
 
 repo_info: true # Show the information for the source of this project
+metadata: true # Show the metadata associated with the user
 profile_link: true # Show a link to the github profile for the user
 
 ####################
@@ -66,16 +67,16 @@ nav:
 links:
   - name: Example page with topbar
     url: /test/page/topbar
-    thumbnail: /media/icon-topbar.png
+    thumbnail: /media/topbar-icon.png
   - name: Example page with appbar
     url: /test/page/appbar
-    thumbnail: /media/icon-topbar.png
+    thumbnail: /media/appbar-icon.png
   - name: Example page with sidebar
     url: /test/page/sidebar
-    thumbnail: /media/icon-sidebar.png
+    thumbnail: /media/sidebar-icon.png
   - name: Example page with header stacked
     url: /test/page/stacked
-    thumbnail: /media/icon-stacked.png
+    thumbnail: /media/stacked-icon.png
   - name: Example page with a custom background
     url: /test/page/background
     thumbnail: /media/icon-bg.png
