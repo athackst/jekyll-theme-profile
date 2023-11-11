@@ -46,6 +46,12 @@
   object-fit: cover; /* Scale and crop the image to cover the container */
 }
 
+.social-aside {
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+
 .nowrap {
   display: block;
   overflow-x: auto;
@@ -159,6 +165,11 @@
   position: relative;
 }
 
+.BlogHeader {
+  color: var(--color-header-text);
+  background-color: var(--color-header-bg);
+}
+
 
 body::before {
   content: "";
@@ -172,6 +183,10 @@ body::before {
     }
 
   @media print {
+    .BlogHeader {
+      background-color: inherit;
+      color: inherit;
+    }
     .AppHeader {
       display: none !important;
     }

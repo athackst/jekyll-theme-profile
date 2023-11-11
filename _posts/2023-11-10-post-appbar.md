@@ -1,5 +1,5 @@
 ---
-title: "This is a topbar post style"
+title: "This is a appbar post style"
 style: appbar
 author: George P. Burdell
 tags: [style, appbar]

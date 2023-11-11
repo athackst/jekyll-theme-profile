@@ -1,26 +1,103 @@
 ---
-layout: page
+layout: default
 ---
-<p class="mb-5">Published {{ page.date | date: "%b %d, %Y"}}</p>
-<div class="markdown-body">
-    {{ content }}
+{%- assign image = page.image | default: page.social_image | default: "assets/img/default.png" %}
+{%- assign user = site.github.owner %}
+{%- assign name = page.author | default: user.name | default: user.login %}
+
+<div class="BlogHeader position-relative border-top">
+    <div class="container-xl p-responsive">
+        <div class="gutter-spacious pt-1 ">
+            <div class="col-12 offset-lg-1 col-lg-10 col-xl-7 mt-5 mt-lg-10 mb-6 mb-lg-8">
+                <div class="h3-mktg lh-condensed mb-3 color-header-default">{{ page.title }}</div>
+                <p class="f4-mktg color-header-default">{{ page.summary }}</p>
+            </div>
+            <div class="offset-lg-1 col-lg-10">
+                <div class="position-relative z-1">
+                    <div class="image-container">
+                        <img src="{{ image | relative_url }}" class="cover-image rounded-2" alt="{{ page.title }}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="color-bg-default position-absolute bottom-0 width-full border-top" style="height:88px">
+    </div>
 </div>
-
-<!-- Pagination links -->
-<div class="paginate-container">
-    <div role="navigation" aria-label="Pagination" class="d-flex d-md-inline-block pagination">
-        {% if page.previous.url %}
-        <a class="previous_page" rel="prev" href="{{ page.previous.url | relative_url }}"
-            aria-disabled="false">{{page.previous.title | truncate: 20 }}</a>
-        {% else %}
-        <span class="previous_page disabled" aria-disabled="true">Previous</span>
-        {% endif %}
-
-        {% if page.next.url %}
-        <a class="next_page" rel="next" href="{{ page.next.url | relative_url }}"
-            aria-disabled="false">{{page.next.title | truncate: 20 }}</a>
-        {% else %}
-        <span class="next_page disabled" aria-disabled="true">Next</span>
-        {% endif %}
+<div class="container-xl mx-auto p-responsive">
+    <div class="gutter-spacious mt-5">
+        <div class="col-12 offset-lg-1 col-lg-10">
+            <div class="text-mono f5-mktg color-fg-muted mb-12px">Author</div>
+            <div class="d-flex flex-nowrap pb-1 flex-items-start">
+                <div class="d-flex flex-wrap">{{ name }}</div>
+                <div class="d-block border-left flex-shrink-0 text-mono f5-mktg color-fg-muted mb-3 ml-auto pl-5">
+                    {{ page.date | date: "%b %d, %Y" }}
+                </div>
+            </div>
+            <div class="color-border-accent-emphasis border-bottom"></div>
+        </div>
+    </div>
+    <div class="mx-auto p-responsive mt-4 mt-md-7 mb-7 mb-md-9">
+        <div class="d-flex flex-wrap gutter-spacious">
+            <div class="col-12 offset-lg-1 col-lg-1">
+                <ul class="list-style-none d-flex flex-lg-column position-sticky top-12">
+                    <li class="mr-4 mr-lg-0 mb-4">
+                        <a href="https://x.com/share?text={{ page.title | url_encode }}&url={{ page.url | absolute_url | url_encode }}"
+                            target="_blank"
+                            class="d-flex flex-justify-center flex-items-center border circle social-aside"
+                            data-proofer-ignore>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.5 222.3" height="18">
+                                <path
+                                    d="M273.5 26.3a109.77 109.77 0 0 1-32.2 8.8 56.07 56.07 0 0 0 24.7-31 113.39 113.39 0 0 1-35.7 13.6 56.1 56.1 0 0 0-97 38.4 54 54 0 0 0 1.5 12.8A159.68 159.68 0 0 1 19.1 10.3a56.12 56.12 0 0 0 17.4 74.9 56.06 56.06 0 0 1-25.4-7v.7a56.11 56.11 0 0 0 45 55 55.65 55.65 0 0 1-14.8 2 62.39 62.39 0 0 1-10.6-1 56.24 56.24 0 0 0 52.4 39 112.87 112.87 0 0 1-69.7 24 119 119 0 0 1-13.4-.8 158.83 158.83 0 0 0 86 25.2c103.2 0 159.6-85.5 159.6-159.6 0-2.4-.1-4.9-.2-7.3a114.25 114.25 0 0 0 28.1-29.1"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mr-4 mr-lg-0 mb-4">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }};t={{ page.title | url_encode }}"
+                            target="_blank"
+                            class="d-flex flex-justify-center flex-items-center border circle social-aside"
+                            data-proofer-ignore>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.3 15.4" height="18">
+                                <path
+                                    d="M14.5 0H.8a.88.88 0 0 0-.8.9v13.6a.88.88 0 0 0 .8.9h7.3v-6h-2V7.1h2V5.4a2.87 2.87 0 0 1 2.5-3.1h.5a10.87 10.87 0 0 1 1.8.1v2.1h-1.3c-1 0-1.1.5-1.1 1.1v1.5h2.3l-.3 2.3h-2v5.9h3.9a.88.88 0 0 0 .9-.8V.8a.86.86 0 0 0-.8-.8z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mr-4 mr-lg-0 mb-4">
+                        <a href="https://www.linkedin.com/shareArticle?url={{ page.url | absolute_url | url_encode }}%2F&title={{ page.title | url_encode }}"
+                            target="_blank"
+                            class="d-flex flex-justify-center flex-items-center border circle social-aside"
+                            data-proofer-ignore>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 18" height="18">
+                                <path
+                                    d="M3.94 2A2 2 0 1 1 2 0a2 2 0 0 1 1.94 2zM4 5.48H0V18h4zm6.32 0H6.34V18h3.94v-6.57c0-3.66 4.77-4 4.77 0V18H19v-7.93c0-6.17-7.06-5.94-8.72-2.91z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="col-12 col-lg-7 col-md-8 markdown-body">
+                {{ content }}
+            </div>
+            <div class="col-12 col-md-4 col-lg-3 markdown-body">
+                <div class="d-none d-md-block position-sticky top-12">
+                    {% capture toc_content%}{% toc %}{% endcapture %}
+                    {% if toc_content contains "li" %}
+                    <div class="mb-8 table-of-contents ">
+                        <h2 class="h6-mktg pt-1">
+                            Table of Contents
+                        </h2>
+                        <div id="table-of-contents">
+                            {{ toc_content }}
+                        </div>
+                    </div>
+                    {%- endif %}
+                </div>
+            </div>
+        </div>
     </div>
 </div>

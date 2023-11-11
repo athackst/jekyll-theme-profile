@@ -121,6 +121,7 @@ plugins:
   - jekyll-octicons
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-toc
   - jemoji
 
 defaults:
@@ -131,6 +132,7 @@ defaults:
       layout: "post"
       breadcrumbs: true
       permalink: /blog/:year/:month/:day/:title.html
+      toc: true
 
 exclude:
   - "Gemfile"
