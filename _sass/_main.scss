@@ -21,6 +21,31 @@
   object-fit: cover;
 }
 
+.cover-image {
+  position: absolute !important;
+  height: 100% !important;
+  width: 100% !important;
+  object-fit: cover;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+.image-container {
+  width: 100%; /* Allow the container to adjust to the website's width */
+  // max-width: 800px; /* Set a maximum width to prevent image from exceeding 800px */
+  height: 0; /* Create an aspect ratio container (initial height is 0) */
+  padding-bottom: 53.125%; /* Aspect ratio (425 / 800) */
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  width: 100%; /* Fill the entire container width */
+  height: 100%; /* Fill the entire container height */
+  object-fit: cover; /* Scale and crop the image to cover the container */
+}
+
 .nowrap {
   display: block;
   overflow-x: auto;

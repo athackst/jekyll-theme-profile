@@ -1,0 +1,10 @@
+{%- assign post_limit = include.limit | default: 3 %}
+
+<div class="gutter-condensed mb-4">
+  {%- for post in site.posts limit: {{post_limit}} %}
+      {%- include post-timeline-card.html %}
+  {%- endfor %}
+</div>
+<div class="col-12 col-md-7 offset-md-5 mb-5">
+  <a href="{{ site.paginate_path | relative_url | replace: 'page:num', '' }}" class="btn ml-5">Read more</a>
+</div>
