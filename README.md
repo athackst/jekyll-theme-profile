@@ -297,10 +297,6 @@ header:
   accent: "#ffffff"
 ```
 
-#### Custom styles
-
-You can override any style with styles defined in `/assets/css/style.css` or `/assets/css/style.scss` files.  This is to support config based styling which needs jekyll variables.
-
 ### Nav
 
 In the `nav` section, you can add navigation links that will show up on every page of your website.
@@ -435,6 +431,30 @@ And adding a `index.html` page at the `pagenate_path`
 layout: paginate
 title: My Blog
 ---
+```
+
+## Custom styles
+
+### Site style
+
+You can override any style with styles defined in `/assets/css/style.css` or `/assets/css/style.scss` files.  This is to support config based styling which needs jekyll variables.
+
+### Page style
+
+You can add css to any page through the `css_style` variable in front matter.
+
+```yaml
+---
+css_style: |
+    .Link-btn {
+        background: rgba(0.1, 0.1, 0.1, 0.4);
+        color: #FFFF;
+    }
+    h1 {
+        color: #FFFF;
+    }
+---
+
 ```
 
 ## Contributing
