@@ -80,6 +80,9 @@ links:
   - name: Example page with a custom background
     url: /test/page/background
     thumbnail: /media/icon-bg.png
+  - name: Example Linktree page
+    url: /test/linktree
+    thumbnail: /media/links.png
 
 ###################
 # Repositories to show on home page

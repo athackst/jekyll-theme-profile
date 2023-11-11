@@ -65,16 +65,21 @@
   <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/anchor-links.js' | relative_url }}"></script>
 
-{%- if bg_image %}
-<style>
-  body {
+  {%- if bg_image %}
+  <style>
+    body {
       position: relative;
       background-image: url('{{ bg_image | relative_url }}');
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
       z-index: -10;
-  }
-</style>
-{%- endif %}
+    }
+  </style>
+  {%- endif %}
+  {%- if page.css_style %}
+  <style>
+    {{ page.css_style }}
+  </style>
+  {%- endif %}
 </head>
