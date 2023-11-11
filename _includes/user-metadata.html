@@ -1,0 +1,30 @@
+{%- assign user = site.github.owner %}
+<div class="f4 d-flex flex-items-center flex-justify-center ">
+    {% if user.bio %}
+    <p class="mb-3 f4">
+        {{ user.bio }}
+    </p>
+    {% endif %}
+    {%- if user.name %}
+    <div class="mb-3">
+        {% octicon mark-github height:20 class:"mr-2 v-align-middle" aria-label:GitHub %}
+        <a href="https://github.com/{{ user.login }}">
+            @{{ user.login }}
+        </a>
+    </div>
+    {%- endif %}
+    {%- if user.email %}
+    <div class="mb-3">
+        {% octicon mail height:20 class:"mr-2 v-align-middle" aria-label:email %}
+        <a href="mailto:{{ user.email }}">
+            {{ user.email }}
+        </a>
+    </div>
+    {%- endif %}
+    {%- if user.location %}
+    <div class="mb-3">
+        {% octicon location height:20 class:"mr-2 v-align-middle" aria-label:Location %}
+        {{ user.location }}
+    </div>
+    {%- endif %}
+</div>

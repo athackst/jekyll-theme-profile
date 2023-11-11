@@ -55,7 +55,7 @@ user_image: /media/user-image.jpg
 #     overlay: rgba(0, 0, 0, 0.5)
 
 # repo_info: true # Show the information for the source of this project
-# metadata: true # Show the metadata associated with the user
+# user_metadata: true # Show the metadata associated with the user
 # profile_link: true # Show a link to the github profile for the user
 
 ####################
