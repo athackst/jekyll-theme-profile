@@ -1,0 +1,37 @@
+---
+layout: default
+user_metadata: true
+---
+<div class="container-xl d-lg-flex min-height-full">
+    <div class="Profile col-lg-4 border-gray-light pt-6 text-center">
+        {%- include toggle.html %}
+        {%- include masthead.html %}
+        {%- include social.html %}
+    </div>
+
+    <div class="col-lg-8 border-top border-lg-top-0 px-4 color-bg-default">
+        <div class="py-6">
+            {%- assign posts_total = site.posts | size %}
+            {%- assign posts_limit = site.posts_limit | default: posts_total %}
+
+            {%- unless content == "" %}
+            {{ content }}
+            {%- endunless %}
+
+            {%- if site.links %}
+            {%- include links.html %}
+            {%- endif %}
+
+            {%- unless posts_total == 0 %}
+            <h2 class="mb-3">Blog</h2>
+            {%- include post-timeline.html limit=posts_limit %}
+            {%- if site.posts.size > post_limit %}
+            {%- endif %}
+            {%- endunless %}
+
+            {%- if site.repositories %}
+            {%- include repositories.html %}
+            {%- endif %}
+        </div>
+    </div>
+</div>

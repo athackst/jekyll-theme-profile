@@ -84,6 +84,9 @@ links:
   - name: Example Linktree page
     url: /test/linktree
     thumbnail: /media/links.png
+  - name: Profile
+    url: /test/profile
+    thumbnail: /media/user-image.jpg
 
 ###################
 # Repositories to show on home page
