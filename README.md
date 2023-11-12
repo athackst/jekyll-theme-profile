@@ -2,7 +2,7 @@
 layout: post
 permalink: /
 image: screenshot.png
-summary: A customizable jekyll theme built off of the github primer css
+description: A customizable jekyll theme built off of the github primer css
 toc: true
 ---
 # jekyll-theme-profile

@@ -1,4 +1,5 @@
-description: A customizable jekyll theme built off of the github primer css
+title: Jekyll Theme Profile
+description: Github Profile built with jekyll-theme-profile
 repository: athackst/jekyll-theme-profile
 # The style of the website
 style: topbar # One of "stacked", "sidebar", "topbar"
@@ -139,6 +140,7 @@ defaults:
     values:
       layout: "post"
       permalink: /blog/:year/:month/:day/:title.html
+      image: /assets/img/default.png
       toc: true
 
 exclude:
