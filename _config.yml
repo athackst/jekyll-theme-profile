@@ -135,7 +135,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      breadcrumbs: true
       permalink: /blog/:year/:month/:day/:title.html
       toc: true
 
