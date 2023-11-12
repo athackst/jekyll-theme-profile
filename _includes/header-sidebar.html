@@ -6,22 +6,41 @@
         $('#collapse-btn').click(function () {
             $('.Extend').addClass('d-none');
         })
+        $('#toolbar-btn').click(function () {
+            $('.Sidebar').toggleClass('d-lg-block');
+            $('.Toolbar-expand').toggleClass('d-lg-block');
+            $('.Toolbar-collapse').toggleClass('d-lg-block');
+            $('.Toolbar').toggleClass('flex-lg-column');
+        })
+        $('#sidebar-btn').click(function () {
+            $('.Sidebar').toggleClass('d-lg-block');
+            $('.Toolbar-expand').toggleClass('d-lg-block');
+            $('.Toolbar-collapse').toggleClass('d-lg-block');
+            $('.Toolbar').toggleClass('flex-lg-column');
+
+        })
     });
 </script>
-<div class="Header container-sm col-lg-4 col-1 border-right flex-items-start p-0" style="min-width: 50px;">
-    <div class="flex-column flex-1 position-sticky top-0 ">
+<div class="Header d-flex border-right flex-items-start p-0 flex-justify-end position-sticky top-0">
+    <div class="flex-column flex-1 position-sticky top-0" >
         <div class="Extend Overlay-header d-none">
             {%- include nav-overlay.html %}
         </div>
-        <div class="d-flex flex-column flex-lg-row flex-justify-end mr-lg-5">
-            <div class="d-flex flex-justify-center mt-3">
-                <button id="expansion-btn" class="btn-octicon mr-2 d-lg-none">{% octicon three-bars height:16 %}</button>
+        <div class="Toolbar d-flex flex-row my-3 flex-justify-end">
+            <div class="Toolbar-expand d-flex flex-justify-center d-none">
+                <button id="sidebar-btn" class="btn-octicon mr-2">{% octicon chevron-right height:16 %}</button>
             </div>
-            <div class="d-flex flex-justify-center mt-3">
+            <div class="d-flex flex-justify-center">
                 {% include toggle.html %}
             </div>
+            <div class="d-flex flex-justify-center">
+                <button id="expansion-btn" class="btn-octicon mr-2 d-lg-none">{% octicon three-bars height:16 %}</button>
+            </div>
+            <div class="Toolbar-collapse d-flex flex-justify-center d-none d-lg-block">
+                <button id="toolbar-btn" class="btn-octicon mr-2">{% octicon chevron-left height:16 %}</button>
+            </div>
         </div>
-        <div class="d-none d-lg-block">
+        <div class="Sidebar d-none d-lg-block" style="max-width:400px;">
             <div class="text-center">
                 <div class="p-2">
                     {%- include masthead.html %}
