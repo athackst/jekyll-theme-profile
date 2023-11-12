@@ -1,16 +1,16 @@
 ---
-layout: page
+layout: post
 permalink: /
+image: screenshot.png
+summary: A customizable jekyll theme built off of the github primer css
+toc: true
 ---
+# jekyll-theme-profile
+
 ![jekyll-theme-profile](screenshot.png)
 
-# jekyll-theme-profile
-{:.no_toc}
 
 Meet "jekyll-theme-profile" – your ultimate Jekyll theme, based on GitHub's primer style. With both light and dark modes, and three stylish options: sidebar, topbar, and stacked, it's all about personalization. Setting up is a breeze, as it automatically populates your profile using your GitHub user info. Add custom links like Linktree and share engaging blog posts effortlessly. Get ready to rock your online presence with this user-friendly and charming theme, making Jekyll and GitHub Pages a joy to use!
-
-1. TOC
-{:toc}
 
 ## Installation
 
