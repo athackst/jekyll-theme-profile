@@ -3,12 +3,14 @@ layout: default
 ---
 
 <div class="py-3">
-    {%- include masthead.html metadata=metadata %}
+    {%- include masthead.html %}
     {%- unless content == "" %}
     {{ content }}
     {%- endunless %}
 
     {%- if site.links %}
+    <div class="d-flex mt-4">
     {%- include links.html %}
+    </div>
     {%- endif %}
 </div>

@@ -1,12 +1,7 @@
-{%- assign user = site.github.owner %}
-
 {%- assign style = page.style | default: site.style %}
-{%- assign breadcrumbs = page.breadcrumbs | default: false %}
+{%- assign user = site.github.owner %}
 {%- assign name = site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url %}
-{%- assign metadata = site.metadata | default: true %}
-
-
 <!doctype html>
 <html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
 
