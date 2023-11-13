@@ -1,6 +1,6 @@
 {%- assign post_limit = include.limit | default: 3 %}
 
-<div class="gutter-condensed mb-4">
+<div class="mb-4">
   {%- for post in site.posts limit: {{post_limit}} %}
       {%- include post-timeline-card.html %}
   {%- endfor %}
