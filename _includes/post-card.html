@@ -1,10 +1,9 @@
 {%- assign icon = post.type | default: "comment" %}
-{%- assign image = post.image | default: post.social_image | default: "assets/img/default.png" %}
 <div class="col-sm-6 col-lg-4 ">
   <div class="py-4 d-flex flex-column border-top">
     <div class="image-container">
       <a href="{{ post.url | relative_url }}">
-        <img class="rounded-2" src="{{ image | relative_url }}" width="377" height="200" alt="{{ post.title }}">
+        <img class="rounded-2" src="{{ post.image | relative_url }}" width="377" height="200" alt="{{ post.title }}">
       </a>
     </div>
     <h3 class="h6-mktg mb-12px">

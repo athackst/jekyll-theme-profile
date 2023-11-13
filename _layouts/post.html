@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{%- assign image = page.image | default: page.social_image | default: "assets/img/default.png" %}
 {%- assign user = site.github.owner %}
 {%- assign name = page.author | default: user.name | default: user.login %}
 
@@ -15,7 +14,7 @@ layout: default
             <div class="offset-lg-1 col-lg-10">
                 <div class="position-relative z-1">
                     <div class="image-container">
-                        <img src="{{ image | relative_url }}" class="cover-image rounded-2" alt="{{ page.title }}"/>
+                        <img src="{{ page.image | relative_url }}" class="cover-image rounded-2" alt="{{ page.title }}"/>
                     </div>
                 </div>
             </div>

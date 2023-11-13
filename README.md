@@ -60,7 +60,6 @@ user_image: /media/user-image.jpg
 
 ####################
 # Social media
-# social_image: /screenshot.png # The social media thumbnail image to use in post links.
 # icon_color: "#959da5" # The color of the social media icons on the site
 # social_media: # Your social media accounts
   # behance: your_username
@@ -362,10 +361,24 @@ repositories:
 You can set the social media image for your site with the setting
 
 ```yaml
-social_image: /screenshot.jpg
+image: /screenshot.jpg
 ```
 
 This works on both yaml frontmatter for a page and in the `_config.yml` file.  Page settings will override site settings.
+
+Set the default for posts through the default settings in the `_config.yml` file.
+
+```yaml
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /blog/:year/:month/:day/:title.html
+      image: /assets/img/default.png # The default image used for social and posts.
+      toc: true
+```
 
 #### Adding your socials
 
