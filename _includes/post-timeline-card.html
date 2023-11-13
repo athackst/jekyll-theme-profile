@@ -1,6 +1,4 @@
 {%- assign icon = post.type | default: "comment" %}
-{%- assign image = post.image | default: post.social_image %}
-{%- assign video = post.video %}
 <div class="TimelineItem flex-wrap">
   <div class="col-12 col-md-5 position-relative">
     <div class="TimelineItem-title mt-5 position-sticky d-flex">
@@ -23,13 +21,13 @@
   </div>
   <div class="col-12 col-md-7">
     <div class="ml-5 mt-5">
-      {%- if image %}
+      {%- if post.image %}
       <div class="image-container mb-5">
-        <img class="rounded-2" src="{{ image}}" width="800" height="425" alt="{{ post.title }}" />
+        <img class="rounded-2" src="{{ post.image}}" width="800" height="425" alt="{{ post.title }}" />
       </div>
       {%- endif %}
-      {%- if video %}
-      <iframe width="560" height="315" src="{{ page.video }}" frameborder="0" gesture="media"
+      {%- if post.video %}
+      <iframe width="560" height="315" src="{{ post.video }}" frameborder="0" gesture="media"
         allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
       {%- endif %}
       <div class="summary"> {{ post.excerpt }}</div>

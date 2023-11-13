@@ -26,7 +26,6 @@ profile_link: true # Show a link to the github profile for the user
 
 ####################
 # Social media
-social_image: /screenshot.png # The social media thumbnail image to use in post links.
 # icon_color: "#959da5" # The color of the social media icons on the site
 # social_media: # Your social media accounts
 #   behance: your_username
@@ -106,10 +105,8 @@ repositories:
 ####################
 # Blog
 posts_limit: 3 # The number of posts to show in home
-
 paginate: 6 # The number of posts to show per page of pagination of blog posts
 paginate_path: "/assets/blog/page:num"
-
 markdown: kramdown
 highlighter: rouge
 # kramdown:
@@ -140,7 +137,7 @@ defaults:
     values:
       layout: "post"
       permalink: /blog/:year/:month/:day/:title.html
-      image: /assets/img/default.png
+      image: /assets/img/default.png # The default image used for social and posts.
       toc: true
 
 exclude:
