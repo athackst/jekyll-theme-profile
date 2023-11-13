@@ -1,7 +1,7 @@
 <div class="Overlay-backdrop--side Overlay-backdrop--placement-left" data-modal-dialog-overlay>
-    <modal-dialog class="Overlay Overlay-whenNarrow Overlay--size-small-portrait Overlay--motion-scaleFade SidePanel" >
-        <div class="Overlay-headerContentWrap my-4">
-            <div class="Overlay-titleWrap d-flex">
+    <modal-dialog class="Overlay Overlay--size-auto Overlay--width-medium Overlay--motion-slideDown" >
+        <div class="Overlay-headerContentWrap d-flex flex-row py-3 px-2">
+            <div class="Overlay-titleWrap d-flex flex-1">
                 <div tabindex="-1" class="d-flex flex-1 ml-3" id="github-logo">
                     <a href="{{ site.baseurl }}/" class="AppHeader-link d-flex flex-items-center no-underline mr-3">
                         <img class="avatar img-cover circle" height="32" width="32" alt="{{ name }}" src="{{ user_img | relative_url }}">
@@ -15,7 +15,7 @@
                 </button>
             </div>
         </div>
-        <div class="Overlay-body d-flex flex-column height-full p-2">
+        <div class="Overlay-body d-flex flex-column p-2">
             <ul data-overflow-nav class="ActionListWrap SideNav">
                 {%- for nav_item in site.nav %}
                 <li class="SideNav-item"{% if page.url==nav_item.url %} aria-current="page"{% endif %}>
