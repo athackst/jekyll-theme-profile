@@ -12,4 +12,14 @@ css_style: |
     h1 {
         color: #FFFF;
     }
+    .octicon {
+        fill: black;
+    }
+    a {
+        color: #FFFF;
+    }
+    a:hover {
+        text-decoration: none;
+        color: var(--color-fg-default);
+    }
 ---
