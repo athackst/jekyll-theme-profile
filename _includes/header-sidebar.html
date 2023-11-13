@@ -23,7 +23,7 @@
 </script>
 <div class="Header d-flex border-right flex-items-start p-0 flex-justify-end position-sticky top-0">
     <div class="flex-column flex-1 position-sticky top-0" >
-        <div class="Toolbar d-flex flex-row my-3 flex-lg-justify-end flex-justify-start">
+        <div class="Toolbar topbar d-flex flex-row py-3 flex-lg-justify-end flex-justify-start">
             <div class="Toolbar-expand d-flex flex-justify-center d-none">
                 <button id="sidebar-btn" class="btn-octicon mr-2">{% octicon chevron-right height:16 %}</button>
             </div>
@@ -37,9 +37,9 @@
                 <button id="toolbar-btn" class="btn-octicon mr-2">{% octicon chevron-left height:16 %}</button>
             </div>
         </div>
-        <div class="Sidebar d-none d-lg-block" style="max-width:400px;">
+        <div class="Sidebar d-none d-lg-block Layout Layout-sidebar Layout--sidebar-wide">
             <div class="text-center">
-                <div class="p-2">
+                <div class="px-5 py-2">
                     {%- include masthead.html %}
                 </div>
                 {%- if site.repo_info %}
