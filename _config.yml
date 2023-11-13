@@ -84,7 +84,7 @@ links:
   - name: Example Linktree page
     url: /test/linktree
     thumbnail: /media/links.png
-  - name: Profile
+  - name: Example Profile page
     url: /test/profile
     thumbnail: /media/user-image.jpg
 
