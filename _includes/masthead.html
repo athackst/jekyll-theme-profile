@@ -2,9 +2,9 @@
 {%- assign name = site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url %}
 {%- assign user_metadata = page.user_metadata | default: layout.user_metadata | default: site.user_metadata %}
-<div class="Masthead pt-4">
+<div class="Masthead">
   <a href="{{ site.baseurl }}/">
-    <div class="img-masthead mb-3">
+    <div class="img-masthead p-1 mb-3">
       <img src="{{ user_img | relative_url }}" alt="{{ name }}"
         class="avatar avatar-user rounded-circle border color-border-default">
     </div>
