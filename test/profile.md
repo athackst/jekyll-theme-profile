@@ -1,5 +1,5 @@
 ---
 layout: profile
 title: My Profile
-style: none
+style: appbar
 ---
