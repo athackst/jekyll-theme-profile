@@ -43,7 +43,11 @@ Once you submit a pull request, our team will review your code. We strive to pro
 
 ## Testing Guidelines
 
-Before submitting your contributions, make sure to test your changes thoroughly. We have a test suite in place, and we appreciate new tests for new features or bug fixes. To run tests locally, use `bundle exec jekyll serve` and check that your changes work as expected.
+Before submitting your contributions, make sure to test your changes thoroughly. We have a test suite in place, and we appreciate new tests for new features or bug fixes.
+
+To run tests locally, use `.github/test.sh` and check there are no errors.
+
+Also, use `bundle exec jekyll serve` and check that your changes work as expected.
 
 ## Documentation
 
