@@ -3,13 +3,13 @@
 {%- assign user_img = site.user_image | default: user.avatar_url %}
 {%- assign user_metadata = page.user_metadata | default: layout.user_metadata | default: site.user_metadata %}
 <div class="Masthead">
-  <a href="{{ site.baseurl }}/">
-    <div class="img-masthead p-2 mb-3">
-      <img src="{{ user_img | relative_url }}" alt="{{ name }}"
-        class="CircleBadge rounded-circle border ">
+    <div class="CircleBadge img-masthead rounded-circle border">
+      <a href="{{ site.baseurl }}/">
+        <img src="{{ user_img | relative_url }}" alt="{{ name }}" class="cover-image">
+      </a>
     </div>
-  </a>
-  <h1 class="text-center mb-3 lh-condensed overflow-wrap-word">{{ name }}</h1>
+
+  <h1 class="text-center my-3 lh-condensed overflow-wrap-word">{{ name }}</h1>
   {%- if user_metadata %}
   {% include user-metadata.html %}
   {%- endif %}
