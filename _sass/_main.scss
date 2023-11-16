@@ -8,11 +8,6 @@
   min-height: 100vh;
 }
 
-.min-width {
-  min-width: 300px;
-}
-
-
 .img-contain {
   object-fit: contain;
 }
@@ -52,19 +47,11 @@
   padding: 10px;
 }
 
-.nowrap {
-  display: block;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
 .img-masthead {
   aspect-ratio: 1 / 1;
   max-width: 296px;
+  position:relative;
   overflow: hidden; /* Hide any overflow to maintain circle shape */
-  display: flex; /* Use flexbox to center the image */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
   margin: auto;
 }
 
