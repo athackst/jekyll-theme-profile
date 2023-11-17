@@ -1,0 +1,12 @@
+---
+layout: page
+title: Repositories
+---
+<div class="pt-3">
+<h2>{{ page.title }}</h2>
+{%- unless content == "" %}
+{{ content }}
+{%- endunless %}
+
+{% include repositories.html %}
+</div>

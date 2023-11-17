@@ -87,6 +87,9 @@ links:
   - name: Example Profile page
     url: /test/profile
     thumbnail: /media/user-image.jpg
+  - name: Example Reposotiries page
+    url: /test/repositories
+    thumbnail: /media/repositories.png
 
 ###################
 # Repositories to show on home page
