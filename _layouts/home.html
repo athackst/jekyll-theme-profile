@@ -10,7 +10,9 @@ layout: page
   {%- endunless %}
 
   {%- if site.links %}
+  <div class="container-md">
   {%- include links.html %}
+  </div>
   {%- endif %}
 
   {%- unless posts_total == 0 %}
