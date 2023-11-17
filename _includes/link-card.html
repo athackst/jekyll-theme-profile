@@ -16,7 +16,7 @@ This builds a link card
     <div class="avatar-7">
       {%- if link.thumbnail %}
       <img src="{{ link.thumbnail | relative_url }}" width="48" height="48"
-        class="rounded-2 box-shadow-none img-contain float-left pl-1" alt="{{ link.name }}">
+        class="rounded-2 box-shadow-none img-cover float-left" alt="{{ link.name }}">
       {%- endif %}
     </div>
     <div class="p-2">
