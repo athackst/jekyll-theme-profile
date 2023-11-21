@@ -1,7 +1,8 @@
 {%- assign user = site.github.owner %}
 {%- assign name = site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url %}
-{%- assign user_metadata = page.user_metadata | default: layout.user_metadata | default: site.user_metadata %}
+{%- assign user_metadata = site.user_metadata -%}
+
 <div class="Masthead">
     <div class="CircleBadge img-masthead rounded-circle border">
       <a href="{{ site.baseurl }}/">
