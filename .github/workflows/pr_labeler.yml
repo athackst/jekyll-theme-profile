@@ -1,4 +1,4 @@
-name: PR Labeler
+name: PR labeler
 on:
   pull_request:
     types: [opened]

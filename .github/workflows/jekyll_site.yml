@@ -1,5 +1,5 @@
 # Workflow for building and deploying a Jekyll site to GitHub Pages
-name: Jekyll site
+name: CI/CD jekyll site
 
 on:
   # Runs on pushes targeting the default branch
