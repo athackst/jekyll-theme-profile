@@ -161,6 +161,11 @@
   background-color: var(--color-canvas-default) !important;
 }
 
+.Page {
+  height: 100% !important;
+  background-color: var(--color-canvas-default) !important;
+}
+
 
 body::before {
   content: "";
