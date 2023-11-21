@@ -30,6 +30,7 @@
       </div>
       {%- endif %}
       <div class="summary"> {{ post.excerpt }}</div>
+      {%- if post.content != blank %}
       <div class="more">
         <a href="{{ post.url | relative_url }}" class="link-mktg arrow-target-mktg text-semibold f4-mktg">
           Contiue
@@ -42,6 +43,7 @@
           </svg>
         </a>
       </div>
+      {%- endif %}
     </div>
 
   </div>
