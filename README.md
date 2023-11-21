@@ -131,7 +131,7 @@ repositories:
 
 ####################
 # Blog
-posts_limit: 3 # The number of posts to show in home
+posts_limit: 3 # The number of posts to show in home (also can be defined in page)
 
 paginate: 6 # The number of posts to show per page of pagination of blog posts
 paginate_path: "/assets/blog/page:num"

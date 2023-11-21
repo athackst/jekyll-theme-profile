@@ -3,7 +3,7 @@ layout: page
 ---
 <div class="py-3">
   {%- assign posts_total = site.posts | size %}
-  {%- assign posts_limit = site.posts_limit | default: posts_total %}
+  {%- assign posts_limit = page.posts_limit | default: site.posts_limit | default: posts_total %}
 
   {%- unless content == "" %}
   {{ content }}
