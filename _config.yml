@@ -90,6 +90,9 @@ links:
   - name: Example Reposotiries page
     url: /test/repositories
     thumbnail: /media/repositories.png
+  - name: Example Landing page
+    url: /test/landing
+    thumbnail: /media/landing.png
 
 ###################
 # Repositories to show on home page
