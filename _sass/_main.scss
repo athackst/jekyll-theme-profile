@@ -153,8 +153,12 @@
 }
 
 .BlogHeader {
-  color: var(--color-header-text);
-  background-color: var(--color-header-bg);
+  color: var(--color-header-text) !important;
+  background-color: var(--color-header-bg) !important;
+}
+
+.BlogContent {
+  background-color: var(--color-canvas-default) !important;
 }
 
 
