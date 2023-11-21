@@ -27,6 +27,9 @@ jobs:
   bump_version:
     runs-on: ubuntu-latest
     needs: update_release_draft
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - name: Bump version
@@ -53,3 +56,5 @@ jobs:
         run: |
           echo "Merging pull request"
           gh pr merge --auto --rebase --delete-branch "${{ steps.cpr.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ github.token }}
