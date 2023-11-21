@@ -5,7 +5,7 @@ layout: page
 <div class="d-flex flex-wrap gutter-spacious">
 <!-- This loops through the paginated posts -->
 {%- for post in paginator.posts %}
-  {%- if post == paginator.posts.first %}
+  {%- if post.feature %}
   {%- include post-feature-card.html %}
   {%- else %}
   {%- include post-card.html %}
