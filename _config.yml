@@ -1,11 +1,16 @@
+# # Welcome to the Jekyll Theme Profile!
+#
+# ######## Jekyll Site Settings ##########
 title: Jekyll Theme Profile
 description: Github Profile built with jekyll-theme-profile
 repository: athackst/jekyll-theme-profile
+
+# ########### Theme settings ###############
 # The style of the website
 style: topbar # One of "stacked", "sidebar", "topbar"
  # The user/project avatar.  If not set the avatar of the project owner will be used.
 user_image: /media/user-image.jpg
-# Optional custom background image and overlay
+# # Optional custom background image and overlay
 # background:
 #   image: /media/background-img.jpg
 #   overlay: rgba(0, 0, 0, 0.7)
@@ -14,7 +19,7 @@ user_image: /media/user-image.jpg
 #   dark:
 #     overlay: rgba(0, 0, 0, 0.5)
 
-# Optional custom header colors
+# # Optional custom header colors
 # header:
 #   color: "#4051b5"
 #   text: "rgba(255,255,255,0.7)"
@@ -23,9 +28,8 @@ user_image: /media/user-image.jpg
 repo_info: true # Show the information for the source of this project
 user_metadata: true # Show the metadata associated with the user
 profile_link: true # Show a link to the github profile for the user
-
-####################
-# Social media
+##########################
+# # Social media settings
 # icon_color: "#959da5" # The color of the social media icons on the site
 # social_media: # Your social media accounts
 #   behance: your_username
@@ -64,7 +68,7 @@ nav:
     url: /test/home/stacked.html
 
 ####################
-# List of links for home page
+# List of links for link cards
 links:
   - name: Example page with topbar
     url: /test/page/topbar
@@ -108,15 +112,20 @@ repositories:
     repositories:
       # - list of respositories to exclude
 
+
+# ########### Plugin settings ###############
 ####################
-# Blog
+# jekyll-paginate settings
 posts_limit: 3 # The number of posts to show in home (also can be defined in page)
 paginate: 6 # The number of posts to show per page of pagination of blog posts
 paginate_path: "/assets/blog/page:num"
+###################
+# jekyll-tagging settings
 tag_page_layout: tags
 tag_page_dir: tags
 
 
+# ============= general settings for the theme ===============
 markdown: kramdown
 highlighter: rouge
 # kramdown:
