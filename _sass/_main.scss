@@ -166,6 +166,15 @@
   background-color: var(--color-canvas-default) !important;
 }
 
+.post-tags::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 20px;
+  background-color: var(--color-fg-default);
+  margin-bottom: 4px;
+}
+
 
 body::before {
   content: "";

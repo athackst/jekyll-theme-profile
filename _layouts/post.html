@@ -15,8 +15,7 @@ layout: default
             <div class="offset-lg-1 col-lg-10">
                 <div class="position-relative z-1">
                     <div class="image-container">
-                        <img src="{{ image | relative_url }}" class="cover-image rounded-2"
-                            alt="{{ page.title }}" />
+                        <img src="{{ image | relative_url }}" class="cover-image rounded-2" alt="{{ page.title }}" />
                     </div>
                 </div>
             </div>
@@ -25,7 +24,7 @@ layout: default
     <div class="BlogContent position-absolute bottom-0 width-full border-top" style="height:88px">
     </div>
 </div>
-<div class="BlogContent">
+<div class="BlogContent pb-5">
     <div class="container-xl mx-auto p-responsive">
         <div class="gutter-spacious pt-5">
             <div class="col-12 offset-lg-1 col-lg-10">
@@ -83,6 +82,16 @@ layout: default
                 </div>
                 <div class="col-12 col-lg-7 col-md-8 markdown-body">
                     {{ content }}
+                    {%- if page.tags.size > 0 %}
+                    <div class="post-tags text-mono f4-mktg mt-8">
+                        <span class="post-tags-label flex-shrink-0 d-inline-block mt-2">Tags: </span>
+                        <ul class="d-inline-block list-style-none color-text-link mb-0">
+                            {% for tag in page.tags %}
+                            <li class="d-inline-block mt-2 mb-0"><a href="{{ site.tag_page_dir | relative_url }}/{{ tag | slugify: 'pretty' }}.html">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {%- endif %}
                 </div>
                 <div class="col-12 col-md-4 col-lg-3 markdown-body">
                     <div class="d-none d-md-block position-sticky top-12">

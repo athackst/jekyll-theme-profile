@@ -113,6 +113,10 @@ repositories:
 posts_limit: 3 # The number of posts to show in home (also can be defined in page)
 paginate: 6 # The number of posts to show per page of pagination of blog posts
 paginate_path: "/assets/blog/page:num"
+tag_page_layout: tags
+tag_page_dir: tags
+
+
 markdown: kramdown
 highlighter: rouge
 # kramdown:
@@ -134,6 +138,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-toc
+  - jekyll-tagging
   - jemoji
 
 defaults:
