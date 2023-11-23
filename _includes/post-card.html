@@ -1,6 +1,7 @@
 {%- assign image = post.image | default: site.image %}
+{%- assign border = include.border %}
 <div class="col-sm-6 col-lg-4 ">
-  <div class="py-4 d-flex flex-column border-top">
+  <div class="py-4 d-flex flex-column {{ border }}">
     <div class="image-container">
       <a href="{{ post.url | relative_url }}">
         <img class="rounded-2" src="{{ image | relative_url }}" width="377" height="200" alt="{{ post.title }}">

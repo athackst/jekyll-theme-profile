@@ -20,5 +20,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
   spec.add_runtime_dependency "jekyll-toc", "~> 0.18.0"
+  spec.add_runtime_dependency "jekyll-tagging", "~> 1.1.0"
   spec.add_runtime_dependency "jemoji", "~> 0.11"
 end

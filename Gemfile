@@ -9,6 +9,7 @@ group :jekyll_plugins do
   gem 'jekyll-octicons'
   gem 'jekyll-paginate'
   gem 'jekyll-seo-tag'
+  gem 'jekyll-tagging'
   gem 'jekyll-toc'
   gem 'jemoji'
 end
