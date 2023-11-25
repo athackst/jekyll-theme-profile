@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Background
-background_image: https://www.allisonthackston.com/assets/img/cover-1920.jpg
+style: sidebar
+title: Page (Sidebar Style)
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](../../another-page.md).
+[Link to another page](../another-page.md).
 
 There should be whitespace between paragraphs.
 

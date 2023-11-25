@@ -1,4 +1,4 @@
-{%- assign style = page.style | default: site.style %}
+{%- assign style = page.style | default: layout.style | default: site.style %}
 {%- assign user = site.github.owner %}
 {%- assign name = site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url %}
@@ -19,9 +19,8 @@
         {% include header-sidebar.html %}
     {%- endif %}
 
-    <div class="flex-column flex-1 min-width-0">
     {{ content }}
-    </div>
+
     {% if style== 'sidebar' %}
     </div>
     {% endif %}

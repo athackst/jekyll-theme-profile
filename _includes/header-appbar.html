@@ -10,9 +10,11 @@
 </script>
 <header class="AppHeader position-sticky top-0 z-2 border-bottom topbar">
     <div class="AppHeader-item d-flex flex-justify-between p-2 flex-items-center">
+        {%- if site.nav %}
         <div class="d-flex">
             <button id="expansion-btn" class="AppHeader-button d-sm-none" type="button">{% octicon three-bars height:16 %}</button>
         </div>
+        {%- endif %}
         <div tabindex="-1" class="d-flex flex-1 ml-3" id="github-logo">
             <a href="{{ site.baseurl }}/" class="AppHeader-link d-flex flex-items-center no-underline mr-3">
                 {% octicon mark-github height:32 %}
