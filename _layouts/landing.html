@@ -5,7 +5,7 @@ style: none
 {%- assign user = site.github.owner %}
 {%- assign name = site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url %}
-<div class="d-flex p-0 position-sticky top-0">
+<div class="Header d-flex p-0 flex-1 height-full">
     <div class="flex-column flex-1 position-sticky top-0">
         <div class="Toolbar topbar d-flex flex-row py-3 flex-justify-end">
             <div class="Toolbar-expand d-flex flex-justify-center d-none">
@@ -15,8 +15,8 @@ style: none
                 {% include toggle.html %}
             </div>
         </div>
-        <div class="text-center">
-            <div class="px-5 py-2">
+        <div class="text-center flex-1">
+            <div class="px-5 py-2 height-full">
                 {%- include masthead.html %}
             </div>
             {%- if site.repo_info %}
@@ -24,6 +24,7 @@ style: none
                 {% include mini-repo-info-card.html class="Header-link no-underline" %}
             </div>
             {%- endif %}
+            {{ content }}
             {%- if site.nav %}
             <div class="d-flex flex-column">
                 {%- include nav.html %}

@@ -1,16 +1,9 @@
----
-layout: post
-permalink: /
-image: screenshot.png
-description: A customizable jekyll theme built off of the github primer css
-toc: true
----
 # jekyll-theme-profile
 
-![jekyll-theme-profile](screenshot.png)
+![jekyll-theme-profile](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/screenshot.png)
 
 
-Meet "jekyll-theme-profile" – your ultimate Jekyll theme, based on GitHub's primer style. With both light and dark modes, and three stylish options: sidebar, topbar, and stacked, it's all about personalization. Setting up is a breeze, as it automatically populates your profile using your GitHub user info. Add custom links like Linktree and share engaging blog posts effortlessly. Get ready to rock your online presence with this user-friendly and charming theme, making Jekyll and GitHub Pages a joy to use!
+This theme is based on GitHub's primer style. It supports both light and dark modes, and four style options: appbar, sidebar, topbar, and stacked. Setting up is a breeze, as it automatically populates your profile using your GitHub user info. Add custom links like Linktree and share engaging blog posts effortlessly.
 
 ## Installation
 
@@ -36,106 +29,8 @@ Or install it yourself as:
 
 ## Usage
 
-Here's a sample config file you can copy and customize:
+Start with a [sample config](https://github.com/athackst/jekyll-theme-profile/blob/main/example/_config.yml) that you can copy and customize.
 
-```yaml
-repository: athackst/jekyll-theme-profile
-# The style of the website
-style: topbar # One of "stacked", "sidebar", "topbar"
- # The user/project avatar.  If not set the avatar of the project owner will be used.
-user_image: /media/user-image.jpg
-# Optional custom background image and overlay
-# background:
-#   image: /media/background-img.jpg
-#   single overlay for all or custom for light and dark modes
-#   overlay: rgba(0, 0, 0, 0.5)
-#   light:
-#     overlay: rgba(255, 255, 255, 0.5)
-#   dark:
-#     overlay: rgba(0, 0, 0, 0.5)
-
-# repo_info: true # Show the information for the source of this project
-# user_metadata: true # Show the metadata associated with the user
-# profile_link: true # Show a link to the github profile for the user
-
-####################
-# Social media
-# icon_color: "#959da5" # The color of the social media icons on the site
-# social_media: # Your social media accounts
-  # behance: your_username
-  # dribbble: your_username
-  # docker: your_username
-  # facebook: your_username
-  # github: your_username
-  # hackerrank: your_username
-  # instagram: your_username
-  # keybase: your_username
-  # linkedin: your_username
-  # mail: email@address
-  # mastodon: your_username
-  # medium: your_username
-  # stackoverflow: your_user_id
-  # telegram: your_username
-  # threads: your_username
-  # tiktok: your_username
-  # twitter: your_username
-  # unsplash: your_username
-  # vk: your_username
-  # vscode: your_username
-  # youtube: your_username
-  # x: your_username
-
-####################
-# Navigation links
-# nav:
-#   - name: Topbar
-#     url: /test/home/topbar.html
-#   - name: Appbar
-#     url: /test/home/appbar.html
-#   - name: Sidebar
-#     url: /test/home/sidebar.html
-#   - name: Stacked
-#     url: /test/home/stacked.html
-
-####################
-# List of links for home page
-# links:
-#   - name: Example page with topbar
-#     url: /test/page/topbar
-#     thumbnail: /media/icon-topbar.png
-#   - name: Example page with appbar
-#     url: /test/page/appbar
-#   - name: Example page with sidebar
-#     url: /test/page/sidebar
-#     thumbnail: /media/icon-sidebar.png
-#   - name: Example page with header stacked
-#     url: /test/page/stacked
-#     thumbnail: /media/icon-stacked.png
-#   - name: Example page with a custom background
-#     url: /test/page/background
-#     thumbnail: /media/icon-bg.png
-
-###################
-# Repositories to show on home page
-repositories:
-  sort_by: stars
-  # sort_by options:
-  #   - pushed
-  #   - stars
-  limit: 24
-  exclude:
-    archived: true
-    forks: true
-    repositories:
-      # - list of respositories to exclude
-
-####################
-# Blog
-posts_limit: 3 # The number of posts to show in home (also can be defined in page)
-
-paginate: 6 # The number of posts to show per page of pagination of blog posts
-paginate_path: "/assets/blog/page:num"
-```
 
 You can also use this with github acions. Below is a typical worfklow file
 
@@ -203,11 +98,6 @@ jobs:
         env:
           JEKYLL_ENV: production
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: HTMLProofer
-        uses: athackst/htmlproofer-action@v0.3.0
-        with:
-          ignore_urls: |
-            https://opensource.org/license/mit/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
@@ -242,21 +132,21 @@ style: sidebar # One of "stacked", "sidebar", "topbar"
 ---
 ```
 
-#### [Sidebar](/test/home/sidebar.md)
+#### [Sidebar](https://www.althack.dev/jekyll-theme-profile/home/sidebar.html)
 
-![Sidebar image](/media/sidebar-preview.png)
+![Sidebar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/sidebar-preview.png)
 
-#### [Stacked](/test/home/stacked.md)
+#### [Stacked](https://www.althack.dev/jekyll-theme-profile/home/stacked.html)
 
-![Stacked image](/media/stacked-preview.png)
+![Stacked image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/stacked-preview.png)
 
-#### [Topbar](/test/home/topbar.md)
+#### [Topbar](https://www.althack.dev/jekyll-theme-profile/home/topbar.html)
 
-![Topbar image](/media/topbar-preview.png)
+![Topbar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/topbar-preview.png)
 
-#### [Appbar](/test/home/appbar.md)
+#### [Appbar](https://www.althack.dev/jekyll-theme-profile/home/appbar.html)
 
-![Appbar image](/media/appbar-preview.png)
+![Appbar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/appbar-preview.png)
 
 #### Background
 
@@ -283,7 +173,7 @@ background:
     overlay: rgba(0, 0, 0, 0.5)
 ```
 
-[Example page](/test/page/background.md)
+[Example page](https://www.althack.dev/jekyll-theme-profile/page/background)
 
 #### Header
 
@@ -300,7 +190,7 @@ header:
 
 In the `nav` section, you can add navigation links that will show up on every page of your website.
 
-![Nav](/media/nav.png){: .border}
+![Nav](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/nav.png){: .border}
 
 ```yaml
 nav:
@@ -316,7 +206,7 @@ nav:
 
 In the `links` section, you can add links to showcase various pages on the web or your website.
 
-![Links](/media/links.png){: .border}
+![Links](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/links.png){: .border}
 
 ```yaml
 links:
@@ -338,7 +228,7 @@ links:
 
 The `repositories` section allows you to display your GitHub repositories on your page.  You can sort them by stars or latest pushes, set a limit to the number of repositories displayed, and exclude archived, forked, or specific repositories from the list
 
-![Repositories](/media/repositories.png){: .border}
+![Repositories](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/repositories.png){: .border}
 
 ```yaml
 repositories:
@@ -354,7 +244,7 @@ repositories:
       # - respositories to exclude
 ```
 
-### Social media
+### Social media and SEO
 
 #### Setting the social media card
 
@@ -384,7 +274,7 @@ defaults:
 
 Utilize the `social_media` section to add links to your various social media profiles.  For each platform simply provide your username or user ID to have the corresponding icon and link appear on your profile.
 
-![Social Media](/media/social-media.png){: .border}
+![Social Media](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/social-media.png){: .border}
 
 ```yaml
 social_media:
@@ -418,23 +308,23 @@ You can also set the icon color.  If you don't set an icon color, the original i
 icon_color: "#959da5"
 ```
 
-### Blog
+### Blog timeline
 
-Make entries for the blog the same way you normally would by placing entries in the `_posts` folder.  You can adjust the number of entries that show up in the main page by adjusting `posts_limit` in the `_config.yml` file.  If you have more posts than the limit, a `Read more` button will link to the paginated blog post page /blog/index.html.
+Make entries for the blog the same way you normally would by placing entries in the `_posts` folder.  You can adjust the number of entries that show up in the main page by adjusting `posts_limit` in the `_config.yml` file.  If you have paginate installed and more posts than the limit, a `Read more` button will link to the paginated blog post page /blog/index.html.
 
-![Blog](/media/blog.png){: .border}
+![Blog](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/blog.png){: .border}
 
 ```yaml
 posts_limit: 3
 ```
 
-Additionally, the theme provides a paginate layout you can use.  By default, the theme serves pagination from `/assets/blog/index.html`.
+Additionally, the theme provides a paginate layout you can use.
 
-But you can adjust the source by updating the config
+To use, add `gem jekyll-paginate` to your gemfile and the following lines to your `_config.yml`
 
 ```yaml
 paginate: 6
-paginate_path: "/assets/blog/page:num"
+paginate_path: "/blog/page:num"
 ```
 
 And adding a `index.html` page at the `pagenate_path`

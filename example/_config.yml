@@ -1,13 +1,15 @@
-# # Welcome to the Jekyll Theme Profile!
-#
 # ######## Jekyll Site Settings ##########
-title: Jekyll Theme Profile
-description: Github Profile built with jekyll-theme-profile
+theme: jekyll-theme-profile
+title: Test Jekyll Theme Profile
+description: Test of the theme built with jekyll-theme-profile
 repository: athackst/jekyll-theme-profile
+base_url: "jekyll-theme-profile"
+url: "https://www.althack.dev"
+
 
 # ########### Theme settings ###############
 # The style of the website
-style: topbar # One of "stacked", "sidebar", "topbar"
+style: topbar # One of "stacked", "sidebar", "topbar", "appbar"
  # The user/project avatar.  If not set the avatar of the project owner will be used.
 user_image: /media/user-image.jpg
 # # Optional custom background image and overlay
@@ -28,19 +30,20 @@ user_image: /media/user-image.jpg
 repo_info: true # Show the information for the source of this project
 user_metadata: true # Show the metadata associated with the user
 profile_link: true # Show a link to the github profile for the user
+
 ##########################
 # # Social media settings
-# icon_color: "#959da5" # The color of the social media icons on the site
-# social_media: # Your social media accounts
+icon_color: "#959da5" # The color of the social media icons on the site
+social_media: # Your social media accounts
 #   behance: your_username
 #   dribbble: your_username
 #   docker: your_username
 #   facebook: your_username
-#   github: your_username
+  github: athackst
 #   hackerrank: your_username
 #   instagram: your_username
 #   keybase: your_username
-#   linkedin: your_username
+  # linkedin: your_username
 #   mail: email@address
 #   mastodon: your_username
 #   medium: your_username
@@ -51,52 +54,49 @@ profile_link: true # Show a link to the github profile for the user
 #   twitter: your_username
 #   unsplash: your_username
 #   vk: your_username
-#   vscode: your_username
+  vscode: althack
 #   youtube: your_username
-#   x: your_username
+  x: althack
 
 ####################
 # Navigation links
 nav:
   - name: Topbar
-    url: /test/home/topbar.html
+    url: /home/topbar.html
   - name: Appbar
-    url: /test/home/appbar.html
+    url: /home/appbar.html
   - name: Sidebar
-    url: /test/home/sidebar.html
+    url: /home/sidebar.html
   - name: Stacked
-    url: /test/home/stacked.html
+    url: /home/stacked.html
 
 ####################
 # List of links for link cards
 links:
   - name: Example page with topbar
-    url: /test/page/topbar
+    url: /page/topbar
     thumbnail: /media/topbar-icon.png
   - name: Example page with appbar
-    url: /test/page/appbar
+    url: /page/appbar
     thumbnail: /media/appbar-icon.png
   - name: Example page with sidebar
-    url: /test/page/sidebar
+    url: /page/sidebar
     thumbnail: /media/sidebar-icon.png
   - name: Example page with header stacked
-    url: /test/page/stacked
+    url: /page/stacked
     thumbnail: /media/stacked-icon.png
-  - name: Example page with a custom background
-    url: /test/page/background
+  - name: Example custom background
+    url: /background
     thumbnail: /media/icon-bg.png
   - name: Example Linktree page
-    url: /test/linktree
+    url: /linktree
     thumbnail: /media/links.png
   - name: Example Profile page
-    url: /test/profile
+    url: /profile
     thumbnail: /media/user-image.jpg
   - name: Example Reposotiries page
-    url: /test/repositories
+    url: /repositories
     thumbnail: /media/repositories.png
-  - name: Example Landing page
-    url: /test/landing
-    thumbnail: /media/landing.png
 
 ###################
 # Repositories to show on home page
@@ -112,43 +112,42 @@ repositories:
     repositories:
       # - list of respositories to exclude
 
+########################
+# Post timeline
+posts_limit: 3 # The number of posts to show in home (also can be defined in page)
 
 # ########### Plugin settings ###############
+plugins:
+  - jekyll-github-metadata
+  - jekyll-octicons
+  - jekyll-relative-links
+  - jekyll-seo-tag
+  - jekyll-toc
+  - jemoji
 ####################
 # jekyll-paginate settings
-posts_limit: 3 # The number of posts to show in home (also can be defined in page)
 paginate: 6 # The number of posts to show per page of pagination of blog posts
-paginate_path: "/assets/blog/page:num"
+paginate_path: "/blog/page:num"
 ###################
 # jekyll-tagging settings
+# Include `gem jekyll-tagging` in your gemfile
 tag_page_layout: tags
 tag_page_dir: tags
-
 
 # ============= general settings for the theme ===============
 markdown: kramdown
 highlighter: rouge
-# kramdown:
-#   input: GFM
-#   syntax_highlighter: rouge
-#   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-#     css_class: highlight
-#     # default_lang: console
-#     span:
-#       line_numbers: false
-#     block:
-#       line_numbers: true
-#       start_line: 1
-
-# ============= general settings for the theme ===============
-plugins:
-  - jekyll-github-metadata
-  - jekyll-octicons
-  - jekyll-paginate
-  - jekyll-seo-tag
-  - jekyll-toc
-  - jekyll-tagging
-  - jemoji
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    # default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
 defaults:
   - scope:
@@ -156,7 +155,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: /blog/:year/:month/:day/:title.html
       image: /assets/img/default.png # The default image used for social and posts.
       toc: true
 

@@ -4,7 +4,7 @@ layout: default
 {%- assign user = site.github.owner %}
 {%- assign name = page.author | default: user.name | default: user.login %}
 {%- assign image = page.image | default: site.image %}
-
+<div class="flex-column flex-1 min-width-0">
 <div class="BlogHeader position-relative border-top">
     <div class="container-xl p-responsive">
         <div class="gutter-spacious pt-1 ">
@@ -82,7 +82,7 @@ layout: default
                 </div>
                 <div class="col-12 col-lg-7 col-md-8 markdown-body">
                     {{ content }}
-                    {%- if page.tags.size > 0 %}
+                    {%- if page.tags.size > 0  and site.tag_page_dir %}
                     <div class="post-tags text-mono f4-mktg mt-8">
                         <span class="post-tags-label flex-shrink-0 d-inline-block mt-2">Tags: </span>
                         <ul class="d-inline-block list-style-none color-text-link mb-0">
@@ -114,4 +114,5 @@ layout: default
     <div class="Related container-xl mx-auto p-responsive markdown-body">
         {% include related.html %}
     </div>
+</div>
 </div>

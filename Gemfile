@@ -4,14 +4,9 @@ source "https://rubygems.org"
 gemspec
 
 group :jekyll_plugins do
-  gem 'github-pages'
-  gem 'jekyll-github-metadata'
-  gem 'jekyll-octicons'
   gem 'jekyll-paginate'
-  gem 'jekyll-seo-tag'
+  gem 'jekyll-relative-links'
   gem 'jekyll-tagging'
-  gem 'jekyll-toc'
-  gem 'jemoji'
 end
 
 group :development do

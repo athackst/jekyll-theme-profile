@@ -74,7 +74,6 @@
 .Header {
     --color-header-text: {{ site.header.accent }};
     --color-accent-fg: {{ site.header.accent }};
-
 }
 {%- endif %}
 

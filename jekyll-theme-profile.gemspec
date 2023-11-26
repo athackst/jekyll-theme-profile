@@ -10,16 +10,14 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://www.althack.dev/jekyll-theme-profile"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|_plugins|LICENSE|README|_config\.yml)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|_plugins|LICENSE|README)!i) }
 
   spec.required_ruby_version = '>=2.7.0'
   spec.add_dependency "jekyll", "> 3.5", "< 5.0"
-  spec.add_runtime_dependency "github-pages", "~>228"
+  # spec.add_runtime_dependency "github-pages", "~>228"
   spec.add_runtime_dependency "jekyll-github-metadata", "~> 2.9"
   spec.add_runtime_dependency "jekyll-octicons", "~> 19.4"
-  spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
-  spec.add_runtime_dependency "jekyll-toc", "~> 0.18.0"
-  spec.add_runtime_dependency "jekyll-tagging", "~> 1.1.0"
+  spec.add_runtime_dependency "jekyll-toc", "~> 0.18"
   spec.add_runtime_dependency "jemoji", "~> 0.11"
 end
