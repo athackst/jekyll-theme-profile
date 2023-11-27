@@ -55,6 +55,14 @@ jobs:
         with:
           ruby-version: ${{ matrix.version }}
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Check rate limit
+        run: |
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /rate_limit
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
@@ -62,7 +70,7 @@ jobs:
         run: .github/build.sh
         env:
           JEKYLL_ENV: production
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JEKYLL_GITHUB_TOKEN: ${{ github.token }}
       - name: Debug output
         run: |
           tree _site
@@ -92,7 +100,7 @@ jobs:
         run: bundle exec jekyll build -s example
         env:
           JEKYLL_ENV: production
-          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JEKYLL_GITHUB_TOKEN: ${{ github.token }}
       - name: HTMLProofer
         uses: athackst/htmlproofer-action@v0.3.0
         with:
@@ -130,3 +138,11 @@ jobs:
             || contains(needs.*.result, 'cancelled')
           }}
       - run: echo "All steps completed successfully"
+      - name: Check rate limit
+        run: |
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /rate_limit
+        env:
+          GH_TOKEN: ${{ github.token }}
