@@ -1,10 +1,32 @@
 ## 11/25/2023
 
+### Use github-pages gem for rates
+
+For some reason the github pages gem uses far _far_ less calls to the github api than if I just use github_metadata_plugin.  I don't know why.
+
+Found it.
+
+- The [issue](https://github.com/jekyll/github-metadata/issues/266)
+- The offending PRS
+    - [#224](https://github.com/jekyll/github-metadata/pull/224)
+    - [#234](https://github.com/jekyll/github-metadata/pull/234)
+
+The solution:
+Pin the jekyll-metadata-plugin to 2.13.0
+
+```
+gem 'jekyll-github-metadata', '= 2.13.0' # Needed to rate limit API calls.
+```
+
+## 11/25/2023
+
 ### Full links in readme
 
 The readme is used in the gem file and they host their own documentation.  All images and links therefore must use full paths.
 
-## 11/25/2023
+### Remove Gemfile.lock
+
+By removing Gemfile.lock, we are able to test this theme against many versions of ruby/jekyll/etc.  Including the lock makes it too hard to get the right dependency versions.
 
 ### Including plugins in the theme
 
