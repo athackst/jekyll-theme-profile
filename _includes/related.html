@@ -98,11 +98,11 @@
   {% assign related_posts = site.related_posts %}
 
 {% comment %}<!-- Otherwise show recent posts if no site.related_posts -->{% endcomment %}
-{% else %}
+{% else if related_by == "default" %}
   {% assign related_posts = site.posts %}
 {% endif %}
 
-{%- if related_limit > 0 %}
+{%- if related_limit > 0 and related_posts.size > 0 %}
 <h2 class="h5-mktg pb-3 mb-lg-3">Related posts</h2>
 <div class="d-flex flex-wrap gutter-spacious">
 {% for post in related_posts limit:related_limit %}
