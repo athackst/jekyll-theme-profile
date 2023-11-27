@@ -121,14 +121,14 @@ jobs:
 Select the default style for your theme by adding `style` to your config file:
 
 ```yaml
-style: sidebar # One of "stacked", "sidebar", "topbar"
+style: sidebar # One of "stacked", "sidebar", "topbar", "appbar"
 ```
 
 You can also set the style of a particular page by adding `style` to your frontmatter.
 
 ```yaml
 ---
-style: sidebar # One of "stacked", "sidebar", "topbar"
+style: sidebar # One of "stacked", "sidebar", "topbar", "appbar
 ---
 ```
 
