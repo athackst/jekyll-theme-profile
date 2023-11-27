@@ -87,7 +87,12 @@ layout: default
                         <span class="post-tags-label flex-shrink-0 d-inline-block mt-2">Tags: </span>
                         <ul class="d-inline-block list-style-none color-text-link mb-0">
                             {% for tag in page.tags %}
-                            <li class="d-inline-block mt-2 mb-0"><a href="{{ site.tag_page_dir | relative_url }}/{{ tag | slugify: 'pretty' }}.html">{{ tag }}</a></li>
+                                {%- if site.tag_page_dir -%}
+                                    {%- capture tag_link %}/{{site.tag_page_dir}}/{{ tag | jekyll_tagging_slug }}{% endcapture %}
+                                {%- else -%}
+                                {%- capture tag_link %}{{site.tag_archive_path}}{{ tag | slugify }}{% endcapture %}
+                                {%- endif -%}
+                            <li class="d-inline-block mt-2 mb-0"><a href="{{ tag_link }}">{{ tag }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
