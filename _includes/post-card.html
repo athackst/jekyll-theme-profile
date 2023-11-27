@@ -10,7 +10,7 @@
     <h3 class="h6-mktg mb-12px">
       <a class="Link--primary" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h3>
-    <p class="f4-mktg color-fg-muted mb-0">{{ post.excerpt }}</p>
+    <p class="f4-mktg color-fg-muted mb-0">{{ post.excerpt | default: post.description }}</p>
     <div class="mt-14px">
       <div class="d-flex flex-items-center">
         <div class="d-flex flex-items-end flex-wrap">
