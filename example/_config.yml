@@ -1,16 +1,25 @@
 # ######## Jekyll Site Settings ##########
 theme: jekyll-theme-profile
-title: Test Jekyll Theme Profile
-description: Test of the theme built with jekyll-theme-profile
+title: Jekyll Theme Profile
+description: Theme built with jekyll-theme-profile
+image: /media/appbar-preview.png
 repository: athackst/jekyll-theme-profile
 base_url: "jekyll-theme-profile"
 url: "https://www.althack.dev"
 
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      image: /assets/img/default.png # The default image used for social and posts.
+      toc: true
 
 # ########### Theme settings ###############
 # The style of the website
 style: topbar # One of "stacked", "sidebar", "topbar", "appbar"
- # The user/project avatar.  If not set the avatar of the project owner will be used.
+# The user/project avatar.  If not set the avatar of the project owner will be used.
 user_image: /media/user-image.jpg
 # # Optional custom background image and overlay
 # background:
@@ -35,27 +44,27 @@ profile_link: true # Show a link to the github profile for the user
 # # Social media settings
 icon_color: "#959da5" # The color of the social media icons on the site
 social_media: # Your social media accounts
-#   behance: your_username
-#   dribbble: your_username
-#   docker: your_username
-#   facebook: your_username
+  # behance: your_username
+  # dribbble: your_username
+  # docker: your_username
+  # facebook: your_username
   github: athackst
-#   hackerrank: your_username
-#   instagram: your_username
-#   keybase: your_username
+  # hackerrank: your_username
+  # instagram: your_username
+  # keybase: your_username
   # linkedin: your_username
-#   mail: email@address
-#   mastodon: your_username
-#   medium: your_username
-#   stackoverflow: your_user_id
-#   telegram: your_username
-#   threads: your_username
-#   tiktok: your_username
-#   twitter: your_username
-#   unsplash: your_username
-#   vk: your_username
+  # mail: email@address
+  # mastodon: your_username
+  # medium: your_username
+  # stackoverflow: your_user_id
+  # telegram: your_username
+  # threads: your_username
+  # tiktok: your_username
+  # twitter: your_username
+  # unsplash: your_username
+  # vk: your_username
   vscode: althack
-#   youtube: your_username
+  # youtube: your_username
   x: althack
 
 ####################
@@ -133,41 +142,5 @@ paginate_path: "/blog/page:num"
 # Include `gem jekyll-tagging` in your gemfile
 tag_page_layout: tags
 tag_page_dir: tags
-
-# ============= general settings for the theme ===============
-markdown: kramdown
-highlighter: rouge
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
-    css_class: highlight
-    # default_lang: console
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
-
-defaults:
-  - scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts"
-    values:
-      layout: "post"
-      image: /assets/img/default.png # The default image used for social and posts.
-      toc: true
-
-exclude:
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "node_modules"
-  - "vendor/bundle/"
-  - "vendor/cache/"
-  - "vendor/gems/"
-  - "vendor/ruby/"
-  - .vscode
-  - .devcontainer
-  - .deprecated
-  - .github
-  - "*.gem"
+# related
+related_by: "tags or categories"
