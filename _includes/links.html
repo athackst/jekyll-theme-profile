@@ -1,6 +1,7 @@
+{% assign links = page.links | default: site.links %}
 <div class="width-full">
   <div class="d-flex flex-column mb-4">
-    {%- for link in site.links %}
+    {%- for link in links %}
     <div class="mb-2">
       {%- include link-card.html %}
     </div>

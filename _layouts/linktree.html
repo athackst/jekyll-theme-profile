@@ -2,7 +2,9 @@
 layout: default
 ---
 <div class="flex-column flex-1 min-width-0 py-3">
+    {%- if style == "topbar" or style == "appbar" %}
     {%- include masthead.html %}
+    {%- endif %}
     {%- unless content == "" %}
     {{ content }}
     {%- endunless %}
