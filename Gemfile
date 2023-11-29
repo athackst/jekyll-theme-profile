@@ -7,7 +7,7 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-relative-links'
   gem 'jekyll-tagging'
-  gem 'jekyll-github-metadata', '= 2.13.0' # Needed to rate limit API calls.
+  gem 'jekyll-github-metadata', '2.15.0' # Needed to rate limit API calls.
 end
 
 group :development do
