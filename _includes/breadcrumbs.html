@@ -1,3 +1,4 @@
+{% assign collection = include.collection | default: site.docs %}
 <div class="Breadcrumb d-flex flex-items-center">
     <nav aria-label="Breadcrumb" class="f5">
         <ol class="breadcrumb">
@@ -10,8 +11,6 @@
             </li>
             {%- continue %}
             {%- endif %}
-            {%- assign asset_url = url | append: "assets/" | append: crumb | append: "/" %}
-            {%- assign isa_asset = site.pages | where: "url", asset_url | first %}
             {%- assign index_url = url | append: crumb | append: "/index.html" %}
             {%- assign isa_index = site.pages | where: "url", index_url | first %}
             {%- assign folder_url = url | append: crumb | append: "/" %}
@@ -19,33 +18,34 @@
             {%- assign url = url | append: crumb %}
             {%- assign isa_page = site.pages | where: "url", url | first %}
             {%- assign isa_post = site.posts | where: "url", url | first %}
+            {%- assign isa_collection = collection | where: "url", index_url | first %}
 
             {%- assign nice_crumb = crumb | url_decode | replace: ".html", "" | replace: "-", " " | replace: "_", " " |
             downcase %}
 
-            {%- comment %}
+            {% comment %}
             Checking the crumb: {{ crumb }}
             [asset url: {{ asset_url }}]
             [index url: {{ index_url }}]
             [folder_url: {{ folder_url }}]
             [url: {{ url }}]
-            {% for p in site.pages %}
+            {% for p in collection %}
             {{ p.url }}
             {% endfor %}
-            {%- endcomment %}
+
+            [Page?: {% if isa_page %}page!{% endif %}]
+            [Post?: {% if isa_post %}post!{% endif %}]
+            [Collection?: {% if isa_collection %}collection!{% endif %}]
+            {% endcomment %}
 
             {%- if page.url == url or page.url == index_url or page.url == folder_url %}
             <li class="breadcrumb-item breadcrumb-item-selected" aria-current="page">
                 <a href="{{ page.url | relative_url }}">{{ nice_crumb }}</a>
             </li>
             {%- break %}
-            {%- elsif isa_page or isa_post or isa_index or isa_folder %}
+            {%- elsif isa_page or isa_post or isa_index or isa_folder or isa_collection %}
             <li class="breadcrumb-item">
                 <a href="{{ url | relative_url }}">{{ nice_crumb }}</a>
-            </li>
-            {%- elsif isa_asset %}
-            <li class="breadcrumb-item">
-                <a href="{{ asset_url | relative_url }}">{{ nice_crumb }}</a>
             </li>
             {%- else %}
             <li class="breadcrumb-item">
