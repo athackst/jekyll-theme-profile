@@ -193,7 +193,7 @@ body::before {
   @media print {
     .BlogHeader {
       background-color: inherit;
-      color: inherit;
+      color: black !important;
     }
     .AppHeader {
       display: none !important;
@@ -205,6 +205,9 @@ body::before {
       display: none !important;
     }
     .Toggle {
+      display: none !important;
+    }
+    .Related {
       display: none !important;
     }
     .paginate-container {
