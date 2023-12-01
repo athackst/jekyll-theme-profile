@@ -6,7 +6,7 @@ style: none
 {%- assign name = site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url %}
 <div class="Header d-flex p-0 flex-1 height-full">
-    <div class="flex-column flex-1 position-sticky top-0">
+    <div class="container-lg flex-column position-sticky top-0">
         <div class="Toolbar topbar d-flex flex-row py-3 flex-justify-end">
             <div class="Toolbar-expand d-flex flex-justify-center d-none">
                 <button id="sidebar-btn" class="btn-octicon mr-2">{% octicon chevron-right height:16 %}</button>
