@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
   spec.add_runtime_dependency "jekyll-toc", "~> 0.18"
   spec.add_runtime_dependency "jemoji", "~> 0.11"
+  spec.add_runtime_dependency "kramdown-parser-gfm", "~> 1.1.0"
 end
