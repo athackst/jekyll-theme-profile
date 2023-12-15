@@ -100,7 +100,7 @@ end
 
 ### Large image
 
-![Branching](https://placekitten.com/g/1200/800/)
+![Branching](https://placebear.com/g/1200/800)
 
 
 ### Definition lists can be used with HTML syntax.

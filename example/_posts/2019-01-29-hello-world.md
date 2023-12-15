@@ -183,11 +183,11 @@ The `<samp>` HTML element is used to enclose inline text that represents sample 
 
 Small images should be shown at their actual size.
 
-![Small Image](https://placekitten.com/g/300/200/)
+![Small Image](https://placebear.com/g/300/200)
 
 Large images should always scale down and fit in the content container.
 
-![Large Image](https://placekitten.com/g/1200/800/)
+![Large Image](https://placebear.com/g/1200/800)
 
 Here's a simple footnote,[^1] and here's a longer one.[^2]
 
