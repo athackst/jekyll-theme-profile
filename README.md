@@ -29,7 +29,7 @@ Or install it yourself as:
 
 ## Usage
 
-Start with a [sample config](https://github.com/athackst/jekyll-theme-profile/blob/main/example/_config.yml) that you can copy and customize.
+Start with a [sample config](https://github.com/athackst/jekyll-theme-profile/blob/main/demo/_config.yml) that you can copy and customize.
 
 
 You can also use this with github acions. Below is a typical worfklow file
@@ -134,19 +134,19 @@ style: sidebar # One of "stacked", "sidebar", "topbar", "appbar
 
 #### [Sidebar](https://www.althack.dev/jekyll-theme-profile/home/sidebar.html)
 
-![Sidebar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/sidebar-preview.png)
+![Sidebar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/sidebar-preview.png)
 
 #### [Stacked](https://www.althack.dev/jekyll-theme-profile/home/stacked.html)
 
-![Stacked image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/stacked-preview.png)
+![Stacked image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/stacked-preview.png)
 
 #### [Topbar](https://www.althack.dev/jekyll-theme-profile/home/topbar.html)
 
-![Topbar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/topbar-preview.png)
+![Topbar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/topbar-preview.png)
 
 #### [Appbar](https://www.althack.dev/jekyll-theme-profile/home/appbar.html)
 
-![Appbar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/appbar-preview.png)
+![Appbar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/appbar-preview.png)
 
 #### Background
 
@@ -190,7 +190,7 @@ header:
 
 In the `nav` section, you can add navigation links that will show up on every page of your website.
 
-![Nav](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/nav.png){: .border}
+![Nav](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/nav.png){: .border}
 
 ```yaml
 nav:
@@ -206,7 +206,7 @@ nav:
 
 In the `links` section, you can add links to showcase various pages on the web or your website.
 
-![Links](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/links.png){: .border}
+![Links](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/links.png){: .border}
 
 ```yaml
 links:
@@ -228,7 +228,7 @@ links:
 
 The `repositories` section allows you to display your GitHub repositories on your page.  You can sort them by stars or latest pushes, set a limit to the number of repositories displayed, and exclude archived, forked, or specific repositories from the list
 
-![Repositories](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/repositories.png){: .border}
+![Repositories](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/repositories.png){: .border}
 
 ```yaml
 repositories:
@@ -274,7 +274,7 @@ defaults:
 
 Utilize the `social_media` section to add links to your various social media profiles.  For each platform simply provide your username or user ID to have the corresponding icon and link appear on your profile.
 
-![Social Media](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/social-media.png){: .border}
+![Social Media](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/social-media.png){: .border}
 
 ```yaml
 social_media:
@@ -312,7 +312,7 @@ icon_color: "#959da5"
 
 Make entries for the blog the same way you normally would by placing entries in the `_posts` folder.  You can adjust the number of entries that show up in the main page by adjusting `posts_limit` in the `_config.yml` file.  If you have paginate installed and more posts than the limit, a `Read more` button will link to the paginated blog post page /blog/index.html.
 
-![Blog](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/example/media/blog.png){: .border}
+![Blog](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/blog.png){: .border}
 
 ```yaml
 posts_limit: 3
