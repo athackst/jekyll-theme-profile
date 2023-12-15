@@ -97,7 +97,7 @@ jobs:
         with:
           enablement: true # Enable github pages if it's not
       - name: Build
-        run: bundle exec jekyll build -s example
+        run: bundle exec jekyll build -s demo
         env:
           JEKYLL_ENV: production
           JEKYLL_GITHUB_TOKEN: ${{ github.token }}
