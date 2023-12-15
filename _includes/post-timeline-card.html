@@ -22,8 +22,10 @@
   <div class="col-12 col-md-7">
     <div class="ml-5 mt-5">
       {%- if post.video %}
-      <iframe width="560" height="315" src="{{ post.video }}" frameborder="0" gesture="media"
-        allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <div class="image-container mb-5">
+        <iframe height="490" width="100%" src="{{ post.video }}" frameborder="0" gesture="media"
+          allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
       {%- elsif post.image %}
       <div class="image-container mb-5">
         <img class="rounded-2" src="{{ post.image}}" width="800" height="425" alt="{{ post.title }}" />
