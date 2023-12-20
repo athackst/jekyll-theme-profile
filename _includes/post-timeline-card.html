@@ -22,9 +22,8 @@
   <div class="col-12 col-md-7">
     <div class="ml-5 mt-5">
       {%- if post.video %}
-      <div class="image-container mb-5">
-        <iframe height="inherited" width="100%" src="{{ post.video }}" frameborder="0" gesture="media"
-          allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      <div id="Timeline-video-container" class="image-container mb-5">
+        <iframe id="Timeline-video" src="{{ post.video }}" frameborder="0" height="inherited" width="inherited"></iframe>
       </div>
       {%- elsif post.image %}
       <div class="image-container mb-5">
