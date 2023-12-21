@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+
+        // Updated cookie settings
+        document.cookie = name + "=" + (value || "") + expires + "; path=/; samesite=Strict; secure";
     }
 
     function getCookie(name) {
@@ -58,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateThemeIcon(nextMode) {
+        var nextIcon;
         if (nextMode === 'dark') {
             nextIcon = 'moon';
         } else if (nextMode === 'light') {
