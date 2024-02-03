@@ -3,6 +3,8 @@
 source "https://rubygems.org"
 gemspec
 
+gem 'rake'
+
 group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-relative-links'
