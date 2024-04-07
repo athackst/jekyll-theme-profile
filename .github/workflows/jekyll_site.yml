@@ -65,7 +65,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: Build with Jekyll
         run: .github/build.sh
         env:
@@ -93,7 +93,7 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
         with:
           enablement: true # Enable github pages if it's not
       - name: Build
