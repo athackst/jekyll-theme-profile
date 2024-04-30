@@ -1,9 +1,15 @@
 ---
 layout: default
 ---
+{%- assign style = page.style | default: layout.style | default: site.style %}
 <div class="flex-column flex-1 min-width-0 py-3">
-    {%- if style == "topbar" or style == "appbar" %}
-    {%- include masthead.html %}
+    <div class="d-flex mt-4 p-responsive container-md flex-row py-3 flex-justify-end">
+        <div class="d-flex flex-justify-center">
+            {% include toggle.html %}
+        </div>
+    </div>
+    {%- if style != "sidebar" and style != "stacked" %}
+    {%- include masthead.html class="CircleBadge--medium" %}
     {%- endif %}
     {%- unless content == "" %}
     {{ content }}

@@ -1,10 +1,10 @@
 {%- assign user = site.github.owner %}
-{%- assign name = site.title | default: user.name | default: user.login %}
+{%- assign name = include.title | default: site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url %}
 {%- assign user_metadata = site.user_metadata -%}
 
 <div class="Masthead">
-    <div class="CircleBadge img-masthead rounded-circle border">
+    <div class="CircleBadge img-masthead {{include.class}}">
       <a href="{{ site.baseurl }}/">
         <img src="{{ user_img | relative_url }}" alt="{{ name }}" class="cover-image">
       </a>
