@@ -15,6 +15,7 @@ fi
 
 # If there's a Gemfile, then run `bundle install`
 # It's assumed that the Gemfile will install Jekyll too
+bundle config set --local path 'vendor/bundle'
 if [ -f Gemfile ]; then
     bundle install
 fi
