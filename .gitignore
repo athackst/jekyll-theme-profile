@@ -6,3 +6,5 @@ _site
 .env
 .deprecated
 Gemfile.lock
+node_modules/
+vendor/
