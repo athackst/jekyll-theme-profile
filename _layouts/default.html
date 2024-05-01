@@ -2,18 +2,23 @@
 {%- assign user = site.github.owner %}
 {%- assign name = site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url %}
+{%- assign light_theme = site.light_theme | default: "light" %}
+{%- assign dark_theme = site.dark_theme | default: "dark_dimmed" %}
 <!doctype html>
-<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
+<html lang="en" data-color-mode="auto" data-light-theme="{{ light_theme }}" data-dark-theme="{{ dark_theme }}">
 
 {%- include head.html %}
 
 <body class="min-height-full d-flex flex-column">
     {%- if style == 'topbar' %}
     {% include header-topbar.html %}
+    <div class="d-lg-flex flex-1">
     {%- elsif style == 'appbar' %}
     {% include header-appbar.html %}
+    <div class="d-lg-flex flex-1">
     {%- elsif style == 'stacked' %}
     {% include header-stacked.html %}
+    <div class="d-lg-flex flex-1">
     {%- elsif style == 'sidebar' %}
     <div class="d-lg-flex flex-1">
         {% include header-sidebar.html %}
@@ -21,9 +26,7 @@
 
     {{ content }}
 
-    {%- if style == 'sidebar' %}
     </div>
-    {%- endif %}
 
     {%- include footer.html %}
 </body>
