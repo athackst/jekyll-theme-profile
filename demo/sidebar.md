@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: profile
 style: sidebar
-tags: [sidebar, page]
+posts_limit: 4
 ---

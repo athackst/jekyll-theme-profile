@@ -132,19 +132,19 @@ style: sidebar # One of "stacked", "sidebar", "topbar", "appbar
 ---
 ```
 
-#### [Sidebar](https://www.althack.dev/jekyll-theme-profile/home/sidebar.html)
+#### [Sidebar](https://www.althack.dev/jekyll-theme-profile/sidebar.html)
 
 ![Sidebar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/sidebar-preview.png)
 
-#### [Stacked](https://www.althack.dev/jekyll-theme-profile/home/stacked.html)
+#### [Stacked](https://www.althack.dev/jekyll-theme-profile/stacked.html)
 
 ![Stacked image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/stacked-preview.png)
 
-#### [Topbar](https://www.althack.dev/jekyll-theme-profile/home/topbar.html)
+#### [Topbar](https://www.althack.dev/jekyll-theme-profile/topbar.html)
 
 ![Topbar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/topbar-preview.png)
 
-#### [Appbar](https://www.althack.dev/jekyll-theme-profile/home/appbar.html)
+#### [Appbar](https://www.althack.dev/jekyll-theme-profile/appbar.html)
 
 ![Appbar image](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/demo/media/appbar-preview.png)
 
@@ -191,11 +191,11 @@ In the `nav` section, you can add navigation links that will show up on every pa
 ```yaml
 nav:
   - name: Topbar
-    url: /test/home/topbar.html
+    url: /demo/topbar.html
   - name: Sidebar
-    url: /test/home/sidebar.html
+    url: /demo/sidebar.html
   - name: Stacked
-    url: /test/home/stacked.html
+    url: /demo/stacked.html
 ```
 
 ### Links
