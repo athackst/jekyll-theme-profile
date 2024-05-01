@@ -1,11 +1,14 @@
 ---
 layout: page
 ---
-<div class="Profile d-lg-flex gutter">
+{%- assign style = page.style | default: layout.style | default: site.style %}
+<div class="Profile d-lg-flex flex-justify-center gutter">
+    {%- if style != "sidebar" and style != "stacked" %}
     <div class="col-lg-4 border-gray-light pt-6 text-center">
         {%- include masthead.html %}
         {%- include social.html %}
     </div>
+    {%- endif %}
 
     <div class="col-lg-8 border-top border-lg-top-0 color-bg-default">
         <div class="py-6">

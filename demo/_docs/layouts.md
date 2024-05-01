@@ -56,13 +56,13 @@ profile_link: true # Show a link to the github profile for the user
 # Navigation links
 nav:
   - name: Topbar
-    url: /home/topbar.html
+    url: /topbar.html
   - name: Appbar
-    url: /home/appbar.html
+    url: /appbar.html
   - name: Sidebar
-    url: /home/sidebar.html
+    url: /sidebar.html
   - name: Stacked
-    url: /home/stacked.html
+    url: /stacked.html
 ```
 
 
