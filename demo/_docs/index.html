@@ -1,0 +1,14 @@
+---
+title: Documentation
+order: 0
+---
+
+<ul>
+    {% for doc in site.docs %}
+      {% unless doc.url == page.url %}
+      <li>
+        <a href="{{ doc.url }}">{{ doc.title }}</a>
+      </li>
+      {% endunless %}
+    {% endfor %}
+  </ul>

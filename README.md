@@ -156,10 +156,6 @@ You can even change the background by adding the following to your `_config.yml`
 background:
   image: /media/background-img.jpg
   overlay: rgba(0, 0, 0, 0.5) # Overlay for both light and dark styles
-  light:
-    overlay: rgba(255, 255, 255, 0.5)
-  dark:
-    overlay: rgba(0, 0, 0, 0.5)
 ```
 
 or

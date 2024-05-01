@@ -7,6 +7,12 @@ repository: athackst/jekyll-theme-profile
 base_url: "jekyll-theme-profile"
 url: "https://www.althack.dev"
 
+collections:
+  docs:
+    output: true
+    sort_by: order
+
+
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
@@ -14,6 +20,14 @@ defaults:
     values:
       layout: "post"
       image: /assets/img/default.png # The default image used for social and posts.
+      toc: true
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "docs"
+    values:
+      layout: "docs"
+      image: /assets/img/default.png # The default image used for social and posts.
+      permalink: /docs/:path:output_ext
       toc: true
 
 # ########### Theme settings ###############
@@ -81,6 +95,8 @@ nav:
     url: /home/sidebar.html
   - name: Stacked
     url: /home/stacked.html
+  - name: Documentation
+    url: /docs
 
 ####################
 # List of links for link cards
