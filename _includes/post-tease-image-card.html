@@ -1,0 +1,22 @@
+<!-- post preview with image -->
+{%- assign image = post.image | default: site.image %}
+{%- assign excerpt = post.description | default: post.excerpt %}
+<div class="py-4 d-flex flex-column border-bottom border-md-0">
+    <div class="image-container">
+        <a href="{{ post.url | relative_url }}">
+            <img class="rounded-2" src="{{ image | relative_url }}" width="800" height="425" alt="{{ post.title }}">
+        </a>
+    </div>
+    <div class="col-12">
+        <h3 class="h3-mktg h3-alt-mktg mb-12px">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <div class="f4-mktg color-fg-muted">{{ excerpt }}</div>
+        <div class="mt-14px">
+            {%- if post.author %}
+            <span class="mr-3 mr-12px mt-1 f5-mktg text-bold">{{ post.author }}</span>
+            {%- endif %}
+            <span class="d-inline-block f5-mktg text-mono color-fg-muted mt-1">{{ post.date | date: "%b %d, %Y"}}</span>
+        </div>
+    </div>
+</div>

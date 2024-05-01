@@ -6,7 +6,7 @@ layout: page
 
 <div class="d-flex flex-wrap gutter-spacious">
 {% for post in page.posts %}
-    {%- if post.feature %}
+    {%- if post.feature or forloop.first %}
         {%- include post-feature-card.html %}
     {%- else %}
         {%- include post-card.html border="border-top" %}

@@ -1,4 +1,5 @@
 {%- assign image = post.image | default: site.image %}
+{%- assign excerpt = post.description | default: post.excerpt %}
 {%- assign border = include.border %}
 <div class="col-sm-6 col-lg-4 ">
   <div class="py-4 d-flex flex-column {{ border }}">
@@ -10,7 +11,7 @@
     <h3 class="h6-mktg mb-12px">
       <a class="Link--primary" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h3>
-    <p class="f4-mktg color-fg-muted mb-0">{{ post.excerpt | default: post.description }}</p>
+    <div class="f4-mktg color-fg-muted mb-0">{{ excerpt }}</div>
     <div class="mt-14px">
       <div class="d-flex flex-items-center">
         <div class="d-flex flex-items-end flex-wrap">

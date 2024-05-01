@@ -169,6 +169,13 @@
   color: var(--color-primer-border-active);
 }
 
+.section-heading {
+  border-top: 5px solid var(--color-fg-default);
+  border-bottom: 1px solid var(--color-border-muted);
+  padding-top: 7px !important;
+  padding-bottom: 11px !important;
+}
+
 .post-tags::before {
   content: "";
   display: block;

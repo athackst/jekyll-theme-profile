@@ -144,3 +144,8 @@ tag_page_layout: tags
 tag_page_dir: tags
 # related
 related_by: "tags or categories"
+
+####################
+# jekyll-category-pages settings
+category_path: category
+category_layout: category_layout.html

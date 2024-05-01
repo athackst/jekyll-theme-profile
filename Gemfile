@@ -6,6 +6,7 @@ gemspec
 gem 'rake'
 
 group :jekyll_plugins do
+  gem "jekyll-category-pages"
   gem 'jekyll-paginate'
   gem 'jekyll-relative-links'
   gem 'jekyll-tagging'

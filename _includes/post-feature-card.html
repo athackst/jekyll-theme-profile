@@ -1,4 +1,6 @@
 {%- assign image = post.image | default: site.image %}
+{%- assign excerpt = post.description | default: post.excerpt %}
+
 <div class="py-4 d-flex flex-column flex-md-row flex-md-row-reverse p-responsive col-12">
   <div class="col-12 col-lg-8 p-responsive">
     <div class="image-container">
@@ -11,7 +13,7 @@
     <h3 class="h4-mktg mb-12px">
       <a class="Link--primary" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h3>
-    <p class="f4-mktg color-fg-muted">{{ post.excerpt }}</p>
+    <div class="f4-mktg color-fg-muted">{{ excerpt }}</div>
     <div class="d-flex flex-items-end flex-wrap">
       {%- if post.author %}
       <span class="mr-3 mr-12px mt-1 f5-mktg text-bold">{{ post.author }}</span>
