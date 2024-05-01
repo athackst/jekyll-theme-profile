@@ -8,10 +8,14 @@ Docs utilize collections to display content
 {% endcomment %}
 {%- assign collection_name = page.collection | default: "docs" %}
 {%- assign docs = site[collection_name]%}
-{%- assign docs_name = page.name | default: "Documentation" %}
+{%- assign docs_name = page.title | default: "Documentation" %}
 {%- assign index_url = collection_name | prepend: "/" | append: "/index.html" %}
-{%- assign docs_index = docs | where: "url", index_url | first %}
-
+{%- for doc in docs %}
+  {%- if doc.url == index_url %}
+    {%- assign docs_index = doc %}
+    {%- break %}
+  {%- endif %}
+{%- endfor %}
 
 <script>
     $(document).ready(function () {
@@ -28,25 +32,25 @@ Docs utilize collections to display content
         <div class="px-4 pb-3 border-bottom">
             <div class="mt-3">
                 {% if docs_index %}
-                <a class="d-block pl-1 mb-2 h3 color-fg-default no-underline" href="{{ index_url | relative_url }}">
-                    {{ docs_name | capitalize }}
+                <a class="d-block pl-1 mb-2 h3 color-fg-default no-underline" href="{{ docs_index.url | relative_url }}">
+                    {{ collection_name | capitalize }}
                 </a>
                 {% else %}
-                <h3 class="d-block pl-1 mb-2 h3 color-fg-default no-underline">{{ docs_name | capitalize }}</h3>
+                <h3 class="d-block pl-1 mb-2 h3 color-fg-default no-underline">{{ collection_name | capitalize }}</h3>
                 {% endif %}
             </div>
         </div>
         <div class="">
             <ul data-overflow-nav class="menu ActionList border-0">
                 {% for nav_item in docs %}
-                {% if nav_item.url != index_url %}
+                {% unless nav_item.url == index_url %}
                 <a href="{{ nav_item.url | relative_url }}" class="ActionListItem-label no-underline">
                 <li class="menu-item ActionList-item border-0"
                     {% if page.url==nav_item.url %} aria-current="page" {% endif %}>
                     {{ nav_item.title }}
                 </li>
                 </a>
-                {% endif %}
+                {% endunless %}
                 {% endfor %}
             </ul>
         </div>
@@ -87,10 +91,11 @@ Docs utilize collections to display content
                     </div>
                 </div>
                 <div class="col-12 col-md-4 markdown-body">
-                    {% if page.toc %}
+                    {% capture page_toc %}{{ content | toc_only }}{% endcapture %}
+                    {% if page_toc contains "</li>" %}
                     <div class="position-sticky top-12 ml-5 pb-5">
                         <h4 class="ml-3 mb-1">In this article</h4>
-                        {{ content | toc_only }}
+                        {{ page_toc }}
                     </div>
                     {% endif %}
                 </div>
@@ -99,5 +104,5 @@ Docs utilize collections to display content
     </div>
 </div>
 <div class="CollectionMenu d-none">
-    {% include collection-menu.html name=docs_name collection=docs index=docs_index.url %}
+    {% include collection-menu.html name=collection_name collection=docs index=docs_index %}
 </div>
