@@ -1,0 +1,12 @@
+{%- assign excerpt = post.description | default: post.excerpt %}
+<div class="py-4 d-flex flex-column tease-border">
+    <div class="col-12">
+      <h3 class="h6-mktg mb-2">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+      <div class="f4-mktg color-fg-muted">{{ excerpt }}</div>
+      <div class="mt-12px">
+        <span class="mr-3 mr-12px mt-1 f5-mktg text-bold">{{ post.author }}</span>
+      </div>
+    </div>
+  </div>

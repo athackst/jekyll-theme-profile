@@ -1,5 +1,6 @@
 ---
 title: "Syntax highlighter"
+category: examples
 ---
 
 Below are some languages and their represntative styles.

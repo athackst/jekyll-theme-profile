@@ -3,6 +3,8 @@ title: "Post with custom background"
 description: Post with custom styling
 background_image: https://www.allisonthackston.com/assets/img/cover-1920.jpg
 style: sidebar
+tags: [style, background]
+category: custom
 css_style: |
   .Header {
     background-color: rgba(0,0,0,0);
