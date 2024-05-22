@@ -51,7 +51,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1.175.1
+        uses: ruby/setup-ruby@v1.177.1
         with:
           ruby-version: ${{ matrix.version }}
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
@@ -88,7 +88,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1.175.1
+        uses: ruby/setup-ruby@v1.177.1
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - name: Setup Pages
