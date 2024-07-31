@@ -12,7 +12,6 @@ collections:
     output: true
     sort_by: order
 
-
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
@@ -168,3 +167,9 @@ related_by: "tags or categories"
 # jekyll-category-pages settings
 category_path: category
 category_layout: category_layout.html
+
+######################
+# jekyll-relative-links settings
+relative_links:
+  enabled:     true
+  collections: true

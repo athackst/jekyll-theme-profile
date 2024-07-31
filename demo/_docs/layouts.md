@@ -9,7 +9,7 @@ category: Advanced
 
 This layout is ideal for documentation, and follows the document style on [github docs](https://docs.github.com)
 
-[Live demo](/docs){:.btn}
+[Live demo](index.html){:.btn}
 
 **_config.yml**
 
@@ -42,7 +42,7 @@ layout: docs
 
 This layout includes site.nav data, your repo card
 
-[Live demo](/){:.btn}
+[Live demo](../index.md){:.btn}
 
 **_config.yml**
 
@@ -78,7 +78,7 @@ layout: landing
 
 This layout provides a linktree-like view for your webpage.
 
-[Live demo](/linktree){:.btn}
+[Live demo](../linktree.md){:.btn}
 
 **_config.yml**
 
@@ -149,7 +149,7 @@ links:
 
 A profile page similar to the one on github
 
-[Live demo](/profile){:.btn}
+[Live demo](../profile.md){:.btn}
 
 **_config.yml**
 
@@ -173,7 +173,7 @@ layout: profile
 
 A view of all of your repositories
 
-[Live demo](/repositories){:.btn}
+[Live demo](../repositories.md){:.btn}
 
 **_config.yml**
 
@@ -205,7 +205,7 @@ title: My Repositories
 
 An index view of all of your tags
 
-[Live demo](/tags){:.btn}
+[Live demo](../tags/index.html){:.btn}
 
 **_config.yml**
 
@@ -231,7 +231,7 @@ layout: tag_index
 
 An index view of all of your categories
 
-[Live demo](/category){:.btn}
+[Live demo](../category/index.html){:.btn}
 
 **_config.yml**
 
