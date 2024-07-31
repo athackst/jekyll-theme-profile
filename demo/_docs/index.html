@@ -7,7 +7,7 @@ order: 0
     {% for doc in site.docs %}
       {% unless doc.url == page.url %}
       <li>
-        <a href="{{ doc.url }}">{{ doc.title }}</a>
+        <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
       </li>
       {% endunless %}
     {% endfor %}
