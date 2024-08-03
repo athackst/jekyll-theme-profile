@@ -4,6 +4,7 @@ order: 4
 category: Advanced
 ---
 
+Layouts in Jekyll define the structure and appearance of pages, allowing for consistent design across your site while accommodating different content types. Below, you'll find examples of each layout, along with configuration details and usage instructions.
 
 ## Docs
 

@@ -2,13 +2,12 @@
 title: "Get started"
 order: 1
 category: Getting started
+image: "https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/screenshot.png"
 ---
 
+This theme is based on GitHub's primer style. It supports both light and dark modes, and four style options: appbar, sidebar, topbar, and stacked. Setting up is a breeze, as it automatically populates your profile using your GitHub user info. Add custom links like Linktree and share engaging blog posts effortlessly.
 
 ![jekyll-theme-profile](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/screenshot.png)
-
-
-This theme is based on GitHub's primer style. It supports both light and dark modes, and four style options: appbar, sidebar, topbar, and stacked. Setting up is a breeze, as it automatically populates your profile using your GitHub user info. Add custom links like Linktree and share engaging blog posts effortlessly.
 
 ## Installation
 
