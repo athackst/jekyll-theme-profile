@@ -2,9 +2,11 @@
 layout: page
 ---
 {% if page.paginator %}
-
   <!-- Pagination is active -->
   {% assign paginator = page.paginator %}
+{% endif %}
+
+{% if paginator %}
 
   {% if paginator.previous_page != nil or paginator.next_page != nil %}
     <!-- Show page number if we have multiple pages -->
@@ -40,7 +42,7 @@ layout: page
   <p class="f4-mktg color-text-tertiary mt-4 mt-md-7 mb-0">Category</p>
   <h1 class="pb-5 mt-0">{{ page.title | capitalize }}</h1>
 
-  <section>
+  <div class="d-flex flex-wrap gutter-spacious">
     <!-- Show excerpts for all posts in this category -->
     {% for post in page.posts %}
     {%- if post.feature %}
@@ -49,6 +51,6 @@ layout: page
     {%- include post-card.html border="border-top" %}
     {%- endif %}
     {% endfor %}
-  </section>
+  </div>
 
 {% endif %}

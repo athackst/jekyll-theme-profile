@@ -10,10 +10,20 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://www.althack.dev/jekyll-theme-profile"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_data|_layouts|_includes|_sass|_plugins|LICENSE|README)!i) }
+  spec.files = Dir.glob([
+    "assets/**/*",
+    "_data/**/*",
+    "_layouts/**/*",
+    "_includes/**/*",
+    "_sass/**/*",
+    "_plugins/**/*",
+    "LICENSE",
+    "README.md"
+  ])
 
   spec.required_ruby_version = '>=2.7.0'
   spec.add_dependency "jekyll", "> 3.5", "< 5.0"
+  spec.add_dependency "csv", "~> 3.3.0"
   # spec.add_runtime_dependency "github-pages", "~>228"
   spec.add_runtime_dependency "jekyll-github-metadata", "~> 2.9"
   spec.add_runtime_dependency "jekyll-octicons", "~> 19.4"
