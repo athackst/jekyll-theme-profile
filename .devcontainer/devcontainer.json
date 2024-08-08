@@ -9,7 +9,12 @@
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [
+		// Jekyll server
+		4000,
+		// Live reload server
+		35729
+	],
 
 	// Mount local aliases if any
 	"mounts": [
@@ -17,7 +22,7 @@
 		"source=/${env:HOME}/.aliases,target=/home/vscode/.aliases,type=bind,consistency=cached"
 	],
 	// Uncomment the next line to run commands after the container is created.
-	"onCreateCommand": ".devcontainer/post-create.sh",
+	"onCreateCommand": ".devcontainer/post-create.sh"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
