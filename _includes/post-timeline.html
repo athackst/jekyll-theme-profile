@@ -1,12 +1,22 @@
-{%- assign post_limit = include.limit | default: 3 %}
+{%- assign collection = include.collection | default: site.posts %}
+{%- assign collection_permalink = include.collection_permalink | default: ':name' %}
+{%- assign replace_value = include.replace_value | default: ':name' %}
+{%- assign post_limit = include.limit | default: nil %}
 
-<div class="mb-4">
-  {%- for post in site.posts limit: {{post_limit}} %}
-      {%- include post-timeline-card.html %}
-  {%- endfor %}
+<div class="mt-md-7 mb-9 mb-md-12">
+  <div class="container-xl mx-auto p-responsive-blog">
+    {%- for post in collection | limit: post_limit %}
+    {%- include post-timeline-card.html %}
+    {%- endfor %}
+  </div>
+  {%- if collection.size > post_limit %}
+  <div class="container-xl mx-auto p-responsive-blog mt-6 mt-md-8 ">
+    <div class="d-flex gutter-spacious">
+      <div class="col-12 col-md-7 offset-md-5">
+        <a href="{{ collection_permalink | replace: replace_value, section_slug | relative_url }}"
+          class="Link--primary arrow-target-mktg text-semibold btn ml-5">View all {% octicon chevron-right height:16 %}</a>
+      </div>
+    </div>
+  </div>
+  {%- endif %}
 </div>
-{%- if site.paginate %}
-<div class="col-12 col-md-7 offset-md-5 mb-5">
-  <a href="{{ site.paginate_path | relative_url | replace: 'page:num', '' }}" class="btn ml-5">Read more</a>
-</div>
-{%- endif %}

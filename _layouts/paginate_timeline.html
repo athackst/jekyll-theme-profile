@@ -1,0 +1,41 @@
+---
+layout: page
+---
+{% assign paginate_path = page.pagination.permalink | default: site.pagination.permalink | default: site.paginate_path %}
+{% assign paginate_first_page_path = site.paginate_path | relative_url | replace: 'page:num', '' %}
+{% assign first_page_path = page.first_page_path | default: paginator.first_page_path | default: paginate_first_page_path%}
+
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+<!-- This loops through the paginated posts -->
+{% include post-timeline.html collection=paginator.posts %}
+<!-- Pagination links -->
+<div class="paginate-container">
+    <div role="navigation" aria-label="Pagination" class="d-flex d-md-inline-block pagination">
+        {%- if paginator.previous_page %}
+        <a class="previous_page" rel="prev" href="{{ paginator.previous_page_path | relative_url }}"
+            aria-disabled="false">Previous</a>
+        {% else %}
+        <span class="previous_page disabled" aria-disabled="true">Previous</span>
+        {% endif %}
+
+        {%- for blog_page in (1..paginator.total_pages) %}
+        {%- if blog_page == paginator.page %}
+        <a href="{{ page.url | relative_url }}" aria-label="{{ blog_page }}" aria-current="page">{{ blog_page }}</a>
+        {% elsif blog_page == 1 %}
+        <a href="{{ first_page_path | relative_url }}" aria-label="{{ blog_page }}">{{ blog_page }}</a>
+        {% else %}
+        <a href="{{ paginate_path | relative_url | replace: ':num', blog_page }}" aria-label="{{ blog_page }}">{{ blog_page }}</a>
+        {%- endif %}
+        {%- endfor %}
+
+        {%- if paginator.next_page %}
+        <a class="next_page" rel="next" href="{{ paginator.next_page_path | relative_url }}"
+            aria-disabled="false">Next</a>
+        {% else %}
+        <span class="next_page disabled" aria-disabled="true">Next</span>
+        {% endif %}
+    </div>
+</div>
