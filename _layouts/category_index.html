@@ -2,37 +2,16 @@
 layout: page
 title: Category
 ---
-{% assign categories = page.categories | default: site.categories %}
-{% assign category_path = page.category_path | default: site.category_path %}
+{%- assign categories = page.categories | default: site.categories %}
+{%- assign category_permalink = site.category_path | default: 'category' | append: '/:cat' %}
+{%- assign category_permalink = page.pagination.permalink | default: site.autopages.categories.permalink | default: category_permalink %}
+{%- assign per_section = page.per_section | default: page.pagination.per_page | default: 3 %}
+
 <h1 class="h3-mktg mt-4 mb-6 mb-md-8">{{ page.title }}</h1>
 
-{% for category in categories %}
-<h2 class="h6-mktg section-heading">{{ category | first | capitalize }}</h2>
-{%- if category[1].size == 1 %}
-{%- assign image_class="col-12" %}
-{%- assign text_class="" %}
-{% else %}
-{%- assign image_class="col-md-7 col-xl-9" %}
-{%- assign text_class="col-md-5 col-xl-3" %}
-{%- endif %}
-<div class="d-flex flex-wrap gutter-spacious {% cycle '', 'flex-row-reverse' %}">
-  {% for post in category[1] limit: 3 %}
-  {%- if forloop.first %}
-  <div class="{{ image_class }}">
-    {%- include post-tease-image-card.html %}
-  </div>
-  <div class="{{ text_class }}">
-  {%- else %}
-    {%- include post-tease-text-card.html %}
-  {%- endif %}
-  {% endfor %}
-  {%- if category[1].size > 3 %}
-    {%- capture category_link %}/{{ category_path }}/{{ category | first | jekyll_tagging_slug }}{%
-      endcapture %}
-    <div>
-    <a href="{{ category_link }}" class="btn">More</a>
-    </div>
-   {%- endif %}
-  </div>
-</div>
-{% endfor %}
+{% include post-gallery.html
+    collection=categories
+    collection_permalink=category_permalink
+    replace_value=":cat"
+    per_section=per_section
+%}
