@@ -1,6 +1,5 @@
-{%- assign collection = include.collection | default: site.posts %}
-{%- assign collection_permalink = include.collection_permalink | default: ':name' %}
-{%- assign replace_value = include.replace_value | default: ':name' %}
+{%- assign collection = include.collection | default: site.posts | sort: "date" | reverse %}
+{%- assign index = include.index %}
 {%- assign post_limit = include.limit | default: nil %}
 
 <div class="mt-md-7 mb-9 mb-md-12">
@@ -13,7 +12,7 @@
   <div class="container-xl mx-auto p-responsive-blog mt-6 mt-md-8 ">
     <div class="d-flex gutter-spacious">
       <div class="col-12 col-md-7 offset-md-5">
-        <a href="{{ collection_permalink | replace: replace_value, section_slug | relative_url }}"
+        <a href="{{ index | relative_url }}"
           class="Link--primary arrow-target-mktg text-semibold btn ml-5">View all {% octicon chevron-right height:16 %}</a>
       </div>
     </div>
