@@ -18,6 +18,9 @@ This builds a link card
       <img src="{{ link.thumbnail | relative_url }}" width="48" height="48"
         class="rounded-2 box-shadow-none img-cover float-left" alt="{{ link.name }}">
       {%- endif %}
+      {%- if link.octicon %}
+        {% octicon {{ link.octicon }} height:48 %}
+      {%- endif %}
     </div>
     <div class="p-2">
       <p class="f3 text-center mb-0">{{ link.name }}</p>
