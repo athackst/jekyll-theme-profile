@@ -1,7 +1,8 @@
 ---
 layout: default
+style: none
 ---
-{%- assign style = page.style | default: layout.style | default: site.style %}
+{%- assign socials=page.socials | default: layout.socials | default: nil %}
 <div class="flex-column flex-1 min-width-0 py-3">
     <div class="d-flex mt-4 p-responsive container-md flex-row py-3 flex-justify-end">
         <div class="d-flex flex-justify-center">
@@ -11,13 +12,15 @@ layout: default
     {%- if style != "sidebar" and style != "stacked" %}
     {%- include masthead.html class="CircleBadge--medium" %}
     {%- endif %}
-    {%- unless content == "" %}
-    {{ content }}
-    {%- endunless %}
-
+    {%- if socials == "top" %}
+    {%- include social.html %}
+    {%- endif %}
     {%- if site.links %}
     <div class="d-flex mt-4 p-responsive container-md">
     {%- include links.html %}
     </div>
+    {%- endif %}
+    {%- if socials == "bottom" %}
+    {%- include social.html %}
     {%- endif %}
 </div>
