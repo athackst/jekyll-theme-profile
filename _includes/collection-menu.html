@@ -1,13 +1,17 @@
 {%- assign collection = include.collection | default: site.docs %}
 {%- assign collection_name = include.name %}
 {%- assign collection_index = include.index %}
+{%- assign index_url = collection_index.url %}
+{%- assign collection_without_index = collection | where_exp: "item", "item.url != index_url" %}
+
 <div class="Overlay-backdrop--side Overlay-backdrop--placement-left" data-modal-dialog-overlay>
-    <modal-dialog class="Overlay Overlay--width-medium Overlay--motion-slideDown height-fit height-full" >
+    <modal-dialog class="Overlay Overlay--width-medium Overlay--motion-slideDown height-fit height-full">
         <div class="Overlay-headerContentWrap d-flex flex-row py-3 px-2 border-bottom">
             <div class="Overlay-titleWrap d-flex flex-1">
                 <div tabindex="-1" class="d-flex flex-1 ml-3" id="github-logo">
                     {% if collection_index %}
-                    <a href="{{ collection_index.url | relative_url }}" class="AppHeader-link d-flex flex-items-center no-underline mr-3">
+                    <a href="{{ collection_index.url | relative_url }}"
+                        class="AppHeader-link d-flex flex-items-center no-underline mr-3">
                         <span class="h3 color-fg-default text-bold">{{ collection_name }}</span>
                     </a>
                     {% else %}
@@ -17,7 +21,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="Overlay-actionWrap d-flex flex-justify-end" >
+            <div class="Overlay-actionWrap d-flex flex-justify-end">
                 <button id="close-contents-btn" class="close-button Overlay-closeButton">
                     {% octicon x height: 16 %}
                 </button>
@@ -25,14 +29,23 @@
         </div>
         <div class="Overlay-body d-flex flex-column p-2">
             <ul data-overflow-nav class="ActionList border-0">
-                {%- for nav_item in collection %}
-                {%- if nav_item.url != collection_index %}
-                <a href="{{ nav_item.url | relative_url }}" class="ActionListItem-label no-underline" >
-                    <li class="menu-item ActionList-item border-0"{% if page.url==nav_item.url %} aria-current="page"{% endif %}>
-                        {{ nav_item.title }}
-                    </li>
-                </a>
-                {%- endif %}
+                {%- assign collection_categories = collection_without_index | group_by: "category" %}
+                {%- for category in collection_categories %}
+                {%- assign category_name = category.name | default: collection_name %}
+                <li class="ActionListItem no-underline h4">{{ category_name | capitalize }}
+                    <ul>
+                        {%- for nav_item in category.items %}
+                        {%- if nav_item.url != collection_index %}
+                        <a href="{{ nav_item.url | relative_url }}" class="ActionListItem-label no-underline">
+                            <li class="menu-item ActionList-item border-0" {% if page.url==nav_item.url %}
+                                aria-current="page" {% endif %}>
+                                {{ nav_item.title }}
+                            </li>
+                        </a>
+                        {%- endif %}
+                        {%- endfor %}
+                    </ul>
+                </li>
                 {%- endfor %}
             </ul>
         </div>
