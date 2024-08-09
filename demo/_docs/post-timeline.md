@@ -20,22 +20,23 @@ You can customize the behavior of this include by passing the following paramete
 
 | Parameter | Default | Description |
 |-----------|---------|-------------|
-| `collection` | Required | The collection of posts to display |
-| `collection_permalink` | `:name` | The permalink structure for individual collection pages |
-| `replace_value` | `:name` | The value to replace in the `collection_permalink` with the section slug |
-| `post_limit` | nil | Number of posts to display per section |
+| `collection` | `site.posts` | The collection of posts to display |
+| `index` | None | The URL for the "View all" link |
+| `limit` | None | Number of posts to display |
+
 Example with parameters:
 
 ```liquid
-{% include post-timeline.html collection=site.articles post_limit=5 %}
+{% include post-timeline.html collection=site.articles limit=5 index="/articles/" %}
 ```
 
 ## Functionality
 
 1. The include sets up initial variables based on the provided parameters or default values.
-2. It creates a container for the timeline posts.
-3. It iterates through the specified collection (limited by `post_limit` if set) and includes a `post-timeline-card.html` for each post.
-4. If there are more posts in the collection than the displayed limit, it adds a "View all" link at the bottom.
+2. It sorts the collection by date in reverse order (newest first).
+3. It creates a container for the timeline posts.
+4. It iterates through the specified collection (limited by `limit` if set) and includes a `post-timeline-card.html` for each post.
+5. If there are more posts in the collection than the displayed limit, it adds a "View all" link at the bottom.
 
 ## Dependencies
 
@@ -54,5 +55,8 @@ To customize the appearance of the timeline:
 
 ## Notes
 
-- Ensure that the `collection_permalink` variable is defined before using this include if you're using the "View all" functionality.
+- The `collection` parameter defaults to `site.posts` if not specified.
+- The `limit` parameter is optional. If not set, all posts in the collection will be displayed.
+- The `index` parameter is required for the "View all" link to function properly.
 - The `relative_url` filter is used for the "View all" link, which is a Jekyll filter for generating correct URLs in different site configurations.
+- The layout uses responsive design classes (`container-xl`, `p-responsive-blog`, etc.) for optimal display on various screen sizes.

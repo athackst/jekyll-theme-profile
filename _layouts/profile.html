@@ -25,7 +25,7 @@ layout: page
 
             {%- unless posts_total == 0 %}
             <h2 class="mb-3">Blog</h2>
-            {%- include post-timeline.html post_limit=posts_limit collection_permalink="/blog/" %}
+            {%- include post-timeline.html limit=posts_limit index="/blog/" %}
             {%- endunless %}
 
             {%- if site.repositories %}
