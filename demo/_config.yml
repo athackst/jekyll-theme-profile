@@ -26,6 +26,7 @@ defaults:
     values:
       layout: "docs"
       image: /assets/img/default.png # The default image used for social and posts.
+      index: /docs/index.html
       permalink: /docs/:path:output_ext
       toc: true
 
