@@ -1,5 +1,5 @@
 ---
-title: "Get started"
+title: "Setup"
 order: 1
 category: Getting started
 image: "https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/screenshot.png"
