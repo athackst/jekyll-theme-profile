@@ -1,5 +1,6 @@
-@import url("https://unpkg.com/@primer/css@^20.2.4/dist/primer.css");
+@use "sass:meta";
+@import url("https://unpkg.com/@primer/css@21.2.2/dist/primer.css");
 @import url("https://cdn.jsdelivr.net/npm/octicons-css/octicons.min.css");
-@import "highlight-syntax";
-@import "language-colors";
-@import "main";
+@include meta.load-css("highlight-syntax");
+@include meta.load-css("language-colors");
+@include meta.load-css("main");
