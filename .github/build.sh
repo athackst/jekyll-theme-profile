@@ -1,4 +1,9 @@
 #!/bin/bash
-
 set -e
-bundle exec jekyll build -s demo
+
+if [[ -n "${JEKYLL_FOLDER}" ]]; then
+    # If JEKYLL_FOLDER is set, use it as the source folder
+    JEKYLL_OPTIONS+="-s ${JEKYLL_FOLDER}"
+fi
+
+bundle exec jekyll build $JEKYLL_OPTIONS

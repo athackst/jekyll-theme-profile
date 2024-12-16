@@ -14,15 +14,15 @@
             "command": "gem push jekyll-theme-profile-*.gem"
         },
         {
-            "label": "jekyll: serve",
+            "label": "jekyll: serve demo",
             "type": "shell",
             "command": "bundle exec jekyll serve -s demo --verbose --livereload",
             "problemMatcher": []
         },
         {
-            "label": "jekyll: build",
+            "label": "jekyll: serve",
             "type": "shell",
-            "command": "bundle exec jekyll build -s demo --verbose",
+            "command": "bundle exec jekyll serve --verbose --livereload",
             "problemMatcher": []
         },
         {
@@ -42,9 +42,23 @@
             "type": "shell",
             "command": ".github/build.sh",
             "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "build demo",
+            "type": "shell",
+            "command": ".github/build.sh",
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "linux":{
+                "options": {
+                    "env": {
+                        "JEKYLL_FOLDER": "demo"
+                    }
+                }
             }
         },
         {
@@ -52,11 +66,28 @@
             "type": "shell",
             "command": ".github/test.sh",
             "problemMatcher": [],
-            "dependsOn": ["build"],
             "group": {
                 "kind": "test",
                 "isDefault": true
             },
+            "dependsOn": ["build"],
+            "options": {
+                "env": {
+                    "HOSTURL": "www.althack.dev",
+                    "BASEURL": "/jekyll-theme-profile"
+                }
+            }
+        },
+        {
+            "label": "test demo",
+            "type": "shell",
+            "command": ".github/test.sh",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "dependsOn": ["build demo"],
             "options": {
                 "env": {
                     "HOSTURL": "www.althack.dev",
