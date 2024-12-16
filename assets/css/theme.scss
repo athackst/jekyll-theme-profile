@@ -1,5 +1,7 @@
 ---
 ---
+@use "jekyll-theme-profile";
+
 {%- if site.background.overlay %}
   {%- assign dark_overlay = site.background.overlay %}
   {%- assign light_overlay = site.background.overlay %}
@@ -82,5 +84,3 @@
     --color-profile-accent: var(--color-accent-fg);
     --color-profile-bg: var(--color-canvas-default);
 }
-
-@import "jekyll-theme-profile";
