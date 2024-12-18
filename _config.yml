@@ -3,9 +3,8 @@ theme: jekyll-theme-profile
 title: Jekyll Theme Profile
 description: Theme built with jekyll-theme-profile
 image: /media/appbar-preview.png
-repository: athackst/jekyll-theme-profile
-base_url: "jekyll-theme-profile"
-url: "https://www.althack.dev"
+# repository: athackst/jekyll-theme-profile
+# base_url: "jekyll-theme-profile"
 
 collections:
   docs:
@@ -17,8 +16,9 @@ defaults:
       path: "" # an empty string here means all files in the project
       type: "posts"
     values:
-      layout: "post"
       image: /assets/img/default.png # The default image used for social and posts.
+      layout: "post"
+      permalink: :year/:month/:day/:title:output_ext
       toc: true
   - scope:
       path: "" # an empty string here means all files in the project
@@ -32,26 +32,12 @@ defaults:
 
 # ########### Theme settings ###############
 # The style of the website
-style: topbar # One of "stacked", "sidebar", "topbar", "appbar"
+style: appbar # One of "stacked", "sidebar", "topbar", "appbar"
 # The user/project avatar.  If not set the avatar of the project owner will be used.
-user_image: /assets/img/user-image.jpg
+# user_image: /assets/img/user-image.jpg
 # The themes to use for dark and light
 dark_theme: dark_dimmed
 light_theme: light
-# # Optional custom background image and overlay
-# background:
-#   image: /media/background-img.jpg
-#   overlay: rgba(0, 0, 0, 0.7)
-#   light:
-#     overlay: rgba(255, 255, 255, 0.5)
-#   dark:
-#     overlay: rgba(0, 0, 0, 0.5)
-
-# # Optional custom header colors
-# header:
-#   color: "#4051b5"
-#   text: "rgba(255,255,255,0.7)"
-#   accent: "#ffffff"
 
 repo_info: true # Show the information for the source of this project
 user_metadata: true # Show the metadata associated with the user
@@ -59,72 +45,48 @@ profile_link: true # Show a link to the github profile for the user
 
 ##########################
 # # Social media settings
-icon_color: "#959da5" # The color of the social media icons on the site
-social_media: # Your social media accounts
-  # behance: your_username
-  # dribbble: your_username
-  # docker: your_username
-  # facebook: your_username
-  github: athackst
-  # hackerrank: your_username
-  # instagram: your_username
-  # keybase: your_username
-  # linkedin: your_username
-  # mail: email@address
-  # mastodon: your_username
-  # medium: your_username
-  # stackoverflow: your_user_id
-  # telegram: your_username
-  # threads: your_username
-  # tiktok: your_username
-  # twitter: your_username
-  # unsplash: your_username
-  # vk: your_username
-  vscode: althack
-  # youtube: your_username
-  x: althack
+# icon_color: "#959da5" # The color of the social media icons on the site
+# social_media: # Your social media accounts
+#   behance: your_username
+#   dribbble: your_username
+#   docker: your_username
+#   facebook: your_username
+#   github: your_username
+#   hackerrank: your_username
+#   instagram: your_username
+#   keybase: your_username
+#   linkedin: your_username
+#   mail: email@address
+#   mastodon: your_username
+#   medium: your_username
+#   stackoverflow: your_user_id
+#   telegram: your_username
+#   threads: your_username
+#   tiktok: your_username
+#   twitter: your_username
+#   unsplash: your_username
+#   vk: your_username
+#   vscode: your_username
+#   youtube: your_username
+#   x: your_username
 
 ####################
 # Navigation links
 nav:
-  - name: Topbar
-    url: /topbar.html
-  - name: Appbar
-    url: /appbar.html
-  - name: Sidebar
-    url: /sidebar.html
-  - name: Stacked
-    url: /stacked.html
-  - name: Documentation
-    url: /docs
+  - name: Posts
+    url: /blog
+  - name: Categories
+    url: /category/
 
 ####################
 # List of links for link cards
 links:
-  - name: Example page with topbar
-    url: /page/topbar
-    thumbnail: /media/topbar-icon.png
-  - name: Example page with appbar
-    url: /page/appbar
-    thumbnail: /media/appbar-icon.png
-  - name: Example page with sidebar
-    url: /page/sidebar
-    thumbnail: /media/sidebar-icon.png
-  - name: Example page with header stacked
-    url: /page/stacked
-    thumbnail: /media/stacked-icon.png
-  - name: Example custom background
-    url: /background
-    thumbnail: /media/icon-bg.png
-  - name: Example Linktree page
-    url: /linktree
-    thumbnail: /media/links.png
-  - name: Example Profile page
-    url: /profile
-    thumbnail: /assets/img/user-image.jpg
-  - name: Example Reposotiries page
-    url: /repositories
-    thumbnail: /media/repositories.png
+  - name: All blog posts
+    url: /blog
+    thumbnail: /assets/img/blog-post-icon.png
+  - name: Browse by category
+    url: /category/
+    thumbnail: /assets/img/category-icon.png
 
 ###################
 # Repositories to show on home page
@@ -152,6 +114,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-toc
   - jemoji
+
 ####################
 # jekyll-paginate settings
 paginate: 6 # The number of posts to show per page of pagination of blog posts
@@ -174,3 +137,8 @@ category_layout: category_layout.html
 relative_links:
   enabled:     true
   collections: true
+
+# ########### Build settings ###############
+exclude:
+  - spec
+  - demo

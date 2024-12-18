@@ -41,7 +41,7 @@ links:
     thumbnail: /media/links.png
   - name: Example Profile page
     url: /profile
-    thumbnail: /media/user-image.jpg
+    thumbnail: /assets/img/user-image.jpg
   - name: Example Reposotiries page
     url: /repositories
     thumbnail: /media/repositories.png

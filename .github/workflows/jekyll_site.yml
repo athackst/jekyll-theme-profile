@@ -6,10 +6,6 @@ on:
   push:
     branches: ["main"]
 
-  # Run on every pull request
-  pull_request:
-    types: [opened, reopened, synchronize]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -40,48 +36,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  test:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        #  need to keep ruby version 2.7.4 for compatability with github pages https://pages.github.com/versions/
-        version: [2.7.4, 3.0, 3.1, 3.2, 3.3]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1.204.0
-        with:
-          ruby-version: ${{ matrix.version }}
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - name: Check rate limit
-        run: |
-          gh api \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            /rate_limit
-        env:
-          GH_TOKEN: ${{ github.token }}
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        run: .github/build.sh
-        env:
-          JEKYLL_ENV: production
-          JEKYLL_GITHUB_TOKEN: ${{ github.token }}
-      - name: Debug output
-        run: |
-          tree _site
-          cat _site/index.html
-      - name: HTLMProofer
-        run: .github/test.sh
-        env:
-          BASEURL: ${{ steps.pages.outputs.base_path }}
-          HOSTURL: ${{ steps.pages.outputs.host }}
-
   # Build job
   build:
     runs-on: ubuntu-latest
@@ -98,10 +52,11 @@ jobs:
         with:
           enablement: true # Enable github pages if it's not
       - name: Build
-        run: bundle exec jekyll build -s demo
+        run: .github/build.sh
         env:
           JEKYLL_ENV: production
           JEKYLL_GITHUB_TOKEN: ${{ github.token }}
+          JEKYLL_FOLDER: ${{ vars.JEKYLL_FOLDER }}
       - name: HTMLProofer
         uses: athackst/htmlproofer-action@v0.3.0
         with:
@@ -129,25 +84,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  success:
-    if: always()
-    runs-on: ubuntu-latest
-    needs: [build, test]
-    steps:
-      - run: exit 1
-        # see https://stackoverflow.com/a/67532120/4907315
-        if: >-
-          ${{
-               contains(needs.*.result, 'failure')
-            || contains(needs.*.result, 'cancelled')
-          }}
-      - run: echo "All steps completed successfully"
-      - name: Check rate limit
-        run: |
-          gh api \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            /rate_limit
-        env:
-          GH_TOKEN: ${{ github.token }}
