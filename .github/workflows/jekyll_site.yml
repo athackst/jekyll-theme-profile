@@ -46,6 +46,7 @@ jobs:
         uses: ruby/setup-ruby@v1.204.0
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          working-directory:  ${{ vars.JEKYLL_FOLDER }}
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -56,6 +57,7 @@ jobs:
         env:
           JEKYLL_ENV: production
           JEKYLL_GITHUB_TOKEN: ${{ github.token }}
+          GEMFILE: ${{ vars.JEKYLL_FOLDER }}/Gemfile
           JEKYLL_FOLDER: ${{ vars.JEKYLL_FOLDER }}
       - name: HTMLProofer
         uses: athackst/htmlproofer-action@v0.3.0
