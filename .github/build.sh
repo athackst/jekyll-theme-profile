@@ -6,4 +6,8 @@ if [[ -n "${JEKYLL_FOLDER}" ]]; then
     JEKYLL_OPTIONS+="-s ${JEKYLL_FOLDER}"
 fi
 
-bundle exec jekyll build $JEKYLL_OPTIONS
+if [[ -n "${GEMFILE}" ]]; then
+    BUNDLE_OPTIONS="--gemfile=${GEMFILE}"
+fi
+
+bundle exec $BUNDLE_OPTIONS jekyll build $JEKYLL_OPTIONS

@@ -32,6 +32,7 @@ jobs:
         with:
           ruby-version: ${{ matrix.version }}
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          working-directory:  ${{ matrix.folder }}
       - name: Check rate limit
         run: |
           gh api \
@@ -49,6 +50,7 @@ jobs:
           JEKYLL_ENV: production
           JEKYLL_GITHUB_TOKEN: ${{ github.token }}
           JEKYLL_FOLDER: ${{ matrix.folder }}
+          GEMFILE: ${{ matrix.folder }}/Gemfile
           PAGES_REPO_NWO: ${{ github.repository }}
       - name: Debug output
         run: |
