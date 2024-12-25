@@ -14,18 +14,6 @@
             "command": "gem push jekyll-theme-profile-*.gem"
         },
         {
-            "label": "jekyll: serve demo",
-            "type": "shell",
-            "command": "bundle exec jekyll serve -s demo --verbose --livereload",
-            "problemMatcher": []
-        },
-        {
-            "label": "jekyll: serve",
-            "type": "shell",
-            "command": "bundle exec jekyll serve --verbose --livereload",
-            "problemMatcher": []
-        },
-        {
             "label": "bundle: update",
             "type": "shell",
             "command": "bundle update",
@@ -45,6 +33,42 @@
             "group": "build"
         },
         {
+            "label": "test",
+            "type": "shell",
+            "command": ".github/test.sh",
+            "problemMatcher": {
+                "owner": "htmlproofer",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^\\* At\\s(.+):([0-9]+):$", 
+                        "file": 1,
+                        "line": 2, 
+                        "message": 0
+                    }
+                ]
+            },
+            "group": "test",
+            "dependsOn": [
+                "build"
+            ],
+            "options": {
+                "env": {
+                    "HOSTURL": "www.althack.dev",
+                    "BASEURL": "/jekyll-theme-profile"
+                }
+            }
+        },
+        {
+            "label": "serve",
+            "type": "shell",
+            "command": ".github/serve.sh",
+            "problemMatcher": []
+        },
+        {
             "label": "build demo",
             "type": "shell",
             "command": ".github/build.sh",
@@ -53,28 +77,12 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "linux":{
+            "linux": {
                 "options": {
                     "env": {
-                        "JEKYLL_FOLDER": "demo"
+                        "JEKYLL_FOLDER": "demo",
+                        "JEKYLL_SITE": "_site/demo"
                     }
-                }
-            }
-        },
-        {
-            "label": "test",
-            "type": "shell",
-            "command": ".github/test.sh",
-            "problemMatcher": [],
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "dependsOn": ["build"],
-            "options": {
-                "env": {
-                    "HOSTURL": "www.althack.dev",
-                    "BASEURL": "/jekyll-theme-profile"
                 }
             }
         },
@@ -82,16 +90,48 @@
             "label": "test demo",
             "type": "shell",
             "command": ".github/test.sh",
-            "problemMatcher": [],
+            "problemMatcher": {
+                "owner": "htmlproofer",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^\\* At\\s(.+):([0-9]+):$",
+                        "file": 1, 
+                        "line": 2, 
+                        "message": 0
+                    }
+                ]
+            },
             "group": {
                 "kind": "test",
                 "isDefault": true
             },
-            "dependsOn": ["build demo"],
+            "dependsOn": [
+                "build demo"
+            ],
             "options": {
                 "env": {
                     "HOSTURL": "www.althack.dev",
-                    "BASEURL": "/jekyll-theme-profile"
+                    "BASEURL": "/jekyll-theme-profile",
+                    "JEKYLL_FOLDER": "demo",
+                    "JEKYLL_SITE": "demo/_site"
+                }
+            }
+        },
+        {
+            "label": "serve demo",
+            "type": "shell",
+            "command": ".github/serve.sh",
+            "problemMatcher": [],
+            "linux": {
+                "options": {
+                    "env": {
+                        "JEKYLL_FOLDER": "demo",
+                        "JEKYLL_SITE": "demo/_site"
+                    }
                 }
             }
         },
