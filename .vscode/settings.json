@@ -1,3 +1,7 @@
 {
-    "svg.preview.background": "dark-transparent"
+    "svg.preview.background": "dark-transparent",
+    "rubyLsp.rubyVersionManager": {
+        "identifier": "rvm"
+    },
+
 }
