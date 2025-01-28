@@ -25,8 +25,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>=2.7.0'
   spec.add_dependency "jekyll", "> 3.5", "< 5.0"
   spec.add_dependency "csv", "~> 3.3.0"
-  # spec.add_runtime_dependency "github-pages", "~>228"
-  spec.add_runtime_dependency "jekyll-github-metadata", "~> 2.9"
   spec.add_runtime_dependency "jekyll-octicons", "~> 19.4"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
   spec.add_runtime_dependency "jekyll-toc", "~> 0.18"

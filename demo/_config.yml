@@ -2,7 +2,7 @@
 theme: jekyll-theme-profile
 title: Jekyll Theme Profile
 description: Theme built with jekyll-theme-profile
-image: /media/appbar-preview.png
+image: /assets/img/social-preview.png
 repository: athackst/jekyll-theme-profile
 base_url: "jekyll-theme-profile"
 url: "https://www.althack.dev"
@@ -144,6 +144,9 @@ repositories:
 # Post timeline
 posts_limit: 3 # The number of posts to show in home (also can be defined in page)
 
+# related
+related_by: "tags or categories"
+
 # ########### Plugin settings ###############
 plugins:
   - jekyll-github-metadata
@@ -154,21 +157,17 @@ plugins:
   - jemoji
 ####################
 # jekyll-paginate settings
-paginate: 6 # The number of posts to show per page of pagination of blog posts
+paginate: 7 # The number of posts to show per page of pagination of blog posts
 paginate_path: "/blog/page:num"
 ###################
 # jekyll-tagging settings
 # Include `gem jekyll-tagging` in your gemfile
 tag_page_layout: tags
 tag_page_dir: tags
-# related
-related_by: "tags or categories"
-
 ####################
 # jekyll-category-pages settings
 category_path: category
 category_layout: category_layout.html
-
 ######################
 # jekyll-relative-links settings
 relative_links:
