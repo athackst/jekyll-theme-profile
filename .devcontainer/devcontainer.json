@@ -22,7 +22,15 @@
 		"source=/${env:HOME}/.aliases,target=/home/vscode/.aliases,type=bind,consistency=cached"
 	],
 	// Uncomment the next line to run commands after the container is created.
-	"onCreateCommand": ".devcontainer/post-create.sh"
+	"onCreateCommand": ".devcontainer/post-create.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"Shopify.ruby-lsp"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},
