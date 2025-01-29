@@ -7,7 +7,6 @@ gem 'rake'
 
 group :jekyll_plugins do
   gem 'jekyll-category-pages'
-  gem 'jekyll-github-metadata', '= 2.13.0' # Needed to rate limit API calls.
   gem 'jekyll-paginate'
   gem 'jekyll-relative-links'
   gem 'jekyll-tagging'
