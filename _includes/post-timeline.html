@@ -1,6 +1,12 @@
 {%- assign collection = include.collection | default: site.posts | sort: "date" | reverse %}
-{%- assign index = include.index %}
-{%- assign post_limit = include.limit | default: nil %}
+{%- if site.paginate %}
+{%- assign paginate_path = site.paginate_path %}
+{%- assign cleaned_path = paginate_path | split: ':' | first %}
+{%- assign placeholder = cleaned_path | split: '/' | last %}
+{%- assign paginate_index = cleaned_path | replace: placeholder, '' | strip %}
+{%- endif %}
+{%- assign index = include.index | default: paginator.index_path | default: paginate_index %}
+{%- assign post_limit = include.limit | default: page.posts_limit | default: site.posts_limit %}
 
 <div class="mt-md-7 mb-9 mb-md-12">
   <div class="container-xl mx-auto p-responsive-blog">
@@ -8,7 +14,7 @@
     {%- include post-timeline-card.html %}
     {%- endfor %}
   </div>
-  {%- if collection.size > post_limit %}
+  {%- if collection.size > post_limit and index %}
   <div class="container-xl mx-auto p-responsive-blog mt-6 mt-md-8 ">
     <div class="d-flex gutter-spacious">
       <div class="col-12 col-md-7 offset-md-5">

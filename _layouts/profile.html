@@ -12,20 +12,14 @@ layout: page
 
     <div class="col-lg-8 border-top border-lg-top-0 color-bg-default">
         <div class="py-6">
-            {%- assign posts_total = site.posts | size %}
-            {%- assign posts_limit = site.posts_limit | default: posts_total %}
-
-            {%- unless content == "" %}
             {{ content }}
-            {%- endunless %}
-
             {%- if site.links %}
             {%- include links.html %}
             {%- endif %}
 
             {%- unless posts_total == 0 %}
             <h2 class="mb-3">Blog</h2>
-            {%- include post-timeline.html limit=posts_limit index="/blog/" %}
+            {%- include post-timeline.html%}
             {%- endunless %}
 
             {%- if site.repositories %}
