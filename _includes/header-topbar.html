@@ -1,3 +1,6 @@
+{%- assign user = site.github.owner %}
+{%- assign name = site.title | default: user.name | default: user.login %}
+{%- assign user_img = site.user_image | default: user.avatar_url | default: "/assets/img/user-image.jpg" %}
 <script>
     $(document).ready(function () {
         $('#expansion-btn').click(function () {

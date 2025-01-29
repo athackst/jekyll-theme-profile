@@ -1,3 +1,6 @@
+{%- assign user = site.github.owner %}
+{%- assign name = site.title | default: user.name | default: user.login %}
+{%- assign user_img = site.user_image | default: user.avatar_url | default: "/assets/img/user-image.jpg" %}
 <div class="Overlay-backdrop--side Overlay-backdrop--placement-left" data-modal-dialog-overlay>
     <modal-dialog class="Overlay Overlay--width-medium Overlay--motion-slideDown height-fit height-full" >
         <div class="Overlay-headerContentWrap d-flex flex-row py-3 px-2">
