@@ -1,6 +1,6 @@
 {%- assign user = site.github.owner %}
 {%- assign name = include.title | default: site.title | default: user.name | default: user.login %}
-{%- assign user_img = site.user_image | default: user.avatar_url %}
+{%- assign user_img = site.user_image | default: user.avatar_url | default: "/assets/img/user-image.jpg" %}
 {%- assign user_metadata = site.user_metadata -%}
 
 <div class="Masthead">
