@@ -4,8 +4,6 @@ title: Jekyll Theme Profile
 description: Theme built with jekyll-theme-profile
 image: /assets/img/social-preview.png
 repository: athackst/jekyll-theme-profile
-base_url: "jekyll-theme-profile"
-url: "https://www.althack.dev"
 
 collections:
   docs:
