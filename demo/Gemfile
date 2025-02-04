@@ -1,21 +1,17 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
-gemspec
-
-gem 'rake'
+gem "jekyll-theme-profile", :path => "../"
 
 group :jekyll_plugins do
   gem 'jekyll-category-pages' # Recommended for category index
   gem 'jekyll-paginate' # Recommended for blog index
   gem 'jekyll-tagging' # Recommended for tagging index
+  gem 'jekyll-relative-links' # Needed to create relative links
+  gem 'jekyll-sitemap' # Needed to create a sitemap
 end
 
 group :development do
   gem 'dotenv', '~> 2.7'
   gem 'html-proofer'
-  gem 'rspec'
-  gem 'rubocop'
-  gem 'ruby-lsp'
-  gem 'webrick', '~> 1.8'
 end

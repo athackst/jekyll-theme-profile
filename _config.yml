@@ -4,12 +4,7 @@ title: Jekyll Theme Profile
 description: Theme built with jekyll-theme-profile
 # image: /assets/img/social-preview.png
 # repository: athackst/jekyll-theme-profile
-# base_url: "jekyll-theme-profile"
-
-collections:
-  docs:
-    output: true
-    sort_by: order
+# base_url: "/jekyll-theme-profile"
 
 defaults:
   - scope:
@@ -22,13 +17,10 @@ defaults:
       toc: true
   - scope:
       path: "" # an empty string here means all files in the project
-      type: "docs"
+      type: "pages"
     values:
-      layout: "docs"
+      layout: "page"
       image: /assets/img/default.png # The default image used for social and posts.
-      index: /docs/index.html
-      permalink: /docs/:path:output_ext
-      toc: true
 
 # ########### Theme settings ###############
 # The style of the website
@@ -114,13 +106,13 @@ related_by: "tags or categories"
 plugins:
   - jekyll-github-metadata
   - jekyll-octicons
-  - jekyll-relative-links
   - jekyll-seo-tag
   - jekyll-toc
   - jemoji
 
 ####################
 # jekyll-paginate settings
+# Include `gem jekyll-paginate` in your gemfile
 # paginate: 6 # The number of posts to show per page of pagination of blog posts
 # paginate_path: "/blog/page:num"
 # ###################
@@ -130,19 +122,12 @@ plugins:
 # tag_page_dir: tags
 # ####################
 # jekyll-category-pages settings
+# Include `gem jekyll-category-pages` in your gemfile
 # category_path: category
 # category_layout: category_layout.html
 ######################
-# jekyll-relative-links settings
-relative_links:
-  enabled:     true
-  collections: true
 
 # ########### Build settings ###############
 exclude:
   - spec
-  - vendor
-  - .jekyll-cache
-  - _site
-  - node_modules
   - demo

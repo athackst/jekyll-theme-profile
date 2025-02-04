@@ -14,18 +14,6 @@
             "command": "gem push jekyll-theme-profile-*.gem"
         },
         {
-            "label": "jekyll: serve demo",
-            "type": "shell",
-            "command": "bundle exec jekyll serve -s demo --verbose --livereload",
-            "problemMatcher": []
-        },
-        {
-            "label": "jekyll: serve",
-            "type": "shell",
-            "command": "bundle exec jekyll serve --verbose --livereload",
-            "problemMatcher": []
-        },
-        {
             "label": "bundle: update",
             "type": "shell",
             "command": "bundle update",
@@ -42,13 +30,6 @@
             "type": "shell",
             "command": ".github/build.sh",
             "problemMatcher": [],
-            "group": "build"
-        },
-        {
-            "label": "build demo",
-            "type": "shell",
-            "command": ".github/build.sh",
-            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -56,7 +37,8 @@
             "linux":{
                 "options": {
                     "env": {
-                        "JEKYLL_FOLDER": "demo"
+                        "JEKYLL_FOLDER": "${input:folder}",
+                        "BUNDLE_GEMFILE": "${input:folder}/Gemfile"
                     }
                 }
             }
@@ -70,28 +52,19 @@
                 "kind": "test",
                 "isDefault": true
             },
-            "dependsOn": ["build"],
-            "options": {
-                "env": {
-                    "HOSTURL": "www.althack.dev",
-                    "BASEURL": "/jekyll-theme-profile"
-                }
-            }
+            "dependsOn": ["build"]
         },
         {
-            "label": "test demo",
+            "label": "serve",
             "type": "shell",
-            "command": ".github/test.sh",
+            "command": ".github/serve.sh",
             "problemMatcher": [],
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "dependsOn": ["build demo"],
-            "options": {
-                "env": {
-                    "HOSTURL": "www.althack.dev",
-                    "BASEURL": "/jekyll-theme-profile"
+            "linux":{
+                "options": {
+                    "env": {
+                        "JEKYLL_FOLDER": "${input:folder}",
+                        "BUNDLE_GEMFILE": "${input:folder}/Gemfile"
+                    }
                 }
             }
         },
@@ -101,5 +74,14 @@
             "command": ".github/release.sh jekyll-theme-profile.gemspec",
             "problemMatcher": []
         },
+    ],
+    "inputs": [
+        {
+            "id": "folder",
+            "type": "pickString",
+            "options": [".", "demo"],
+            "default": ".",
+            "description": "Folder to build"
+        }
     ]
 }
