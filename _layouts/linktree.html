@@ -3,6 +3,7 @@ layout: default
 style: none
 ---
 {%- assign socials=page.socials | default: layout.socials | default: nil %}
+{%- assign links=page.links | default: site.links | default: nill %}
 <div class="flex-column flex-1 min-width-0 py-3">
     <div class="d-flex mt-4 p-responsive container-md flex-row py-3 flex-justify-end">
         <div class="d-flex flex-justify-center">
@@ -15,9 +16,9 @@ style: none
     {%- if socials == "top" %}
     {%- include social.html %}
     {%- endif %}
-    {%- if site.links %}
+    {%- if links %}
     <div class="d-flex mt-4 p-responsive container-md">
-    {%- include links.html %}
+    {%- include links.html links=links %}
     </div>
     {%- endif %}
     {%- if socials == "bottom" %}

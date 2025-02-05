@@ -1,4 +1,4 @@
-{% assign links = page.links | default: site.links %}
+{% assign links = include.links | default: page.links | default: site.links %}
 <div class="width-full">
   <div class="d-flex flex-column mb-4">
     {%- for link in links %}
