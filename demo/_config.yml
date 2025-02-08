@@ -85,14 +85,14 @@ social_media: # Your social media accounts
 ####################
 # Navigation links
 nav:
-  - name: Topbar
-    url: /topbar.html
   - name: Appbar
     url: /appbar.html
   - name: Sidebar
     url: /sidebar.html
   - name: Stacked
     url: /stacked.html
+  - name: Topbar
+    url: /topbar.html
   - name: Documentation
     url: /docs
 

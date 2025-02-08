@@ -6,7 +6,6 @@ category: Getting started
 
 This theme can be set up using the `_config.yml` file, most settings can be overwritten in pages.
 
-
 ## Theme settings
 
 ### Setting the theme
