@@ -1,10 +1,10 @@
 ---
 title: Docs Layout
 category: layouts
-order: 3
+order: 24
 ---
 
-The Docs layout is ideal for documentation pages and follows the document style on [GitHub Docs](https://docs.github.com).
+The **docs** layout is ideal for documentation pages and follows the document style on [GitHub Docs](https://docs.github.com).
 
 ## Usage
 
@@ -45,7 +45,7 @@ defaults:
 
 ## Demo
 
-[Live demo](index.html){:.btn}
+[Live demo](../index.html){:.btn}
 
 ## Notes
 

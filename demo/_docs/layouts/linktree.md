@@ -1,10 +1,10 @@
 ---
 title: Linktree Layout
 category: layouts
-order: 3
+order: 22
 ---
 
-The Linktree layout is a versatile template for creating a page that displays a collection of important links, similar to the popular Linktree service. This layout is highly customizable and can be used to create both simple and complex link pages.
+The **linktree** layout is a versatile template for creating a page that displays a collection of important links, similar to the popular Linktree service. This layout is highly customizable and can be used to create both simple and complex link pages.
 
 ## Usage
 
@@ -76,7 +76,7 @@ links:
 ---
 ```
 
-[Live demo](../linktree.md){:.btn}
+[Live demo](../../linktree.md){:.btn}
 
 ## Customization
 
@@ -138,7 +138,7 @@ links:
 ---
 ```
 
-[Live demo](../linktree-custom.md){:.btn}
+[Live demo](../../linktree-custom.md){:.btn}
 
 ## Notes
 

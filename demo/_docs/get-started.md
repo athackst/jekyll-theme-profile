@@ -5,7 +5,8 @@ category: Getting started
 image: "https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/screenshot.png"
 ---
 
-This theme is based on GitHub's primer style. It supports both light and dark modes, and four style options: appbar, sidebar, topbar, and stacked. Setting up is a breeze, as it automatically populates your profile using your GitHub user info. Add custom links like Linktree and share engaging blog posts effortlessly.
+This theme is based on GitHub's primer style. It supports both light and dark modes, and four style options: [appbar](styles/appbar.md), [sidebar](styles/sidebar.md), [stacked](styles/stacked.md), and [topbar](styles/topbar.md),. 
+
 
 ![jekyll-theme-profile](https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/screenshot.png)
 
@@ -20,7 +21,7 @@ gem "jekyll-theme-profile"
 And then execute:
 
 ```shell
-bundle
+bundle install
 ```
 Or install it yourself as:
 
@@ -42,26 +43,6 @@ profile_link: true # Show a link to the github profile for the user
 ```
 
 Or you can start with a [sample config](https://github.com/athackst/jekyll-theme-profile/blob/main/demo/_config.yml) that you can copy and customize.
-
-### Extras
-
-You may also want to add the following supported plugins to your gemfile
-
-```gemfile
-  gem 'jekyll-paginate' # Needed for blog index
-  gem 'jekyll-relative-links' # Needed for breadcrumbs in docs
-  gem 'jekyll-tagging' # Needed for tag pages for blog posts
-  gem 'jekyll-github-metadata', '= 2.13.0' # Needed to rate limit API calls.
-```
-
-And the corresponding plugins to your `_config.yml` file:
-
-```yaml
-# ########### Plugin settings ###############
-plugins:
-  - jekyll-github-metadata
-  - jekyll-relative-links
-```
 
 ## Building
 

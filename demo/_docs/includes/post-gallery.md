@@ -1,7 +1,7 @@
 ---
 title: Post Gallery
 category: includes
-order: 13
+order: 40
 ---
 
 The `post-gallery.html` include file creates a magazine-style layout for displaying collections of posts. It's designed to showcase posts in a visually appealing manner, with the first post of each section displayed prominently and subsequent posts in a more compact format.
@@ -19,14 +19,16 @@ The `post-gallery.html` include file creates a magazine-style layout for display
 
 To use this include in your Jekyll site, you can call it from a layout or another include file like this:
 
+{% raw %}
 ```liquid
-{% raw %}{% include post-gallery.html
+{% include post-gallery.html
     collection=site.categories
     collection_permalink='/category/:name/'
     replace_value=':name'
     per_section=4
-%}{% endraw %}
+%}
 ```
+{% endraw %}
 
 ### Layout
 
@@ -45,7 +47,7 @@ title: Explore Our Categories
 
 To see `post-gallery.html` in action within the `category_index` layout, visit our demo page:
 
-[Category Index Demo](/category/index.html)
+[Category Index Demo](../../category/index.html){:.btn}
 
 ## Functionality
 

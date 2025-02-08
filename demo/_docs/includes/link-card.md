@@ -1,7 +1,7 @@
 ---
 title: Link Card
 category: includes
-order: 2
+order: 40
 ---
 
 This include file generates a card for displaying a link with optional thumbnail and description. It's designed to be flexible and can display as either a clickable link or a text-only card.
@@ -10,9 +10,11 @@ This include file generates a card for displaying a link with optional thumbnail
 
 To use this include in your Jekyll theme, add the following line to your template:
 
+{% raw %}
 ```liquid
 {% include link-card.html link=page.link_object %}
 ```
+{% endraw %}
 
 ## Parameters
 
@@ -28,10 +30,12 @@ You can customize the behavior of this include by passing a `link` object with t
 
 Example with parameters:
 
+{% raw %}
 ```liquid
 {% assign link = page.featured_link %}
 {% include link-card.html link=link %}
 ```
+{% endraw %}
 
 ## Functionality
 

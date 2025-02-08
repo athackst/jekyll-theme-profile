@@ -1,7 +1,7 @@
 ---
 title: Links
 category: includes
-order: 2
+order: 40
 ---
 
 This include file generates a collection of link cards, typically used for displaying a set of important links on a page.
@@ -10,9 +10,11 @@ This include file generates a collection of link cards, typically used for displ
 
 To use this include in your Jekyll theme, add the following line to your template:
 
+{% raw %}
 ```liquid
 {% include links.html %}
 ```
+{% endraw %}
 
 ## Parameters
 

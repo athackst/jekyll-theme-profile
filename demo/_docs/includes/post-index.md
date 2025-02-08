@@ -1,7 +1,7 @@
 ---
 title: Post Index
 category: includes
-order: 12
+order: 40
 ---
 
 ## Purpose
@@ -20,14 +20,16 @@ The `post-index.html` include file creates a straightforward, list-style layout 
 
 To use this include in your Jekyll site, you can call it from a layout or another include file like this:
 
+{% raw %}
 ```liquid
-{% raw %}{% include post-index.html
+{% include post-index.html
     collection=site.categories
     collection_permalink='/category/:name/'
     replace_value=':name'
     per_section=8
-%}{% endraw %}
+%}
 ```
+{% endraw %}
 
 ### Layout
 
@@ -46,7 +48,7 @@ title: Tags
 
 To see `post-index.html` in action within the `tag_index` layout, visit our demo page:
 
-[Tag Index Demo](/tags/index.html)
+[Tag Index Demo](../..//tags/index.html){:.btn}
 
 ## Functionality
 
