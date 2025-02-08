@@ -4,7 +4,6 @@ title: Jekyll Theme Profile
 description: Theme built with jekyll-theme-profile
 # image: /assets/img/social-preview.png
 # repository: athackst/jekyll-theme-profile
-# base_url: "/jekyll-theme-profile"
 
 defaults:
   - scope:
@@ -28,8 +27,8 @@ style: appbar # One of "stacked", "sidebar", "topbar", "appbar"
 # The user/project avatar.  If not set the avatar of the project owner will be used.
 # user_image: /assets/img/user-image.jpg
 # The themes to use for dark and light
-dark_theme: dark_dimmed
-light_theme: light
+dark_theme: dark # One of dark, dark_dimmed, dark_colorblind, dark_high_contrast, dark_tritanopia
+light_theme: light # One of light, light_colorblind, light_high_contrast, light_tritanopia
 
 repo_info: true # Show the information for the source of this project
 user_metadata: true # Show the metadata associated with the user
@@ -83,10 +82,7 @@ profile_link: true # Show a link to the github profile for the user
 ###################
 # Repositories to show on home page
 repositories:
-  sort_by: stars
-  # sort_by options:
-  #   - pushed
-  #   - stars
+  sort_by: stars #pushed or stars
   limit: 24
   exclude:
     archived: true
@@ -95,11 +91,7 @@ repositories:
       # - list of respositories to exclude
 
 ########################
-# Post timeline
-# posts_limit: 3 # The number of posts to show in home (also can be defined in page)
-
-########################
-# Post pages
+# Post settings
 related_by: "tags or categories"
 
 # ########### Plugin settings ###############
