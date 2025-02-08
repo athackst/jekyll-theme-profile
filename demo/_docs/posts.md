@@ -34,7 +34,7 @@ Here's a list of variables for this theme
 
 | Variable | Description |
 |---|---|
-| `layout` | Specifies the layout file to use.  Use the layout file name without the file extension. <br/><br/> Go to [layouts](/docs/layouts) to learn about options |
+| `layout` | Specifies the layout file to use.  Use the layout file name without the file extension. <br/><br/> Go to [docs](../_docs/index.html) to learn about options |
 | `permalink` | If you need or processed blog post URLs to be something other than the site-wide default (`/year/month/day/title.html`), then you can set this variable and it will be used as the final URL |
 | `published` | Set to false if you don't want a specific post to show up when the site is generated |
 | `date` | A date here overrides the date from the name of the post.  This can be used to ensure correct sorting of posts.  A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`: hours, minutes,seconds, and timezone offset are optional |
@@ -64,28 +64,6 @@ Linking to a PDF for readers to download:
 ... you can [get the PDF](/assets/mydoc.pdf) directly.
 ```
 
-## Displaying an index of posts
-
-This theme uses the `jekyll-paginate` plugin to create an index of posts.
-
-Add the following to your `_config.yml` file
-
-```yaml
-####################
-# jekyll-paginate settings
-paginate: 6 # The number of posts to show per page of pagination of blog posts
-paginate_path: "/blog/page:num"
-```
-
-And then create a index page in the path you specified above.  In this example, you would create the following page in `/blog/index.html`
-
-```md
----
-layout: paginate
-title: My Blog
----
-```
-
 ## Tags and Categories
 
 Jekyll has first class support for *tags* and *categories* in blog posts.
@@ -97,30 +75,16 @@ Since Jekyll expects multiple items mapped to the key `tags`, it will automatica
 
 Irrespective of the front matter key chosen, Jekyll stores the metadata mapped to the plural key which is exposed to Liquid templates.
 
-Tag pages in this theme are also provided by the `jekyll-tagging` plugin.
-
-To use, include `gem jekyll-tagging` in your gemfile and add the following to your `_config.yml` file
+By default the theme will show posts related by tags or categories with the setting:
 
 ```yaml
-# jekyll-tagging settings
-tag_page_layout: tags
-tag_page_dir: tags
 # related
 related_by: "tags or categories"
 ```
 
 These show up as "related posts" underneth a post.
 
-If you want to create a tag index plage, add a index page with the following content.  Here it would be located at `tags/index.html`
-
-```md
----
-title: Tags
-layout: tag_index
----
-```
-
-
+See [tagging](plugins/tagging.md) for additional features and settings using the `jekyll-tagging` plugin.
 
 ### Categories
 
@@ -138,3 +102,5 @@ When the post also has front matter defining categories, they just get added to 
 The hallmark difference between categories and tags is that categories of a post may be incorporated into the generated URL for the post, while tags cannot be.
 
 Therefore, depending on whether front matter has `category: classic hollywood`, or `categories: classic hollywood`, the example post above would have the URL as either `movies/horror/classic%20hollywood/2019/05/21/bride-of-chucky.html` or `movies/horror/classic/hollywood/2019/05/21/bride-of-chucky.html` respectively.
+
+See [category pages](plugins/category-pages.md) for additional features and settings using the `jekyll-category-pages` plugin.

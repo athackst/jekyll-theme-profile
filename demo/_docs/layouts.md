@@ -1,7 +1,8 @@
 ---
-title: "Theme layouts"
-order: 4
-category: Advanced
+title: "Advanced theme settings"
+category: advanced
+order: 50
+published: false
 ---
 
 Layouts in Jekyll define the structure and appearance of pages, allowing for consistent design across your site while accommodating different content types. Below, you'll find examples of each layout, along with configuration details and usage instructions.

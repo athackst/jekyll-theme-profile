@@ -1,7 +1,7 @@
 ---
 title: Post Timeline
 category: includes
-order: 13
+order: 40
 ---
 
 This include file generates a timeline of posts with an optional "View all" link at the end. It's designed to be flexible and customizable through various parameters.
@@ -10,9 +10,11 @@ This include file generates a timeline of posts with an optional "View all" link
 
 To use this include in your Jekyll theme, add the following line to your template:
 
+{% raw %}
 ```liquid
 {% include post-timeline.html %}
 ```
+{% endraw %}
 
 ## Parameters
 
@@ -22,13 +24,23 @@ You can customize the behavior of this include by passing the following paramete
 |-----------|---------|-------------|
 | `collection` | `site.posts` | The collection of posts to display |
 | `index` | None | The URL for the "View all" link |
-| `limit` | None | Number of posts to display |
+| `limit` | `site.pagination` or `-1` | Number of posts to display |
 
 Example with parameters:
 
+{% raw %}
 ```liquid
 {% include post-timeline.html collection=site.articles limit=5 index="/articles/" %}
 ```
+{% endraw %}
+
+If the limit is set to a number below 0, all posts will show.
+
+### Demo Page
+
+To see `post-timeline.html` in action within the `paginate_timeline` layout, visit our demo page:
+
+[Post Timeline Demo](../../timeline.md){:.btn}
 
 ## Functionality
 

@@ -1,6 +1,6 @@
 ---
 title: "Theme includes"
-order: 5
-category: Advanced
+order: 40
+category: Includes
 published: false
 ---
