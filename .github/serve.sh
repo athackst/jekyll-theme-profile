@@ -6,4 +6,4 @@ if [[ -n "${JEKYLL_FOLDER}" ]]; then
     JEKYLL_OPTIONS+="-s ${JEKYLL_FOLDER}"
 fi
 
-bundle exec jekyll serve $JEKYLL_OPTIONS --livereload --incremental
+bundle exec jekyll serve $JEKYLL_OPTIONS --livereload
