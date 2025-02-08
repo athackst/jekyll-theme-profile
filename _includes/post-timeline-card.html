@@ -14,7 +14,7 @@
         {%- endif %}
         <div class="text-gray mb-2 ws-normal">{{ post.date | date: "%b %d, %Y"}}</div>
         {%- for tag in post.tags %}
-        <span class="IssueLabel IssueLabel--big color-bg-accent-emphasis color-fg-on-emphasis mr-1">{{tag}}</span>
+        <span class="IssueLabel IssueLabel--big color-bg-accent-emphasis color-fg-on-emphasis mr-1 mb-5">{{tag}}</span>
         {%- endfor %}
       </div>
     </div>
@@ -31,7 +31,7 @@
           <img class="rounded-2" src="{{ post.image}}" width="800" height="425" alt="{{ post.title }}" />
         </div>
         {%- endif %}
-        <div class="summary"> {{ post.excerpt }}</div>
+        {% if post.excerpt != blank %}<div class="summary mt-5"> {{ post.excerpt }}</div>{% endif %}
         {%- if post.content != blank %}
         <div class="more">
           <a href="{{ post.url | relative_url }}" class="link-mktg arrow-target-mktg text-semibold f4-mktg">
