@@ -30,7 +30,7 @@ defaults:
 
 # ########### Theme settings ###############
 # The style of the website
-style: topbar # One of "stacked", "sidebar", "topbar", "appbar"
+style: appbar # One of "stacked", "sidebar", "topbar", "appbar"
 # The user/project avatar.  If not set the avatar of the project owner will be used.
 user_image: /assets/img/user-image.jpg
 # The themes to use for dark and light
@@ -99,21 +99,6 @@ nav:
 ####################
 # List of links for link cards
 links:
-  - name: Example page with topbar
-    url: /page/topbar
-    thumbnail: /media/topbar-icon.png
-  - name: Example page with appbar
-    url: /page/appbar
-    thumbnail: /media/appbar-icon.png
-  - name: Example page with sidebar
-    url: /page/sidebar
-    thumbnail: /media/sidebar-icon.png
-  - name: Example page with header stacked
-    url: /page/stacked
-    thumbnail: /media/stacked-icon.png
-  - name: Example custom background
-    url: /background
-    thumbnail: /media/icon-bg.png
   - name: Example Linktree page
     url: /linktree
     thumbnail: /media/links.png
@@ -123,6 +108,9 @@ links:
   - name: Example Reposotiries page
     url: /repositories
     thumbnail: /media/repositories.png
+  - name: Example landing page
+    url: /landing
+    thumbnail: /media/landing.png
 
 ###################
 # Repositories to show on home page
@@ -139,10 +127,7 @@ repositories:
       # - list of respositories to exclude
 
 ########################
-# Post timeline
-posts_limit: 3 # The number of posts to show in home (also can be defined in page)
-
-# related
+# Post settings
 related_by: "tags or categories"
 
 # ########### Plugin settings ###############
