@@ -1,9 +1,28 @@
+{%- comment -%}
+  post-timeline-card.html
+  Usage example:
+    {% include post-timeline-card.html post=post %}
+  
+  Expects:
+    post (object) with fields:
+      - url
+      - title
+      - author (optional)
+      - date
+      - tags (array, optional)
+      - excerpt (optional)
+      - content (optional)
+      - type (string, optional, for the Octicon, defaults to 'comment')
+      - video (URL string, optional)
+      - image (URL string, optional)
+{%- endcomment -%}
+{%- assign post = include.post %}
 {%- assign icon = post.type | default: "comment" %}
 <div class="TimelineItem flex-wrap">
   <div class="col-12 col-md-5 position-relative">
     <div class="TimelineItem-title mt-5 position-sticky d-flex">
       <div class="TimelineItem-badge">{% octicon {{icon}} height:16 %}</div>
-      <div class="title">
+      <div class="title mb-5">
         <div class="h2">
           <a href="{{ post.url | relative_url }}">
             {{ post.title }}
@@ -20,20 +39,20 @@
     </div>
   </div>
   <div class="col-12 col-md-7">
-    <div class="pb-5 pt-0 py-md-7 ml-5 border-bottom">
+    <div class="pt-md-7 ml-5 border-bottom">
         {%- if post.video %}
-        <div id="Timeline-video-container" class="image-container">
+        <div id="Timeline-video-container" class="image-container mb-5">
           <iframe id="Timeline-video" src="{{ post.video }}" frameborder="0" height="inherited"
             width="inherited"></iframe>
         </div>
         {%- elsif post.image %}
-        <div class="image-container">
+        <div class="image-container mb-5">
           <img class="rounded-2" src="{{ post.image}}" width="800" height="425" alt="{{ post.title }}" />
         </div>
         {%- endif %}
-        {% if post.excerpt != blank %}<div class="summary mt-5"> {{ post.excerpt }}</div>{% endif %}
-        {%- if post.content != blank %}
-        <div class="more">
+        {% if post.excerpt != blank %}<div class="summary mb-5"> {{ post.excerpt }}</div>{% endif %}
+        {%- if post.content != blank and post.video == blank %}
+        <div class="more mb-5">
           <a href="{{ post.url | relative_url }}" class="link-mktg arrow-target-mktg text-semibold f4-mktg">
             Contiue
             <svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg" width="16" height="16"
