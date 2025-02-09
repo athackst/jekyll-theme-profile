@@ -1,27 +1,23 @@
-{%- assign collection = include.collection | default: site.posts | sort: "date" | reverse %}
-{%- if site.paginate %}
-{%- assign paginate_path = site.paginate_path %}
-{%- assign cleaned_path = paginate_path | split: ':' | first %}
-{%- assign placeholder = cleaned_path | split: '/' | last %}
-{%- assign paginate_index = cleaned_path | replace: placeholder, '' | strip %}
+{%- comment -%}
+  post-timeline.html
+  Usage example:
+    {% include post-timeline.html collection=site.posts limit=5 %}
+
+  Expects:
+    collection (array, required) - A list of posts or other objects to display.
+    limit (integer, optional) - Number of posts to display (default: all).
+{%- endcomment -%}
+
+{%- assign timeline_collection = include.collection | sort: "date" | reverse %}
+{%- assign timeline_post_limit = include.limit | default: -1 %}
+{%- if post_limit < 0 %}
+{%- assign timeline_post_limit = collection.size %}
 {%- endif %}
-{%- assign index = include.index | default: paginator.index_path | default: paginate_index %}
-{%- assign post_limit = include.limit | default: page.posts_limit | default: site.posts_limit %}
 
 <div class="mt-md-7 mb-9 mb-md-12">
   <div class="container-xl mx-auto p-responsive-blog">
-    {%- for post in collection | limit: post_limit %}
-    {%- include post-timeline-card.html %}
+    {%- for post in timeline_collection | limit: timeline_post_limit %}
+    {%- include post-timeline-card.html post=post %}
     {%- endfor %}
   </div>
-  {%- if collection.size > post_limit and index %}
-  <div class="container-xl mx-auto p-responsive-blog mt-6 mt-md-8 ">
-    <div class="d-flex gutter-spacious">
-      <div class="col-12 col-md-7 offset-md-5">
-        <a href="{{ index | relative_url }}"
-          class="Link--primary arrow-target-mktg text-semibold btn ml-5">View all {% octicon chevron-right height:16 %}</a>
-      </div>
-    </div>
-  </div>
-  {%- endif %}
 </div>
