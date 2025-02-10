@@ -28,6 +28,9 @@ This config will split your post list into chunks of five items per page.
 
 The Paginate Layout must be specified in the index of the start of this path.  For the example above, it should be in `/blog/index.html`.
 
+> [!NOTE]
+> The path should be *absolute* and start with a `/`, otherwise the index links  will not work correctly.
+
 ## Parameters
 
 The Paginate Timeline layout supports the following:
