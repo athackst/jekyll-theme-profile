@@ -10,7 +10,7 @@
 
 {%- assign timeline_collection = include.collection | sort: "date" | reverse %}
 {%- assign timeline_post_limit = include.limit | default: -1 %}
-{%- if post_limit < 0 %}
+{%- if timeline_post_limit < 0 %}
 {%- assign timeline_post_limit = collection.size %}
 {%- endif %}
 
