@@ -1,4 +1,4 @@
 ---
-title: Blog Timeline
+title: Blog timeline
 layout: paginate_timeline
 ---
