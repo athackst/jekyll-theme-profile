@@ -74,6 +74,8 @@ With this configuration:
 1. Each page shows 5 posts.
 2. Pagination paths follow the pattern `/blog/page1`, `/blog/page2`, etc.
 
+[Live demo](../../timeline.md]{:.btn}
+
 ## Notes
 
 - **Jekyll Pagination Plugin**: Ensure you have the [jekyll-paginate](../plugins/pagination.md) plugin configured (depending on your Jekyll version).
