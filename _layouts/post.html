@@ -3,7 +3,7 @@ layout: default
 ---
 {%- assign user = site.github.owner %}
 {%- assign name = page.author | default: user.name | default: user.login %}
-{%- assign image = page.image | default: site.image %}
+{%- assign image = page.image | default: site.image | default: "/assets/img/default.png" %}
 <div class="flex-column flex-1 min-width-0">
     <div class="BlogHeader position-relative border-top">
         <div class="container-xl p-responsive">

@@ -1,4 +1,4 @@
 ---
 layout: repositories
-title: My Repositories
+title: Repositories
 ---

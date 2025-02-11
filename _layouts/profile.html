@@ -7,10 +7,10 @@ layout: page
 {%- assign style = page.style | default: layout.style | default: site.style %}
 {%- assign links = page.links | default: site.links | default: nill %}
 {%- assign collection = page.collection | default: site.posts %}
-{%- assign limit = page.posts_limit | default: site.posts_limit | default: site.paginate %}
+{%- assign posts_limit = page.posts_limit | default: site.posts_limit | default: site.paginate %}
 {% assign paginate_path = page.pagination.permalink | default: site.pagination.permalink | default: site.paginate_path %}
-{% assign paginate_first_page_path = paginate_path | relative_url | replace: 'page:num', '' %}
-{% assign first_page_path = page.first_page_path | default: paginator.first_page_path | default: paginate_first_page_path%}
+{% assign paginate_first_page_path = paginate_path | replace: 'page:num', '' %}
+{% assign first_page_path = page.first_page_path | default: paginator.first_page_path | default: paginate_first_page_path %}
 
 <div class="Profile d-lg-flex flex-justify-center gutter">
     {%- if style != "sidebar" and style != "stacked" %}
@@ -20,26 +20,23 @@ layout: page
     </div>
     {%- endif %}
 
-    <div class="col-lg-8 border-top border-lg-top-0 color-bg-default">
+    <div class="col-lg-8 color-bg-default">
         <div class="py-6">
+            {%- if content %}
+            <div class="mb-8">
             {{ content }}
+            </div>
+            {%- endif %}
             {%- if links %}
             {%- include links.html links=links %}
             {%- endif %}
-
             {%- unless collection.size == 0 %}
-            <h2 class="mb-3">Latest posts</h2>
-            {%- include post-timeline.html collection=collection limit=limit %}
-            {%- if collection.size > post_limit and first_page_path %}
-            <div class="container-xl mx-auto p-responsive-blog mt-6 mt-md-8 ">
-              <div class="d-flex gutter-spacious">
-                <div class="col-12 col-md-7 offset-md-5">
-                  <a href="{{ first_page_path | relative_url }}"
-                    class="Link--primary arrow-target-mktg text-semibold btn ml-5">View all {% octicon chevron-right height:16 %}</a>
-                </div>
+            <div class="container-xl mb-8">
+              <div class="pb-3">
+                <h2>Latest posts</h2>
               </div>
+              {%- include post-timeline.html collection=collection limit=posts_limit index=first_page_path %}
             </div>
-            {%- endif %}
             {%- endunless %}
 
             {%- if site.repositories %}
