@@ -111,6 +111,15 @@ links:
   - name: Example landing page
     url: /landing
     thumbnail: /media/landing.png
+  - name: Example blog index
+    url: /blog
+    octicon: comment
+  - name: Example category index
+    url: /category
+    octicon: stack
+  - name: Example tag index
+    url: /tags
+    octicon: tag
 
 ###################
 # Repositories to show on home page
