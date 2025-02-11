@@ -88,7 +88,7 @@ background:
     overlay: rgba(0, 0, 0, 0.5)
 ```
 
-[Example page](../background.md){:.btn}
+[Example page](../custom-background.md){:.btn}
 
 #### Set custom header colors
 
@@ -99,11 +99,17 @@ header:
   color: "#4051b5"
   text: "rgba(255,255,255,0.7)"
   accent: "#ffffff"
+  image: /media/background-img.jpg
+  overlay: rbga(0, 0, 0, 0.5)
 ```
 
 - `color` The main background color of the header
 - `text` The color of text elements within the header
 - `accent` Controls the color of accent elements such as links
+- `image` Sets an image in the background of the header
+- `overlay` Sets the overlay on top of an image for better visability of links
+
+[Example page](../custom-header.md){:.btn}
 
 #### Additional theme features
 
