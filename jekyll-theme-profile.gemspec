@@ -16,7 +16,6 @@ Gem::Specification.new do |spec|
                           '_layouts/**/*',
                           '_includes/**/*',
                           '_sass/**/*',
-                          '_plugins/**/*',
                           '_config.yml',
                           'LICENSE',
                           'README.md'
