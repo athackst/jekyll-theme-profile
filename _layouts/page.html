@@ -1,8 +1,21 @@
 ---
 layout: default
 ---
+{%- assign title = page.title | default: page.tag %}
+{%- assign subtype = page.subtype %}
+{%- if title == page.tag %}
+{%- assign subtype = "tag" %}
+{%- endif %}
 <div class="Page flex-column flex-1 min-width-0">
-    <div class="container-xl p-3 px-md-5 markdown-body">
+{% if title %}
+    <div class="container-xl p-3 px-md-5 mt-6">
+        {% if subtype %}
+        <p class="f4-mktg color-text-tertiary mb-n4">{{ subtype | downcase }}</p>
+        {% endif %}
+        <h1 class="h3-mktg mt-6 mb-4">{{ title | capitalize }}</h1>
+    </div>
+{% endif %}
+    <div class="container-xl p-3 px-md-5 markdown-body mb-6">
         {{ content }}
     </div>
     <div class="flex-1"></div>
