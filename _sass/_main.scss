@@ -84,9 +84,7 @@
 
 .AppHeader {
   --AppHeader-bg: var(--bgColor-inset, var(--color-canvas-inset));
-  // color: var(--fgColor-default, var(--color-fg-default));
   background: var(--AppHeader-bg);
-  // box-shadow: inset 0 calc(var(--borderWidth-thin, 1px)*-1) var(--borderColor-default, var(--color-border-default));
 }
 
 .AppHeader-button {
@@ -157,11 +155,7 @@
   background-color: var(--color-header-bg) !important;
 }
 
-.BlogContent {
-  background-color: var(--color-canvas-default) !important;
-}
-
-.Page {
+.Blog {
   background-color: var(--color-canvas-default) !important;
 }
 

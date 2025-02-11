@@ -1,5 +1,3 @@
-{%- assign bg_image = page.background_image | default: site.background.image | default: null %}
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,18 +27,8 @@
   <script src="{{ '/assets/js/anchor-links.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/timeline.js' | relative_url }}"></script>
 
-  {%- if bg_image %}
-  <style>
-    body {
-      position: relative;
-      background-image: url('{{ bg_image | relative_url }}');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      z-index: -10;
-    }
-  </style>
-  {%- endif %}
+  {%- include custom-colors.html %}
+
   {%- if page.css_style %}
   <style>
     {{ page.css_style }}

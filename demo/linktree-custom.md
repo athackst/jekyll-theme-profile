@@ -1,6 +1,7 @@
 ---
 layout: linktree
-background_image: https://www.allisonthackston.com/assets/img/cover-1920.jpg
+background:
+  image: https://www.allisonthackston.com/assets/img/cover-1920.jpg
 title: Linktree
 css_style: |
     .Link-btn {
@@ -34,7 +35,7 @@ links:
     url: /page/stacked
     thumbnail: /media/stacked-icon.png
   - name: Example custom background
-    url: /background
+    url: /custom-background
     thumbnail: /media/icon-bg.png
   - name: Example Linktree page
     url: /linktree
