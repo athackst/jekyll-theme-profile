@@ -1,10 +1,7 @@
 ---
 layout: page
 ---
-<p class="f4-mktg color-text-tertiary mt-4 mt-md-7 mb-n4">Tag</p>
-<h1 class="h3-mktg mt-4 mb-6 mb-md-8">{{ page.tag | capitalize }}</h1>
-
-<div class="d-flex flex-wrap gutter-spacious">
+<div class="d-flex flex-wrap gutter-spacious border-top">
 {% for post in page.posts %}
     {%- if post.feature or forloop.first %}
         {%- include post-feature-card.html %}
