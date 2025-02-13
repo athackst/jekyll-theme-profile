@@ -1,53 +1,61 @@
 {%- assign collection = include.collection | default: site.docs %}
 {%- assign collection_name = include.name %}
 {%- assign collection_index = include.index %}
+{%- assign collection_id = include.id | default: "collection-menu" %}
+{% comment %}computed variables{% endcomment %}
 {%- assign index_url = collection_index.url %}
 {%- assign collection_without_index = collection | where_exp: "item", "item.url != index_url" %}
 
-<div class="Overlay-backdrop--side Overlay-backdrop--placement-left" data-modal-dialog-overlay>
-    <modal-dialog class="Overlay Overlay--width-medium Overlay--motion-slideDown height-fit height-full">
-        <div class="Overlay-headerContentWrap d-flex flex-row py-3 px-2 border-bottom">
-            <div class="Overlay-titleWrap d-flex flex-1">
-                <div tabindex="-1" class="d-flex flex-1 ml-3" id="github-logo">
-                    {% if collection_index %}
+<script>
+    $(document).ready(function () {
+        const $menu = $("#{{ collection_id }}");
+        const $closeButton = $(".close-menu");
+
+        if ($menu.length && $closeButton.length) {
+            $closeButton.click(() => $menu.removeAttr("open")); // Properly closes the dropdown
+        }
+    });
+</script>
+
+<details class="details-reset details-overlay" id="{{ collection_id }}">
+    <summary class="btn btn-invisible" aria-haspopup="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+    </summary>
+    <details-menu class="SelectMenu" role="menu">
+        <div class="SelectMenu-modal">
+
+            <div class="SelectMenu-header">
+                <div tabindex="-1" class="SelectMenu-title" id="github-logo">
+                    {%- if collection_index %}
                     <a href="{{ collection_index.url | relative_url }}"
                         class="AppHeader-link d-flex flex-items-center no-underline mr-3">
                         <span class="h3 color-fg-default text-bold">{{ collection_name }}</span>
                     </a>
-                    {% else %}
+                    {%- else %}
                     <div class="AppHeader-link d-flex flex-items-center no-underline mr-3">
                         <span class="h3 color-fg-default text-bold">{{ collection_name }}</span>
                     </div>
-                    {% endif %}
+                    {%- endif %}
+                </div>
+                <div class="d-flex flex-justify-end">
+                    <button class="SelectMenu-closeButton close-menu" type="button">
+                        {% octicon x height: 16 %}
+                    </button>
                 </div>
             </div>
-            <div class="Overlay-actionWrap d-flex flex-justify-end">
-                <button id="close-contents-btn" class="close-button Overlay-closeButton">
-                    {% octicon x height: 16 %}
-                </button>
-            </div>
-        </div>
-        <div class="Overlay-body d-flex flex-column p-2">
-            <ul data-overflow-nav class="ActionList border-0">
+            <div class="SideNav border overflow-y-auto">
                 {%- assign collection_categories = collection_without_index | group_by: "category" %}
                 {%- for category in collection_categories %}
                 {%- assign category_name = category.name | default: collection_name %}
-                <li class="ActionListItem no-underline h4">{{ category_name | capitalize }}
-                    <ul>
-                        {%- for nav_item in category.items %}
-                        {%- if nav_item.url != collection_index %}
-                        <a href="{{ nav_item.url | relative_url }}" class="ActionListItem-label no-underline">
-                            <li class="menu-item ActionList-item border-0" {% if page.url==nav_item.url %}
-                                aria-current="page" {% endif %}>
-                                {{ nav_item.title }}
-                            </li>
-                        </a>
-                        {%- endif %}
-                        {%- endfor %}
-                    </ul>
-                </li>
+                <div class="SideNav-item no-underline h4">{{ category_name | capitalize }}</div>
+                {%- for nav_item in category.items %}
+                <a href="{{ nav_item.url }}" class="SideNav-item" role="menuitem" {% if page.url contains nav_item.url
+                    %} aria-current="page" {% endif %}>{{ nav_item.title }}</a>
                 {%- endfor %}
-            </ul>
+                {%- endfor %}
+            </div>
         </div>
-    </modal-dialog>
-</div>
+    </details-menu>
+</details>
