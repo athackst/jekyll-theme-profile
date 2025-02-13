@@ -1,11 +1,5 @@
 <script>
     $(document).ready(function () {
-        $('#expansion-btn').click(function () {
-            $('.Extend').toggleClass('d-none');
-        });
-        $('#collapse-btn').click(function () {
-            $('.Extend').addClass('d-none');
-        })
         $('#toolbar-btn').click(function () {
             $('.Sidebar').toggleClass('d-lg-block');
             $('.Toolbar-expand').toggleClass('d-lg-block');
@@ -27,8 +21,8 @@
             <div class="Toolbar-expand d-flex flex-justify-center d-none">
                 <button id="sidebar-btn" class="btn-octicon mr-2">{% octicon chevron-right height:16 %}</button>
             </div>
-            <div class="d-flex flex-justify-center">
-                <button id="expansion-btn" class="btn-octicon mr-2 d-lg-none">{% octicon three-bars height:16 %}</button>
+            <div class="d-flex flex-justify-center d-lg-none">
+                {%- include nav-overlay.html %}
             </div>
             <div class="d-flex flex-justify-center">
                 {% include toggle.html %}
@@ -58,9 +52,6 @@
                 </div>
                 {%- endif %}
             </div>
-        </div>
-        <div class="Extend Overlay-header flex-row d-none">
-            {%- include nav-overlay.html %}
         </div>
     </div>
 </div>
