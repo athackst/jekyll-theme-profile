@@ -66,20 +66,14 @@
   overflow-wrap: break-word;
 }
 
-.Overlay-header .Overlay-headerContentWrap {
-  align-items: flex-start;
-  display: flex;
-  gap: var(--stack-gap-condensed, 0.5rem);
-  padding: var(--stack-gap-condensed, 0.5rem) var(--stack-gap-condensed, 0.5rem) 0 var(--stack-gap-condensed, 0.5rem);
+.SelectMenu::before {
+  background-color: unset;
 }
 
-.Overlay-footer {
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  flex-wrap: wrap;
-  padding: 0 var(--stack-padding-normal, 1rem) var(--stack-padding-normal, 1rem) var(--stack-padding-normal, 1rem);
-  z-index: 1;
+.SelectMenu {
+  position: absolute;
+  top: unset;
+  bottom: unset;
 }
 
 .AppHeader {
@@ -105,13 +99,6 @@
   color: var(--color-fg-default);
 }
 
-.AppHeader-logo {
-  border: 0;
-  width: var(--base-size-32, 32px);
-  height: var(--base-size-32, 32px);
-  outline-offset: 2px;
-}
-
 .ActionListItem {
   background-color: var(--control-transparent-bgColor-rest, #0000);
   border-radius: var(--borderRadius-medium, 0.375rem);
@@ -119,27 +106,6 @@
   position: relative;
 }
 
-.ActionListContent {
-  -webkit-tap-highlight-color: transparent;
-  align-items: start;
-  background-color: initial;
-  border: none;
-  border-radius: var(--borderRadius-medium, 0.375rem);
-  color: var(--control-fgColor-rest, var(--color-fg-default));
-  display: grid;
-  grid-template-areas: "leadingAction leadingVisual label trailingVisual trailingAction";
-  grid-template-columns: min-content min-content minmax(0, auto) min-content min-content;
-  grid-template-rows: min-content;
-  padding-block: var(--actionListContent-paddingBlock);
-  padding-inline: var(--control-medium-paddingInline-condensed, 0.5rem);
-  position: relative;
-  text-align: left;
-  touch-action: manipulation;
-  transition: background 33.333ms linear;
-  -webkit-user-select: none;
-  user-select: none;
-  width: 100%;
-}
 
 .ActionListItem-label {
   color: var(--fgColor-default, var(--color-fg-default));
@@ -199,9 +165,6 @@ body::before {
       display: none !important;
     }
     .Header {
-      display: none !important;
-    }
-    .Profile {
       display: none !important;
     }
     .Toggle {

@@ -1,41 +1,53 @@
 {%- assign user = site.github.owner %}
 {%- assign name = site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url | default: "/assets/img/user-image.jpg" %}
-<div class="Overlay-backdrop--side Overlay-backdrop--placement-left" data-modal-dialog-overlay>
-    <modal-dialog class="Overlay Overlay--width-medium Overlay--motion-slideDown height-fit height-full" >
-        <div class="Overlay-headerContentWrap d-flex flex-row py-3 px-2">
-            <div class="Overlay-titleWrap d-flex flex-1">
-                <div tabindex="-1" class="d-flex flex-1 ml-3" id="github-logo">
+{%- assign nav_id = include.id | default: "nav-menu" %}
+<script>
+    $(document).ready(function () {
+        const $menu = $("#{{ nav_id }}");
+        const $closeButton = $(".close-menu");
+
+        if ($menu.length && $closeButton.length) {
+            $closeButton.click(() => $menu.removeAttr("open")); // Properly closes the dropdown
+        }
+    });
+</script>
+<details class="details-reset details-overlay" id="{{ nav_id }}">
+    <summary class="AppHeader-button btn btn-invisible" aria-haspopup="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+    </summary>
+    <details-menu class="SelectMenu" role="menu">
+        <div class="SelectMenu-modal">
+            <div class="SelectMenu-header">
+                <div tabindex="-1" class="SelectMenu-title" id="github-logo">
                     <a href="{{ site.baseurl }}/" class="AppHeader-link d-flex flex-items-center no-underline mr-3">
-                        <img class="avatar img-cover circle" height="32" width="32" alt="{{ name }}" src="{{ user_img | relative_url }}">
+                        <img class="avatar img-cover circle" height="32" width="32" alt="{{ name }}"
+                            src="{{ user_img | relative_url }}">
                         <span class="h4 text-semibold mx-3">{{ name }}</span>
                     </a>
                 </div>
+                <div class="d-flex flex-justify-end">
+                    <button class="SelectMenu-closeButton close-menu" type="button">
+                        {% octicon x height: 16 %}
+                    </button>
+                </div>
             </div>
-            <div class="Overlay-actionWrap d-flex flex-justify-end" >
-                <button id="collapse-btn" class="close-button Overlay-closeButton">
-                    {% octicon x height: 16 %}
-                </button>
-            </div>
-        </div>
-        <div class="Overlay-body d-flex flex-column p-2">
-            <ul data-overflow-nav class="ActionListWrap SideNav">
+
+            <div class="SelectMenu-list">
                 {%- for nav_item in site.nav %}
-                <li class="SideNav-item"{% if page.url==nav_item.url %} aria-current="page"{% endif %}>
-                    <a href="{{ nav_item.url | relative_url }}" class="ActionListContent ActionListItem-label" >
-                        {{ nav_item.name }}
-                    </a>
-                </li>
+                <a href="{{ nav_item.url }}" class="SelectMenu-item" role="menuitem"{% if page.url contains nav_item.url %} aria-current="page"{% endif %}>{{ nav_item.name }}</a>
                 {%- endfor %}
-            </ul>
-        </div>
-        <div class="Overlay-footer Overlay-footer--alignEnd d-block pt-0">
-            <div class="ActionList-sectionDivider mt-0 mb-1"></div>
-            {%- if site.social_media %}
-            <div class="ActionList px-0 flex-1">
-                {%- include social.html %}
             </div>
-            {%- endif %}
+            <div class="SelectMenu-footer">
+                <div class="ActionList-sectionDivider mt-0 mb-1"></div>
+                {%- if site.social_media %}
+                <div class="ActionList px-0 flex-1 pb-">
+                    {%- include social.html %}
+                </div>
+                {%- endif %}
+            </div>
         </div>
-    </modal-dialog>
-</div>
+    </details-menu>
+</details>

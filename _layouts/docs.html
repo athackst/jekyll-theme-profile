@@ -8,21 +8,10 @@ Docs utilize collections to display content
 {% endcomment %}
 {%- assign collection_name = page.collection | default: "docs" %}
 {%- assign docs = site[collection_name]%}
-{%- assign docs_name = page.title | default: "Documentation" %}
 {%- assign index_url = page.index %}
 {%- assign docs_index = docs | where_exp: "item", "item.url == index_url" | first %}
 {%- assign docs_without_index = docs | where_exp: "item", "item.url != index_url" %}
 
-<script>
-    $(document).ready(function () {
-        $('#contents-btn').click(function () {
-            $('.CollectionMenu').toggleClass('d-none');
-        });
-        $('#close-contents-btn').click(function () {
-            $('.CollectionMenu').addClass('d-none');
-        })
-    });
-</script>
 <div class="d-lg-flex flex-1">
     <div class="Layout Layout-sidebar position-sticky border-right d-none d-xl-block">
         <div class="px-4 pb-3 border-bottom">
@@ -62,7 +51,7 @@ Docs utilize collections to display content
         <div class="container-xl mx-auto p-responsive py-3">
             <div class="py-4 d-flex">
                 <div class="d-xl-none">
-                    <button id="contents-btn" class="btn-octicon mr-2">{% octicon three-bars height:16 %}</button>
+                    {% include collection-menu.html collection=docs name=collection_name index=docs_index %}
                 </div>
                 {% include breadcrumbs.html %}
             </div>
@@ -105,7 +94,4 @@ Docs utilize collections to display content
             </div>
         </div>
     </div>
-</div>
-<div class="CollectionMenu d-none">
-    {% include collection-menu.html name=collection_name collection=docs_without_index index=docs_index %}
 </div>
