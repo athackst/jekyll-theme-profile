@@ -74,6 +74,8 @@ With this configuration:
 1. Each page shows 5 posts.
 2. Pagination paths follow the pattern `/blog/page1`, `/blog/page2`, etc.
 
+[Live demo](../../timeline.md){:.btn}
+
 ## Notes
 
 - **Jekyll Pagination Plugin**: Ensure you have the [jekyll-paginate](../plugins/pagination.md) plugin configured (depending on your Jekyll version).
@@ -84,6 +86,6 @@ With this configuration:
 
 1. [`post-timeline.html`](../includes/post-timeline.md) (included): Used to render the collection of posts.
 2. [`post-timeline-card.html`](../includes/post-timeline-card.md) (included): Used to render each post.
-3. [**pagination**](../plugins/pagination.md): Make sure your Jekyll site is set up for pagination, or the layout’s pagination features will not work.
+3. [pagination](../plugins/pagination.md): Make sure your Jekyll site is set up for pagination, or the layout’s pagination features will not work.
 
 Ensure these dependencies are properly set up in your Jekyll theme for the Paginate Timeline layout to function correctly.
