@@ -30,11 +30,11 @@ By removing Gemfile.lock, we are able to test this theme against many versions o
 
 ### Including plugins in the theme
 
-Initialilly, I thought it would be a good idea to include some default plugins with the theme.  Especially for plugins that required a specific layout like `jekyll-pagination` and `jekyll-tagging`.
+Initially, I thought it would be a good idea to include some default plugins with the theme.  Especially for plugins that required a specific layout like `jekyll-pagination` and `jekyll-tagging`.
 
 However, pulling this in as a user seems problematic.  Despite trying to include the pagination index in "assets" so that it's bundled with the theme, it isn't accessible to the site at build time for the user because it's in the host theme directory.
 
-It also limits the type of plugins that a user can use, since it creates more  dependencies. For example, if I ship with `jekyll-pagination`, it not only has issues building my site as a user of the theme, it also prevents me from using `jekll-pagination-v2` which is preferred for jekyll+3 (not supported by github pages).
+It also limits the type of plugins that a user can use, since it creates more  dependencies. For example, if I ship with `jekyll-pagination`, it not only has issues building my site as a user of the theme, it also prevents me from using `jekyll-pagination-v2` which is preferred for jekyll+3 (not supported by github pages).
 
 I have therefore decided that it's best to not ship with these plugins and instead require the user to set them up if desired.  However, layouts will be shipped that they can use, and certain snippets will be guarded by having the appropriate settings in config before being included.
 
@@ -50,7 +50,7 @@ For example, if another layout has the frontmatter
 layout: default
 ```
 
-You might expect that all of the variables would be availabe for any {% raw %}`{% include ..%}`{% endraw %} that you might have within your new layout.  They are not.
+You might expect that all of the variables would be available for any {% raw %}`{% include ..%}`{% endraw %} that you might have within your new layout.  They are not.
 
 However, variables assigned inside of the includes are maintained.
 

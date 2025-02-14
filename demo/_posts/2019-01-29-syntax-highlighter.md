@@ -4,7 +4,7 @@ category: examples
 tags: how-to example
 ---
 
-Below are some languages and their represntative styles.
+Below are some languages and their representative styles.
 
 ## Ruby
 
@@ -74,9 +74,9 @@ body {
 
 ```yaml
 ---
-one: Mark McGwire
-two: Sammy Sosa
-three: Ken Griffey
+one: Apple
+two: Banana
+three: Cherry
 ```
 
 ## C++

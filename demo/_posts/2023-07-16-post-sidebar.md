@@ -6,189 +6,55 @@ image: "https://github.blog/wp-content/uploads/2023/08/1200x630-AI-Unfurl-DARK-I
 category: style
 ---
 
-Eos eu docendi tractatos sapientem, brute option menandri in vix, quando vivendo accommodare te ius. Nec melius fastidii constituam id, viderer theophrastus ad sit, hinc semper periculis cum id. Noluisse postulant assentior est in, no choro sadipscing repudiandae vix. Vis in euismod delenit dignissim. Ex quod nostrum sit, suas decore animal id ius, nobis solet detracto quo te.
+# Welcome to the Test Post
 
-No laudem altera adolescens has, volumus lucilius eum no. Eam ei nulla audiam efficiantur. Suas affert per no, ei tale nibh sea. Sea ne magna harum, in denique scriptorem sea, cetero alienum tibique ei eos. Labores persequeris referrentur eos ei.
+This is a sample post intended to test various styles provided by the theme. It includes headings, paragraphs, lists, code snippets, and more. Everything here is meant to look ordinary while helping you ensure your styles are working as expected.
 
+## Subheading Example
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+This is a paragraph with **bold text**, *italic text*, and a [link to jekyll](https://jekyllrb.com/). Text should wrap correctly, and spacing should be consistent.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+### Another Subheading
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Lists are a key part of content. Here’s an unordered list:
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
-
-Text can be **bold**, *italic*, or ~~strikethrough~~. [Links](https://github.com) should be blue with no underlines (unless hovered over).
-
-There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.
-
-> There should be no margin above this first sentence.
-> Blockquotes should be a lighter gray with a gray border along the left side.
-> There should be no margin below this final sentence.
-
-# Header 1
-
-This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
-
-## Header 2
-
-> This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
-
-### Header 3
-
-#### Header 4
-
-- This is an unordered list following a header.
-- This is an unordered list following a header.
-- This is an unordered list following a header.
-
-##### Header 5
-
-1. This is an ordered list following a header.
-2. This is an ordered list following a header.
-3. This is an ordered list following a header.
-
-###### Header 6
-
-| What       | Follows    |
-|------------|------------|
-| A table    | A header   |
-| A table    | A header   |
-| A table    | A header   |
-
----
-
-There's a horizontal rule above and below this.
-
----
-
-Here is an unordered list:
-
-- Salt-n-Pepa
-- Bel Biv DeVoe
-- Kid 'N Play
+- Apples
+- Bananas
+- Grapes
 
 And an ordered list:
 
-1. Michael Jackson
-2. Michael Bolton
-3. Michael Bublé
+1. First item
+2. Second item
+3. Third item
 
-And an unordered task list:
+#### Inline Elements
 
-- [x] Create a sample markdown document
-- [ ] Add task lists to it
-- [ ] Take a vacation
+Some `inline code` for testing, along with `anotherSnippet` right here.
 
-And a "mixed" task list:
+##### Code Block
 
-- [x] Steal underpants
-- [ ]
-- [x] Profit!
-
-And a nested list:
-
-- Jackson 5
-  - Michael
-  - Tito
-  - Jackie
-  - Marlon
-  - Jermaine
-- TMNT
-  - Leonardo
-  - Michelangelo
-  - Donatello
-  - Raphael
-
-Definition lists can be used with HTML syntax. Definition terms are **bold and italic**.
-
-Name
-: Godzilla
-
-Born
-: 1952
-
-Birthplace
-: Japan
-
-Color
-: Green
-
----
-
-Tables should have bold headings and alternating shaded rows.
-
-| Artist        | Album                | Year |
-|---------------|----------------------|------|
-| David Bowie   | Scary Monsters       | 1980 |
-| Prince        | Purple Rain          | 1982 |
-| Beastie Boys  | License to Ill       | 1986 |
-| Janet Jackson | Rhythm Nation 1814   | 1989 |
-
-If a table is too wide, it should condense down and/or scroll horizontally.
-
-| Artist        | Album                | Year | Label               | Songs                                                                                                                                                              |
-|---------------|----------------------|------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| David Bowie   | Scary Monsters       | 1980 | RCA Records         | It's No Game (No. 1), Up the Hill Backwards, Scary Monsters (And Super Creeps), Ashes to Ashes, Fashion, Teenage Wildlife, Scream Like a Baby, Kingdom Come, Because You're Young, It's No Game (No. 2)  |
-| Prince        | Purple Rain          | 1982 | Warner Brothers Records | Let's Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I'm a Star, Purple Rain                                  |
-| Beastie Boys  | License to Ill       | 1986 | Def Jam             | Rhymin & Stealin, The New Style, She's Crafty, Posse in Effect, Slow Ride, Girls, Fight for Your Right, No Sleep till Brooklyn, Paul Revere, "Hold It Now, Hit It", Brass Monkey, Slow and Low, Time to Get Ill  |
-| Janet Jackson | Rhythm Nation 1814   | 1989 | A&M                 | Interlude: Pledge, Rhythm Nation, Interlude: T.V., State of the World, Interlude: Race, The Knowledge, Interlude: Let's Dance, Miss You Much, Interlude: Come Back, Love Will Never Do (Without You), Livin' in a World (They Didn't Make), Alright, Interlude: Hey Baby, Escapade, Interlude: No Acid, Black Cat, Lonely, Come Back to Me, Someday Is Tonight, Interlude: Livin'...In Complete Darkness |
-
----
-
-Code snippets like `var foo = "bar";` can be shown inline.
-
-Also, `this should vertically align` <code>with this</code> <code>and this</code>.
-
-Code can also be shown in a block element.
-
-
-$ a \* b = c ^ b $
-
-$ 2^{\frac{n-1}{3}} $
-
-$ \int_a^b f(x)\,dx. $
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-  cout << "Hello World!";
-  return 0;
-}
-// prints 'Hi, Tom' to STDOUT.
+```html
+<div class="example">
+  <p>Hello, world!</p>
+</div>
 ```
 
-```python
-class Person:
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
+###### Blockquote
 
-p1 = Person("John", 36)
+> This is a blockquote. It should stand out from the rest of the content.
 
-print(p1.name)
-print(p1.age)
-```
+## Tables
 
-Inline code inside table cells should still be distinguishable.
+Tables should be styled appropriately and should scroll if they are too wide.
 
-| Language    | Code              |
-|-------------|-------------------|
-| JavasScript | `var foo = "bar";`|
-| Ruby        | `foo = "bar"`     |
+| Product  | Price | Stock        |
+|----------|-------|--------------|
+| Chair    | $50   | In stock     |
+| Table    | $150  | Low stock    |
+| Lamp     | $30   | Out of stock |
 
----
-
-The `<samp>` HTML element is used to enclose inline text that represents sample (or quoted) output from a computer program. Here an example of an error message: `File not found`.
-
----
+### Images
 
 Small images should be shown at their actual size.
 
@@ -198,6 +64,7 @@ Large images should always scale down and fit in the content container.
 
 ![Large Image](https://placebear.com/g/1200/800)
 
+### Footnotes
 Here's a simple footnote,[^1] and here's a longer one.[^2]
 
 [^1]: This is the first footnote.
@@ -207,4 +74,6 @@ Here's a simple footnote,[^1] and here's a longer one.[^2]
      `my code`
      Add as many paragraphs as you like.
 
-`This is the final element on the page, and there should be no margin below this.`
+## Final Thoughts
+
+This post covers common content types. 

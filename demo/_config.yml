@@ -106,7 +106,7 @@ links:
   - name: Example Profile page
     url: /profile
     thumbnail: /assets/img/user-image.jpg
-  - name: Example Reposotiries page
+  - name: Example Repositories page
     url: /repositories
     thumbnail: /media/repositories.png
   - name: Example landing page
@@ -134,7 +134,7 @@ repositories:
     archived: true
     forks: true
     repositories:
-      # - list of respositories to exclude
+      # - list of repositories to exclude
 
 ########################
 # Post settings

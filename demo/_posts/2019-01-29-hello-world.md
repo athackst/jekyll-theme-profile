@@ -26,11 +26,12 @@ There should be whitespace between paragraphs. There should be whitespace betwee
 
 # Header 1
 
-This is a normal paragraph following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+This is a standard paragraph designed for testing purposes. Sample text flows here to simulate real content. Widgets, gadgets, and tools align perfectly with lorem bits and placeholder pieces. Testing the rhythm of prose, we sprinkle in arbitrary nouns like keyboard, coffee mug, and paperclip. The goal is simple: evaluate formatting without getting too distracted by meaning.
+
 
 ## Header 2
 
-> This is a blockquote following a header. Bacon ipsum dolor sit amet t-bone doner shank drumstick, pork belly porchetta chuck sausage brisket ham hock rump pig. Chuck kielbasa leberkas, pork bresaola ham hock filet mignon cow shoulder short ribs biltong.
+> This is a blockquote following a header. Sample text flows here to simulate real content. Widgets, gadgets, and tools align perfectly with lorem bits and placeholder pieces. Testing the rhythm of prose, we sprinkle in arbitrary nouns like keyboard, coffee mug, and paperclip. The goal is simple: evaluate formatting without getting too distracted by meaning.
 
 ### Header 3
 
@@ -62,15 +63,15 @@ There's a horizontal rule above and below this.
 
 Here is an unordered list:
 
-- Salt-n-Pepa
-- Bel Biv DeVoe
-- Kid 'N Play
+- Apples
+- Bananas
+- Carrots
 
 And an ordered list:
 
-1. Michael Jackson
-2. Michael Bolton
-3. Michael Bublé
+1. First item
+2. Second item
+3. Third item
 
 And an unordered task list:
 
@@ -86,17 +87,18 @@ And a "mixed" task list:
 
 And a nested list:
 
-- Jackson 5
-  - Michael
-  - Tito
-  - Jackie
-  - Marlon
-  - Jermaine
-- TMNT
-  - Leonardo
-  - Michelangelo
-  - Donatello
-  - Raphael
+- Fruits
+  - Apple
+  - Banana
+  - Cherry
+  - Grape
+  - Orange
+- Tools
+  - Hammer
+  - Screwdriver
+  - Wrench
+  - Pliers
+
 
 Definition lists can be used with HTML syntax. Definition terms are **bold and italic**.
 
@@ -125,12 +127,19 @@ Tables should have bold headings and alternating shaded rows.
 
 If a table is too wide, it should condense down and/or scroll horizontally.
 
-| Artist        | Album                | Year | Label               | Songs                                                                                                                                                              |
-|---------------|----------------------|------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| David Bowie   | Scary Monsters       | 1980 | RCA Records         | It's No Game (No. 1), Up the Hill Backwards, Scary Monsters (And Super Creeps), Ashes to Ashes, Fashion, Teenage Wildlife, Scream Like a Baby, Kingdom Come, Because You're Young, It's No Game (No. 2)  |
-| Prince        | Purple Rain          | 1982 | Warner Brothers Records | Let's Go Crazy, Take Me With U, The Beautiful Ones, Computer Blue, Darling Nikki, When Doves Cry, I Would Die 4 U, Baby I'm a Star, Purple Rain                                  |
-| Beastie Boys  | License to Ill       | 1986 | Def Jam             | Rhymin & Stealin, The New Style, She's Crafty, Posse in Effect, Slow Ride, Girls, Fight for Your Right, No Sleep till Brooklyn, Paul Revere, "Hold It Now, Hit It", Brass Monkey, Slow and Low, Time to Get Ill  |
-| Janet Jackson | Rhythm Nation 1814   | 1989 | A&M                 | Interlude: Pledge, Rhythm Nation, Interlude: T.V., State of the World, Interlude: Race, The Knowledge, Interlude: Let's Dance, Miss You Much, Interlude: Come Back, Love Will Never Do (Without You), Livin' in a World (They Didn't Make), Alright, Interlude: Hey Baby, Escapade, Interlude: No Acid, Black Cat, Lonely, Come Back to Me, Someday Is Tonight, Interlude: Livin'...In Complete Darkness |
+| Item         | Description      | Color     | Size    | Material  | Weight | Price  | Rating | Stock | Notes                        |
+|--------------|------------------|-----------|---------|-----------|--------|--------|--------|-------|-------------------------------|
+| Chair        | Office chair      | Black     | Medium  | Wood      | 12kg   | $120   | 4.5    | Yes   | Adjustable height             |
+| Table        | Dining table      | Brown     | Large   | Wood      | 30kg   | $450   | 4.7    | Yes   | Seats six                     |
+| Lamp         | Desk lamp         | White     | Small   | Metal     | 2kg    | $35    | 4.2    | No    | LED light included            |
+| Sofa         | Living room sofa  | Gray      | Large   | Fabric    | 45kg   | $780   | 4.8    | Yes   | Three seats                   |
+| Shelf        | Wall shelf        | Oak       | Medium  | Wood      | 8kg    | $60    | 4.6    | Yes   | Easy to install               |
+| Bed          | Queen bed frame   | Black     | Large   | Metal     | 40kg   | $550   | 4.9    | Yes   | Mattress not included         |
+| Mirror       | Wall mirror       | Silver    | Medium  | Glass     | 5kg    | $90    | 4.3    | Yes   | Comes with mounting kit       |
+| Rug          | Area rug          | Beige     | Large   | Wool      | 10kg   | $300   | 4.4    | No    | Hand-woven                    |
+| Cabinet      | Storage cabinet   | White     | Medium  | Wood      | 20kg   | $250   | 4.7    | Yes   | Multiple compartments         |
+| Fan          | Standing fan      | Gray      | Medium  | Plastic   | 4kg    | $80    | 4.1    | Yes   | Adjustable speed settings     |
+
 
 ---
 

@@ -47,6 +47,6 @@ tags: [jekyll, tutorial, plugins]
 
 ## Additional resources
 
-- [Jekll tags](https://jekyllrb.com/docs/posts/#tags)
+- [Jekyll tags](https://jekyllrb.com/docs/posts/#tags)
 - [jekyll-tagging repository](https://github.com/pattex/jekyll-tagging)
 - [Posts documentation](../posts.md#tags)

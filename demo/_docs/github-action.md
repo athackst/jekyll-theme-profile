@@ -5,7 +5,7 @@ category: Advanced
 image: "https://raw.githubusercontent.com/athackst/jekyll-theme-profile/main/screenshot.png"
 ---
 
-You can also use this with GitHub acions. Below is a typical worfklow file
+You can also use this with GitHub actions. Below is a typical workflow file
 
 ```yaml
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
