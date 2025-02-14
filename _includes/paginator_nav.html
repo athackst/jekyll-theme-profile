@@ -7,8 +7,6 @@
         {%- if paginator.previous_page %}
         <a class="previous_page" rel="prev" href="{{ previous_page_path | relative_url }}"
             aria-disabled="false">Previous</a>
-        {% else %}
-        <span class="previous_page disabled" aria-disabled="true">Previous</span>
         {% endif %}
 
         {%- for paginator_nav_page in (1..paginator.total_pages) %}
@@ -24,8 +22,6 @@
         {%- if paginator.next_page %}
         <a class="next_page" rel="next" href="{{ next_page_path | relative_url }}"
             aria-disabled="false">Next</a>
-        {% else %}
-        <span class="next_page disabled" aria-disabled="true">Next</span>
         {% endif %}
     </div>
     {% endif %}
