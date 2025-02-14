@@ -109,7 +109,7 @@ links:
   - name: Example Profile page
     url: /profile
     thumbnail: /media/user-image.jpg
-  - name: Example Reposotiries page
+  - name: Example Repositories page
     url: /repositories
     thumbnail: /media/repositories.png
 ```
@@ -142,7 +142,7 @@ links:
   - name: Example Profile page
     url: /profile
     thumbnail: /media/user-image.jpg
-  - name: Example Reposotiries page
+  - name: Example Repositories page
     url: /repositories
     thumbnail: /media/repositories.png
 ```
@@ -192,7 +192,7 @@ repositories:
     archived: true
     forks: true
     repositories:
-      # - list of respositories to exclude
+      # - list of repositories to exclude
 ```
 
 **markdown page**

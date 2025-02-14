@@ -59,7 +59,7 @@ user_image: /assets/img/user-image.jpg
 
 #### Customizing light and dark themes
 
-This setting specifies the style for the light and dark modes of your site.  These styhles are taken from [primer css](https://primer.style/css/storybook/?path=/docs/support-theming--docs).
+This setting specifies the style for the light and dark modes of your site.  These styles are taken from [primer css](https://primer.style/css/storybook/?path=/docs/support-theming--docs).
 
 ```yaml
 # The themes to use for dark and light
@@ -100,14 +100,14 @@ header:
   text: "rgba(255,255,255,0.7)"
   accent: "#ffffff"
   image: /media/background-img.jpg
-  overlay: rbga(0, 0, 0, 0.5)
+  overlay: rgba(0, 0, 0, 0.5)
 ```
 
 - `color` The main background color of the header
 - `text` The color of text elements within the header
 - `accent` Controls the color of accent elements such as links
 - `image` Sets an image in the background of the header
-- `overlay` Sets the overlay on top of an image for better visability of links
+- `overlay` Sets the overlay on top of an image for better visibility of links
 
 [Example page](../custom-header.md){:.btn}
 
@@ -246,7 +246,7 @@ repositories:
     archived: true
     forks: true
     repositories:
-      # - list of respositories to exclude
+      # - list of repositories to exclude
 ```
 
 - `sort_by` What to sort repositories by, either latest pushed or number of stars

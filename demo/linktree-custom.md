@@ -43,7 +43,7 @@ links:
   - name: Example Profile page
     url: /profile
     thumbnail: /assets/img/user-image.jpg
-  - name: Example Reposotiries page
+  - name: Example Repositories page
     url: /repositories
     thumbnail: /media/repositories.png
 ---

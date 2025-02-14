@@ -9,7 +9,7 @@ image: "../../media/sidebar-preview.png"
 
 The **sidebar** style modifies the theme's header section to provide a clean, GitHub-like navigation experience.  It features
 
-- A collapsable side navigation bar that collapses 
+- A collapsible side navigation bar that collapses 
 - Consistent spacing and typography matching GitHub's Primer style
 - Dark and light mode compatibility
 

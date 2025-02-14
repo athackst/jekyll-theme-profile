@@ -35,7 +35,7 @@ If you encounter any issues or bugs, please feel free to open an issue on our Gi
 
 ## Branching and Pull Requests
 
-Our project follows my [git styleguide](https://www.allisonthackston.com/articles/git-style-guide.html).
+Our project follows my [git style guide](https://www.allisonthackston.com/articles/git-style-guide.html).
 
 ## Code Review Process
 

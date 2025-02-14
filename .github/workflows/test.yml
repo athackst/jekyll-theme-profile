@@ -56,7 +56,7 @@ jobs:
         run: |
           tree _site
           cat _site/index.html
-      - name: HTLMProofer
+      - name: HTMLProofer
         run: .github/test.sh
         env:
           BASEURL: ${{ steps.pages.outputs.base_path }}

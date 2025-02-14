@@ -88,7 +88,7 @@ repositories:
     archived: true
     forks: true
     repositories:
-      # - list of respositories to exclude
+      # - list of repositories to exclude
 
 ########################
 # Post settings

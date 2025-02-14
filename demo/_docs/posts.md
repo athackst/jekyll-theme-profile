@@ -38,13 +38,13 @@ Here's a list of variables for this theme
 | `permalink` | If you need or processed blog post URLs to be something other than the site-wide default (`/year/month/day/title.html`), then you can set this variable and it will be used as the final URL |
 | `published` | Set to false if you don't want a specific post to show up when the site is generated |
 | `date` | A date here overrides the date from the name of the post.  This can be used to ensure correct sorting of posts.  A date is specified in the format `YYYY-MM-DD HH:MM:SS +/-TTTT`: hours, minutes,seconds, and timezone offset are optional |
-| `category` or `categories` | Instead of placing posts inside of folders, you can specify one or more categories that the post belongs to.  When the site is generated the post will act as though it had been set with these categories normally.  Categories (pluaral key) can be specified as a YAML list or a space-separated string |
+| `category` or `categories` | Instead of placing posts inside of folders, you can specify one or more categories that the post belongs to.  When the site is generated the post will act as though it had been set with these categories normally.  Categories (plural key) can be specified as a YAML list or a space-separated string |
 | `tags` | Similar to categories, one or multiple tags can be added to a post.  Also like categories, tags can be specified as a YAML list or a space-separated string |
 | `description` | A longer description used for hte description meta tag |
 | `image` | URL to an image associated with the post for SEO |
 | `author` | Post-specific author information |
 | `locale` | Post-specific locale information |
-| `excerpt_separator` | You can access a snippet of a posts' content by using `excerpt` vairalbe on a post.  By default this is the first paragraph of content in the post, but can be custompized by using `excerpt_separater`. <br/><br/>Example `excerpt_separator: <!--more-->` |
+| `excerpt_separator` | You can access a snippet of a posts' content by using `excerpt` variable on a post.  By default this is the first paragraph of content in the post, but can be customized by using `excerpt_separator`. <br/><br/>Example `excerpt_separator: <!--more-->` |
 
 
 ## Including images and resources
@@ -82,7 +82,7 @@ By default the theme will show posts related by tags or categories with the sett
 related_by: "tags or categories"
 ```
 
-These show up as "related posts" underneth a post.
+These show up as "related posts" underneath a post.
 
 See [tagging](plugins/tagging.md) for additional features and settings using the `jekyll-tagging` plugin.
 
