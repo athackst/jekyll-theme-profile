@@ -101,7 +101,7 @@ layout: default
                                 {%- else -%}
                                 {%- capture tag_link %}{{site.tag_archive_path}}{{ tag | slugify }}{% endcapture %}
                                 {%- endif -%}
-                                <li class="d-inline-block mt-2 mb-0"><a href="{{ tag_link }}">{{ tag }}</a></li>
+                                <li class="d-inline-block mt-2 mb-0"><a href="{{ tag_link | relative_url }}">{{ tag }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
