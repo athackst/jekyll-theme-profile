@@ -51,7 +51,7 @@
         </div>
         {%- endif %}
         {% if post.excerpt != blank %}<div class="summary mb-5"> {{ post.excerpt }}</div>{% endif %}
-        {%- if post.content != blank and post.video == blank %}
+        {%- if post.content != post.excerpt %}
         <div class="more mb-5">
           <a href="{{ post.url | relative_url }}" class="link-mktg arrow-target-mktg text-semibold f4-mktg">
             Contiue
