@@ -34,6 +34,7 @@ defaults:
       layout: "docs"
       image: /assets/img/default.png # The default image used for social and posts.
       permalink: /docs/:path
+      edit_url: "https://github.com/{user}/{repo}/edit/{branch}" # replace with your user, repo, and branch for edit links
       toc: true
 ```
 
@@ -42,6 +43,7 @@ defaults:
 - Automatically generates a table of contents (`toc: true`)
 - Uses a default image for social sharing
 - Sorts documentation pages by the `order` front matter
+- Adds a "Edit this page" link if `edit_url` is set
 
 ## Demo
 
