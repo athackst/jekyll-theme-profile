@@ -11,6 +11,7 @@ Docs utilize collections to display content
 {%- assign index_url = page.index %}
 {%- assign docs_index = docs | where_exp: "item", "item.url == index_url" | first %}
 {%- assign docs_without_index = docs | where_exp: "item", "item.url != index_url" %}
+{%- assign edit_url = page.edit_url | default: site.edit_url %}
 
 <div class="d-lg-flex flex-1">
     <div class="Layout Layout-sidebar position-sticky border-right d-none d-xl-block">
@@ -81,6 +82,13 @@ Docs utilize collections to display content
                             {% endif %}
                         </div>
                     </div>
+
+                    <!-- Edit link -->
+                    {% if edit_url %} 
+                    <div class="doc-footer border-top my-8 py-5">
+                        <a href="{{ edit_url }}/{{ page.path }}">{% octicon pencil height: 16 %} Edit this page</a>
+                    </div>
+                    {% endif %}
                 </div>
                 <div class="col-12 col-md-4 markdown-body">
                     {% capture page_toc %}{{ content | toc_only }}{% endcapture %}

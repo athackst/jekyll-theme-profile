@@ -26,6 +26,7 @@ defaults:
       image: /assets/img/default.png # The default image used for social and posts.
       index: /docs/index.html
       permalink: /docs/:path:output_ext
+      edit_url: "https://github.com/athackst/jekyll-theme-profile/edit/main/demo"
       toc: true
 
 # ########### Theme settings ###############

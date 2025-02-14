@@ -1,3 +1,19 @@
+{%- comment -%}
+  collection-menu.html
+
+  Generates a dropdown menu for a Jekyll collection, grouping items by their "category" front matter.
+  Useful for documentation, guides, or any collection-based navigation.
+
+  Parameters:
+    - collection (defaults to site.docs): The Jekyll collection to display.
+    - name: Display name for the collection header.
+    - index: Optional index page object for the collection (e.g., site.docs_index).
+    - id (default: "collection-menu"): HTML ID for the menu container (useful when multiple menus are present).
+
+  Example Usage:
+    {% include collection-menu.html collection=site.docs name="Documentation" index=site.docs_index id="docs-menu" %}
+{%- endcomment -%}
+
 {%- assign collection = include.collection | default: site.docs %}
 {%- assign collection_name = include.name %}
 {%- assign collection_index = include.index %}
