@@ -92,7 +92,7 @@ background:
 
 #### Set custom header colors
 
-You can change the header color by adding the following to your `_config.yml` file.
+You can change the header color by adding the following to your `_config.yml` file or page frontmatter.
 
 ```yaml
 header:
