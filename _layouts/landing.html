@@ -2,11 +2,12 @@
 layout: default
 style: none
 ---
+{%- assign style = page.style | default: layout.style | default: site.style %}
 <div class="Header d-flex p-0 flex-1">
     <div class="container-lg flex-column position-sticky top-0">
         <div class="d-flex flex-row py-3 flex-justify-end">
             <div class="d-flex flex-justify-center">
-                {% include toggle.html %}
+                {% if style == 'none' %}{% include toggle.html %}{% endif %}
             </div>
         </div>
         <div class="text-center flex-1">

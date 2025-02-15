@@ -1,5 +1,6 @@
 ---
 layout: linktree
+style: appbar
 title: Background
 background:
   image:  https://www.allisonthackston.com/assets/img/cover-1920.jpg
