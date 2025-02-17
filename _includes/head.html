@@ -1,3 +1,4 @@
+{% assign favicon=site.favicon | default: site.logo | default: '/assets/img/favicon.ico' %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 
   <link href="{{ '/assets/css/theme.css' | relative_url }}" rel="stylesheet" type="text/css">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" type="text/css">
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/img/favicon.ico' | relative_url}}">
+  <link rel="icon" type="image/x-icon" href="{{ favicon | relative_url}}">
 
 
   {%- if site.analytics.provider == 'google' %}
