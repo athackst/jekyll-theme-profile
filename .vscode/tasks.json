@@ -6,7 +6,12 @@
         {
             "label": "gem: build",
             "type": "shell",
-            "command": "gem build jekyll-theme-profile.gemspec"
+            "command": "gem build jekyll-theme-profile.gemspec",
+            "options": {
+                "env": {
+                    "GEM_VERSION": "0.0.0"
+                }
+            }
         },
         {
             "label": "gem: push",
