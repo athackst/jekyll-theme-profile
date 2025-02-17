@@ -4,7 +4,11 @@ on:
   release:
     types: [published]
   workflow_dispatch:
-
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+        type: string
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -16,6 +20,14 @@ jobs:
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 1 # Increment this number if you need to re-download cached gems
+      - name: Determine release version
+        id: get_version
+        run: |
+          if [ "${{ github.event_name }}" = "release" ]; then
+            echo "GEM_VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+          else
+            echo "GEM_VERSION=${{ inputs.version }}" >> $GITHUB_ENV
+          fi
       - name: Release
         run: .github/release.sh jekyll-theme-profile.gemspec
         env:
