@@ -33,7 +33,15 @@
         {%- endif %}
         <div class="text-gray mb-2 ws-normal">{{ post.date | date: "%b %d, %Y"}}</div>
         {%- for tag in post.tags %}
-        <span class="IssueLabel IssueLabel--big color-bg-accent-emphasis color-fg-on-emphasis mr-1 mb-5">{{tag}}</span>
+          {%- if site.tag_page_dir -%}
+          {%- capture tag_link %}/{{site.tag_page_dir}}/{{ tag | jekyll_tagging_slug }}{%
+          endcapture %}
+          {%- elsif site.tag_archive_path -%}
+          {%- capture tag_link %}{{site.tag_archive_path}}{{ tag | slugify }}{% endcapture %}
+          {%- endif -%}
+          {% if tag_link %}<a href="{{ tag_link | relative_url }}" class="IssueLabel px-0">{% endif %}
+          <span class="IssueLabel IssueLabel--big color-bg-accent-emphasis color-fg-on-emphasis mr-1">{{tag}}</span>
+          {% if tag_link %}</a>{% endif %}
         {%- endfor %}
       </div>
     </div>
