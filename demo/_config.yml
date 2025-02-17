@@ -34,6 +34,8 @@ defaults:
 style: appbar # One of "stacked", "sidebar", "topbar", "appbar"
 # The user/project avatar.  If not set the avatar of the project owner will be used.
 user_image: /assets/img/user-image.jpg
+# The site logo/favicon
+favicon: /media/appbar-icon.png
 # The themes to use for dark and light
 dark_theme: dark_dimmed
 light_theme: light
