@@ -58,7 +58,6 @@ repo_info: true # Show the information for the source of this project
 user_metadata: true # Show the metadata associated with the user
 profile_link: true # Show a link to the github profile for the user
 
-
 ##########################
 # # Social media settings
 icon_color: "#959da5" # The color of the social media icons on the site
