@@ -1,14 +1,12 @@
 ---
 title: "Introducing Custom Header Colors"
-description: "Take control of your post headers with custom colors, images, and overlays."
-style: sidebar
-tags: [style, header]
-category: custom
+description: "Take control of your post headers with custom colors and images"
+image: "/media/custom-header-feature.png"
+tags: [news, style, customization, header]
+category: news
 ---
 
-# Introducing Custom Header Colors
-
-We’re excited to announce a new feature that allows you to fully customize your post headers with colors, images, and overlays. This gives you the flexibility to create headers that match your content and branding perfectly.
+I'm excited to announce a new feature that allows you to fully customize your post headers with colors, images, and overlays. This gives you the flexibility to create headers that match your content and branding perfectly.
 
 ## What Can You Customize?
 
@@ -52,7 +50,7 @@ header:
 
 ## Learn More
 
-See a live demo on the [Custom Header Example Page](../custom-header.md){:.btn}.
+[Live Demo](../custom-header.md){:.btn}
 
 For full configuration details, refer to the [Set Custom Header Colors section in the documentation](../_docs/configuration.md#set-custom-header-colors).
 

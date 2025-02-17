@@ -1,18 +1,10 @@
 ---
-title: "Post with custom background"
-description: Post with custom styling
-background:
-  image: https://www.allisonthackston.com/assets/img/cover-1920.jpg
-style: sidebar
-tags: [style, background]
-category: custom
-css_style: |
-  .Header {
-    background-color: rgba(0,0,0,0);
-  }
+title: "Introducing Custom Backgrounds"
+description: "Customize the theme with your own style by setting a custom background color, image, and overlays."
+image: "/media/custom-background-feature.png"
+tags: [news, style, customization, background]
+category: news
 ---
-
-# Introducing Custom Backgrounds
 
 I'm excited to introduce a new feature that allows you to set custom background images for your posts. This feature gives you more creative control over the look and feel of your content, making it easier to align your post’s visuals with your message.
 
@@ -37,9 +29,9 @@ You can also fine-tune the styling using the `css_style` field, allowing you to 
 
 ## See It in Action
 
-You’re looking at a live example right now! This post uses a custom background image, and we’ve set the header to be transparent with a simple CSS tweak.
+[Live demo](../custom-background.md){:.btn}
 
-Want to dive deeper? Check out the [Custom Background Example Page](../custom-background.md) for more details and additional examples.
+Want to dive deeper? Check out the [docs](../_docs/configuration.md#set-a-custom-background-and-image-overlay) for more details and additional examples.
 
 ## Get Creative!
 

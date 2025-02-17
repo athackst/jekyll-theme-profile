@@ -12,24 +12,24 @@ links:
     octicon: paintbrush
   - name: Custom header color (sidebar)
     url: /custom-header-color-sidebar
-    octicon: paintbrush
+    thumbnail: /media/icon-sidebar.png
   - name: Custom header color (stacked)
     url: /custom-header-color-stacked
-    octicon: paintbrush
+    thumbnail: /media/icon-stacked.png
   - name: Custom header color (topbar)
     url: /custom-header-color-topbar
-    octicon: paintbrush
+    thumbnail: /media/icon-topbar.png
   - name: Custom header image (landing)
     url: /custom-header-image-landing
     octicon: image
   - name: Custom header image (sidebar)
     url: /custom-header-image-sidebar
-    octicon: image
+    thumbnail: /media/icon-sidebar.png
   - name: Custom header image (stacked)
     url: /custom-header-image-stacked
-    octicon: image
+    thumbnail: /media/icon-stacked.png
   - name: Custom header image (topbar)
     url: /custom-header-image-topbar
-    octicon: image
+    thumbnail: /media/icon-topbar.png
 
 ---

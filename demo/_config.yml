@@ -102,16 +102,16 @@ nav:
 links:
   - name: Example Linktree page
     url: /linktree
-    thumbnail: /media/links.png
+    octicon: link
   - name: Example Profile page
     url: /profile
-    thumbnail: /assets/img/user-image.jpg
+    octicon: person
   - name: Example Repositories page
     url: /repositories
-    thumbnail: /media/repositories.png
+    octicon: repo
   - name: Example landing page
     url: /landing
-    thumbnail: /media/landing.png
+    octicon: rocket
   - name: Example blog index
     url: /blog
     octicon: comment
@@ -121,6 +121,12 @@ links:
   - name: Example tag index
     url: /tags
     octicon: tag
+  - name: Custom background
+    url: /custom-background
+    octicon: device-desktop
+  - name: Custom header
+    url: /custom-header
+    octicon: browser
 
 ###################
 # Repositories to show on home page

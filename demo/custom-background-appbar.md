@@ -1,11 +1,12 @@
 ---
-layout: default
+layout: page
 style: appbar
-title: Background
+title: Custom background
 background:
   image:  https://www.allisonthackston.com/assets/img/cover-1920.jpg
-  overlay: 'rgba(0,0,0,0.7)'
+  dark:
+    overlay: 'rgba(0,0,0,0.75)'
+  light:
+    overlay: 'rgba(255,255,255,0.25)'
 ---
-
-
-This is a custom background and overlay
+This is a appbar style page with a custom background and overlay.
