@@ -1,11 +1,29 @@
+// Needed for setting the background overlay
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--overlay-color);
+  /* Use the --overlay-color variable here */
+}
+
+.avatar-user {
+  border-radius: 50% !important;
+}
+
+// Needed to support custom background with a sidebar
+.background-fixed {
+  background-attachment: fixed !important;
+}
+
 // If a user adds a custom font, this component will stop it from bleeding into GitHub components:
 .github-component {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol !important;
-}
-
-.background-fixed {
-  background-attachment: fixed !important;
 }
 
 .min-height-full {
@@ -20,6 +38,15 @@
   object-fit: cover;
 }
 
+.img-masthead {
+  aspect-ratio: 1 / 1;
+  max-width: 296px;
+  position: relative;
+  overflow: hidden;
+  /* Hide any overflow to maintain circle shape */
+  margin: auto;
+}
+
 .cover-image {
   position: absolute !important;
   height: 100% !important;
@@ -30,44 +57,62 @@
 }
 
 .image-container {
-  width: 100%; /* Allow the container to adjust to the website's width */
+  width: 100%;
+  /* Allow the container to adjust to the website's width */
   // max-width: 800px; /* Set a maximum width to prevent image from exceeding 800px */
-  height: 0; /* Create an aspect ratio container (initial height is 0) */
-  padding-bottom: 53.125%; /* Aspect ratio (425 / 800) */
+  height: 0;
+  /* Create an aspect ratio container (initial height is 0) */
+  padding-bottom: 53.125%;
+  /* Aspect ratio (425 / 800) */
   position: relative;
   overflow: hidden;
 }
 
 .image-container img {
   position: absolute;
-  width: 100%; /* Fill the entire container width */
-  height: 100%; /* Fill the entire container height */
-  object-fit: cover; /* Scale and crop the image to cover the container */
+  width: 100%;
+  /* Fill the entire container width */
+  height: 100%;
+  /* Fill the entire container height */
+  object-fit: cover;
+  /* Scale and crop the image to cover the container */
+}
+
+.post-tags::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 20px;
+  background-color: var(--color-fg-default);
+  margin-bottom: 4px;
+}
+
+.overflow-wrap-word {
+  overflow-wrap: break-word;
+}
+
+.rounded-circle {
+  width: 100%;
+  /* Make the image fill the container */
+  height: 100%;
+  /* Make the image fill the container */
+  border-radius: 50%;
+  /* Make the div circular */
+  object-fit: cover;
+  /* Scale the image to fill the container */
+}
+
+.section-heading {
+  border-top: 5px solid var(--color-fg-default);
+  border-bottom: 1px solid var(--color-border-muted);
+  padding-top: 7px !important;
+  padding-bottom: 11px !important;
 }
 
 .social-aside {
   width: 44px;
   height: 44px;
   padding: 10px;
-}
-
-.img-masthead {
-  aspect-ratio: 1 / 1;
-  max-width: 296px;
-  position:relative;
-  overflow: hidden; /* Hide any overflow to maintain circle shape */
-  margin: auto;
-}
-
-.rounded-circle {
-  width: 100%; /* Make the image fill the container */
-  height: 100%; /* Make the image fill the container */
-  border-radius: 50%; /* Make the div circular */
-  object-fit: cover; /* Scale the image to fill the container */
-}
-
-.overflow-wrap-word {
-  overflow-wrap: break-word;
 }
 
 .SelectMenu::before {
@@ -133,54 +178,33 @@
   color: var(--color-primer-border-active);
 }
 
-.section-heading {
-  border-top: 5px solid var(--color-fg-default);
-  border-bottom: 1px solid var(--color-border-muted);
-  padding-top: 7px !important;
-  padding-bottom: 11px !important;
-}
-
-.post-tags::before {
-  content: "";
-  display: block;
-  height: 5px;
-  width: 20px;
-  background-color: var(--color-fg-default);
-  margin-bottom: 4px;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background-color: var(--overlay-color); /* Use the --overlay-color variable here */
-    }
-
-  @media print {
-    .BlogHeader {
-      background-color: inherit;
-      color: black !important;
-    }
-    .AppHeader {
-      display: none !important;
-    }
-    .Header {
-      display: none !important;
-    }
-    .Toggle {
-      display: none !important;
-    }
-    .Related {
-      display: none !important;
-    }
-    .paginate-container {
-      display: none !important;
-    }
-    .markdown-body {
-      font-size: 12px;
-    }
+@media print {
+  .BlogHeader {
+    background-color: inherit;
+    color: black !important;
   }
+
+  .AppHeader {
+    display: none !important;
+  }
+
+  .Header {
+    display: none !important;
+  }
+
+  .Toggle {
+    display: none !important;
+  }
+
+  .Related {
+    display: none !important;
+  }
+
+  .paginate-container {
+    display: none !important;
+  }
+
+  .markdown-body {
+    font-size: 12px;
+  }
+}
