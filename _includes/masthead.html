@@ -2,11 +2,12 @@
 {%- assign name = include.title | default: site.title | default: user.name | default: user.login %}
 {%- assign user_img = site.user_image | default: user.avatar_url | default: "/assets/img/user-image.jpg" %}
 {%- assign user_metadata = site.user_metadata -%}
+{%- assign size = include.size | default: "256px" %}
 
 <div class="Masthead">
-    <div class="CircleBadge img-masthead {{include.class}}">
+    <div class="CircleBadge img-masthead" style="width: {{ size }};" >
       <a href="{{ site.baseurl }}/">
-        <img src="{{ user_img | relative_url }}" alt="{{ name }}" class="cover-image">
+        <img src="{{ user_img | relative_url }}" alt="{{ name }}" class="cover-image" >
       </a>
     </div>
 
