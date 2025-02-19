@@ -14,9 +14,8 @@ layout: default
                 </div>
                 <div class="offset-lg-1 col-lg-10">
                     <div class="position-relative z-1">
-                        <div class="image-container">
-                            <img src="{{ image | relative_url }}" class="cover-image rounded-2"
-                                alt="{{ page.title }}" />
+                        <div class="image-container rounded-2">
+                            <img src="{{ image | relative_url }}" alt="{{ page.title }}" />
                         </div>
                     </div>
                 </div>
@@ -90,7 +89,7 @@ layout: default
                         </div>
                         {% endif %}
                         {{ content }}
-                        {%- if page.tags.size > 0 and site.tag_page_dir %}
+                        {%- if page.tags.size > 0 %}
                         <div class="post-tags text-mono f4-mktg mt-8">
                             <span class="post-tags-label flex-shrink-0 d-inline-block mt-2">Tags: </span>
                             <ul class="d-inline-block list-style-none color-text-link mb-0">
@@ -98,10 +97,11 @@ layout: default
                                 {%- if site.tag_page_dir -%}
                                 {%- capture tag_link %}/{{site.tag_page_dir}}/{{ tag | jekyll_tagging_slug }}{%
                                 endcapture %}
-                                {%- else -%}
+                                {%- elsif site.tag_archive_path -%}
                                 {%- capture tag_link %}{{site.tag_archive_path}}{{ tag | slugify }}{% endcapture %}
                                 {%- endif -%}
-                                <li class="d-inline-block mt-2 mb-0"><a href="{{ tag_link | relative_url }}">{{ tag }}</a></li>
+                                <li class="d-inline-block mt-2 mb-0">
+                                    <a href="{{ tag_link | relative_url }}">{{ tag }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
