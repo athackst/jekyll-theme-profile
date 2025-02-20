@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'jekyll-theme-profile'
-  spec.version       = ENV['GEM_VERSION'] || '0.0.0'
+  spec.version       = File.read(File.expand_path('../VERSION', __FILE__)).strip
   spec.authors       = ['Allison Thackston']
   spec.email         = ['allison@allisonthackston.com']
 
