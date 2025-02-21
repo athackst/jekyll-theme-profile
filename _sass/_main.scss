@@ -83,7 +83,7 @@ body::before {
   display: block;
   height: 5px;
   width: 20px;
-  background-color: var(--color-fg-default);
+  background-color: var(--fgColor-default, var(--color-fg-default));
   margin-bottom: 4px;
 }
 
@@ -103,8 +103,8 @@ body::before {
 }
 
 .section-heading {
-  border-top: 5px solid var(--color-fg-default);
-  border-bottom: 1px solid var(--color-border-muted);
+  border-top: 5px solid var(--borderColor-default, var(--color-border-default));
+  border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));
   padding-top: 7px !important;
   padding-bottom: 11px !important;
 }
@@ -136,16 +136,16 @@ body::before {
   grid-auto-columns: max-content;
   width: var(--base-size-32, 32px);
   height: var(--base-size-32, 32px);
-  color: var(--color-fg-muted);
+  color: var(--color-fg-muted, var(--fgColor-muted));
   background: transparent;
-  border: var(--borderWidth-thin, 1px) solid var(--color-border-default);
+  border: var(--borderWidth-thin, 1px) solid var(--borderColor-default);
   border-radius: var(--borderRadius-medium, 6px);
   align-items: center;
   justify-content: center;
 }
 
 .AppHeader-link {
-  color: var(--color-fg-default);
+  color: var(--fgColor-default, var(--color-fg-default));
 }
 
 .ActionListItem {
@@ -166,16 +166,16 @@ body::before {
 }
 
 .BlogHeader {
-  color: var(--color-header-text) !important;
-  background-color: var(--color-header-bg) !important;
+  color: var(--header-fgColor-default, var(--color-header-text)) !important;
+  background-color: var(--header-bgColor, var(--color-header-bg)) !important;
 }
 
 .Blog {
-  background-color: var(--color-canvas-default) !important;
+  background-color: var(--bgColor-default, var(--color-canvas-default)) !important;
 }
 
 .Header-link[aria-current]:not([aria-current=false]) {
-  color: var(--color-primer-border-active);
+  color: var(--underlineNav-borderColor-active, var(--color-primer-border-active));
 }
 
 @media print {
