@@ -55,7 +55,7 @@
         </div>
         {%- elsif post.image %}
         <div class="image-container mb-5">
-          <img class="rounded-2" src="{{ post.image}}" width="800" height="425" alt="{{ post.title }}" />
+          <img class="rounded-2" src="{{ post.image | relative_url }}" width="800" height="425" alt="{{ post.title }}" />
         </div>
         {%- endif %}
         {% if post.excerpt != blank %}<div class="summary mb-5"> {{ post.excerpt }}</div>{% endif %}
