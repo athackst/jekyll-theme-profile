@@ -5,9 +5,9 @@
 {%- assign size = include.size | default: "256px" %}
 
 <div class="Masthead">
-    <div class="CircleBadge img-masthead" style="width: {{ size }};" >
+    <div class="CircleBadge" style="width: {{ size }};" >
       <a href="{{ site.baseurl }}/">
-        <img src="{{ user_img | relative_url }}" alt="{{ name }}" class="cover-image" >
+        <img src="{{ user_img | relative_url }}" alt="{{ name }}" >
       </a>
     </div>
 

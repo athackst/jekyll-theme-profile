@@ -38,7 +38,7 @@ body::before {
   object-fit: cover;
 }
 
-.img-masthead {
+.Masthead .CircleBadge {
   aspect-ratio: 1 / 1;
   max-width: 296px;
   position: relative;
@@ -47,7 +47,7 @@ body::before {
   margin: auto;
 }
 
-.cover-image {
+.CircleBadge img {
   position: absolute !important;
   height: 100% !important;
   width: 100% !important;
