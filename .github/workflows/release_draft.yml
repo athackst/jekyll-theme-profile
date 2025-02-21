@@ -36,7 +36,7 @@ jobs:
       - name: Check if a Release PR already exists
         id: check-pr
         run: |
-          EXISTING_PR=$(gh pr list --head "release/v*" --state open --json url,headRefName --jq '.[0]')
+          EXISTING_PR=$(gh pr list --state open --json url,headRefName --jq '.[] | select(.headRefName | startswith("release/v"))')
           if [ -n "$EXISTING_PR" ]; then
             PR_URL=$(echo "$EXISTING_PR" | jq -r '.url')
             EXISTING_BRANCH=$(echo "$EXISTING_PR" | jq -r '.headRefName')
