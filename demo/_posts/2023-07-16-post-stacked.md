@@ -3,6 +3,7 @@ title: "This is a stacked post style"
 style: stacked
 tags: [style, stacked]
 image: "https://github.blog/wp-content/uploads/2023/05/1200.630-Community-wLogo-e1698634509856.png"
+description: This is an example of a post with the stacked style.
 category: style
 ---
 # Welcome to the Test Post
