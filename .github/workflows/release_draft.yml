@@ -65,7 +65,7 @@ jobs:
           echo "$VERSION" > VERSION
 
       - name: Create or Update Release PR
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v7
         if: github.event_name == 'workflow_dispatch' || env.PR_EXISTS == 'true'
         with:
           branch: release/v${{ env.VERSION }}
