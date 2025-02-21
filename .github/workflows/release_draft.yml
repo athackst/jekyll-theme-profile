@@ -36,8 +36,9 @@ jobs:
       - name: Check if a Release PR already exists
         id: check-pr
         run: |
-          EXISTING_PR=$(gh pr list --state open --json url,headRefName --jq '.[] | select(.headRefName | startswith("release/v"))')
+          EXISTING_PR=$(gh pr list --state open --json url,headRefName --jq '.[] | select(.headRefName | startswith("release/v"))' | jq -c '.')
           if [ -n "$EXISTING_PR" ]; then
+            echo "Existing PR found"
             PR_URL=$(echo "$EXISTING_PR" | jq -r '.url')
             EXISTING_BRANCH=$(echo "$EXISTING_PR" | jq -r '.headRefName')
 
@@ -45,6 +46,7 @@ jobs:
             echo "PR_URL=$PR_URL" >> $GITHUB_ENV
             echo "EXISTING_BRANCH=$EXISTING_BRANCH" >> $GITHUB_ENV
           else
+            echo "No existing PR found"
             echo "PR_EXISTS=false" >> $GITHUB_ENV
           fi
         env:
@@ -74,3 +76,4 @@ jobs:
             ${{ env.CHANGELOG }}
           commit-message: "Bump version to v${{ env.VERSION }}"
           delete-branch: true
+          token: ${{ secrets.RELEASE_TOKEN }} # Token to trigger workflows
