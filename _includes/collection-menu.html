@@ -67,7 +67,7 @@
                 {%- assign category_name = category.name | default: collection_name %}
                 <div class="SideNav-item no-underline h4">{{ category_name | capitalize }}</div>
                 {%- for nav_item in category.items %}
-                <a href="{{ nav_item.url }}" class="SideNav-item" role="menuitem" {% if page.url contains nav_item.url
+                <a href="{{ nav_item.url | relative_url }}" class="SideNav-item" role="menuitem" {% if page.url contains nav_item.url
                     %} aria-current="page" {% endif %}>{{ nav_item.title }}</a>
                 {%- endfor %}
                 {%- endfor %}
