@@ -4,7 +4,7 @@ style: appbar
 author: George P. Burdell
 tags: [style, appbar]
 image: https://github.blog/wp-content/uploads/2023/10/hero-light.jpg
-description: This is an example of a post inside of the appbar style.
+description: This is an example of a post with the appbar style.
 category: style
 ---
 # Welcome to the Test Post

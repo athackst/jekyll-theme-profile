@@ -3,6 +3,7 @@ title: "This is a sidebar post style"
 style: sidebar
 tags: [style, sidebar]
 image: "https://github.blog/wp-content/uploads/2023/08/1200x630-AI-Unfurl-DARK-Inverto.png"
+description: This is an example of a post with the sidebar style.
 category: style
 ---
 
