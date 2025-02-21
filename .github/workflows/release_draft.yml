@@ -24,56 +24,27 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get version and changelog info
-        run: |
-          VERSION=${{ steps.release-draft.outputs.tag_name }}
-          VERSION=${VERSION#v} # Strip leading 'v' if present
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "CHANGELOG<<EOF" >> $GITHUB_ENV
-          echo "${{ steps.release-draft.outputs.body }}" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
-      - name: Check if a Release PR already exists
-        id: check-pr
-        run: |
-          EXISTING_PR=$(gh pr list --state open --json url,headRefName --jq '.[] | select(.headRefName | startswith("release/v"))' | jq -c '.')
-          if [ -n "$EXISTING_PR" ]; then
-            echo "Existing PR found"
-            PR_URL=$(echo "$EXISTING_PR" | jq -r '.url')
-            EXISTING_BRANCH=$(echo "$EXISTING_PR" | jq -r '.headRefName')
-
-            echo "PR_EXISTS=true" >> $GITHUB_ENV
-            echo "PR_URL=$PR_URL" >> $GITHUB_ENV
-            echo "EXISTING_BRANCH=$EXISTING_BRANCH" >> $GITHUB_ENV
-          else
-            echo "No existing PR found"
-            echo "PR_EXISTS=false" >> $GITHUB_ENV
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Close old Release PR if the version changed
-        if: env.PR_EXISTS == 'true' && env.EXISTING_BRANCH != format('release/v{0}', env.VERSION)
-        run: |
-          gh pr close "$PR_URL" --delete-branch
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Update version
       - name: Update version
         run: |
-          echo "$VERSION" > VERSION
+          echo "${{ steps.release-draft.outputs.tag_name }}" > VERSION
+
+      - name: Close old Release PR if the version changed
+        run: |
+          .github/close_stale.sh
+          echo "PR_EXISTS=$PR_EXISTS" >> $GITHUB_ENV
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create or Update Release PR
         uses: peter-evans/create-pull-request@v5
         if: github.event_name == 'workflow_dispatch' || env.PR_EXISTS == 'true'
         with:
-          branch: release/v${{ env.VERSION }}
-          title: "Release v${{ env.VERSION }}"
+          branch: release/v${{ steps.release-draft.outputs.tag_name }}
+          title: "Release v${{ steps.release-draft.outputs.tag_name }}"
           body: |
-            Release version ${{ env.VERSION }}
+            Release version ${{ steps.release-draft.outputs.tag_name }}
 
-            ${{ env.CHANGELOG }}
-          commit-message: "Bump version to v${{ env.VERSION }}"
+            ${{ steps.release-draft.outputs.body }}
+          commit-message: "Bump version to v${{ steps.release-draft.outputs.tag_name }}"
           delete-branch: true
           token: ${{ secrets.RELEASE_TOKEN }} # Token to trigger workflows
