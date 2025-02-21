@@ -42,25 +42,25 @@ body {
 {%- endif %}
 {%- if header_color %}
 .Header {
-    --color-header-bg: {{ header_color }};
+    --header-bgColor: {{ header_color }};
 }
 /* Light mode styles */
 [data-color-mode='light'] {
-    --color-header-bg: {{ header_color }};
+    --header-bgColor: {{ header_color }};
 }
 
 @media(prefers-color-scheme: light) {
 [data-color-mode='auto'][data-light-theme='light'] {
-    --color-header-bg: {{ header_color }};
+    --header-bgColor: {{ header_color }};
 }
 }
 /* Dark mode styles */
 [data-color-mode='dark'] {
-    --color-header-bg: {{ header_color }};
+    --header-bgColor: {{ header_color }};
 }
 @media(prefers-color-scheme: dark) {
 [data-color-mode='auto'][data-dark-theme='dark_dimmed'] {
-    --color-header-bg: {{ header_color }};
+    --header-bgColor: {{ header_color }};
 }
 }
 {%- endif %}
