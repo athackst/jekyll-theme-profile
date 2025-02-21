@@ -1,30 +1,29 @@
-name: Draft release
+name: Draft release PR
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main  # Updates the PR only if it already exists
+  workflow_dispatch:  # Manually trigger to create a new PR
 
 jobs:
-  update_release_draft:
-    permissions:
-      contents: write # for release-drafter/release-drafter and Bump version
-      pull-requests: write # for release-drafter/release-drafter and Bump version
+  update-release-draft:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required for updating release notes
+      pull-requests: write  # Required for modifying the PR
     steps:
-      # Check out the code
       - name: Checkout main branch
         uses: actions/checkout@v4
 
-      # Drafts your next Release notes as Pull Requests are merged into "main"
-      - name: Get release draft
-        uses: release-drafter/release-drafter@v6.1.0
+      - name: Run Release Drafter
         id: release-draft
+        uses: release-drafter/release-drafter@v6
         with:
-          # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
           config-name: release-drafter.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Get version and changelog info
       - name: Get version and changelog info
         run: |
           VERSION=${{ steps.release-draft.outputs.tag_name }}
@@ -34,14 +33,38 @@ jobs:
           echo "${{ steps.release-draft.outputs.body }}" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
+      - name: Check if a Release PR already exists
+        id: check-pr
+        run: |
+          EXISTING_PR=$(gh pr list --head "release/v*" --state open --json url,headRefName --jq '.[0]')
+          if [ -n "$EXISTING_PR" ]; then
+            PR_URL=$(echo "$EXISTING_PR" | jq -r '.url')
+            EXISTING_BRANCH=$(echo "$EXISTING_PR" | jq -r '.headRefName')
+
+            echo "PR_EXISTS=true" >> $GITHUB_ENV
+            echo "PR_URL=$PR_URL" >> $GITHUB_ENV
+            echo "EXISTING_BRANCH=$EXISTING_BRANCH" >> $GITHUB_ENV
+          else
+            echo "PR_EXISTS=false" >> $GITHUB_ENV
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Close old Release PR if the version changed
+        if: env.PR_EXISTS == 'true' && env.EXISTING_BRANCH != format('release/v{0}', env.VERSION)
+        run: |
+          gh pr close "$PR_URL" --delete-branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # Update version
       - name: Update version
         run: |
           echo "$VERSION" > VERSION
 
-      # Create a release PR
-      - name: Create Release PR
+      - name: Create or Update Release PR
         uses: peter-evans/create-pull-request@v5
+        if: github.event_name == 'workflow_dispatch' || env.PR_EXISTS == 'true'
         with:
           branch: release/v${{ env.VERSION }}
           title: "Release v${{ env.VERSION }}"
