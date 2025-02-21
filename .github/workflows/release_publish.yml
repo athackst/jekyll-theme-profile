@@ -1,0 +1,36 @@
+name: Publish release
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish-release-draft:
+    if: contains(github.event.head_commit.message, 'Bump version to ')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # For tagging
+      deployments: write  # For publishing draft release
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract version from VERSION file
+        id: version
+        run: |
+          VERSION=$(cat VERSION)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Publish Draft Release
+        
+        run: |
+          gh release edit "${VERSION}" --draft=false
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  call-publish-gem:
+    needs: publish-release-draft
+    uses: ./.github/workflows/release.yml
+    with:
+      version: ${{ needs.publish-release-draft.outputs.version }} # Or from VERSION file
+    secrets: inherit
