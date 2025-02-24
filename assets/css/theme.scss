@@ -1,6 +1,10 @@
 ---
 ---
-@use "jekyll-theme-profile";
+{% if site.github.versions %}
+@import 'jekyll-theme-profile-compat';
+{% else %}
+@use 'jekyll-theme-profile';
+{% endif %}
 
 :root{
     --color-profile-text: var(--color-fg-default);

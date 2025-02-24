@@ -123,3 +123,10 @@ plugins:
 exclude:
   - spec
   - demo
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
