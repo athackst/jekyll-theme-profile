@@ -1,6 +1,6 @@
 ---
 ---
-{% if site.github.versions %}
+{% if site.github.versions != blank %}
 @import 'jekyll-theme-profile-compat';
 {% else %}
 @use 'jekyll-theme-profile';
